@@ -1,7 +1,6 @@
 extends Control
 
-@export var min_position: Vector2
-@export var max_position: Vector2
+@export var bounding_box: CanvasItem
 
 
 var dragging: bool = false
@@ -19,7 +18,7 @@ func _ready():
 func _process(delta):
 	if dragging:
 		var raw_position = get_global_mouse_position() - drag_offset
-		global_position = raw_position #.clamp(min_position, max_position - size)
+		global_position = raw_position.clamp(bounding_box.global_position, bounding_box.global_position + bounding_box.size - self.size)
 
 func _on_top_bar_button_down():
 	dragging = true
@@ -33,3 +32,7 @@ func _on_top_bar_button_up():
 
 func _on_resize_button_down(corner_index: int):
 	print("resizing from ", corner_index)
+
+
+func _on_close_pressed():
+	self.queue_free()

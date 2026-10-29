@@ -42,15 +42,14 @@ grow_vertical = 2
 texture = ExtResource("2_tbgi4")
 expand_mode = 1
 
-[node name="Window" parent="Computer/Screen" unique_id=945610282 instance=ExtResource("1_o5qli")]
+[node name="Window" parent="Computer/Screen" unique_id=945610282 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.03497939
 anchor_top = 0.049319714
 anchor_right = 0.8232035
 anchor_bottom = 0.80516887
-min_position = Vector2(35, 27)
-max_position = Vector2(972, 588)
+bounding_box = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Computer/Screen/Window" unique_id=646324747]
@@ -276,6 +275,7 @@ scale = Vector2(0.3789063, 0.3632811)
 texture = ExtResource("2_0wfyh")
 
 [node name="ColorRect" type="ColorRect" parent="Computer/Screen" unique_id=1855724515]
+z_index = 1
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -309,13 +309,14 @@ offset_right = 969.0
 offset_bottom = 27.0
 text = "3:22"
 
-[node name="Window2" parent="Computer/Screen" unique_id=1339506137 instance=ExtResource("1_o5qli")]
+[node name="Window2" parent="Computer/Screen" unique_id=1339506137 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.34053499
 anchor_top = 0.23639455
 anchor_right = 0.96193415
 anchor_bottom = 0.8469388
+bounding_box = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
 [node name="minesweeper" parent="Computer/Screen/Window2" unique_id=411667812 instance=ExtResource("5_tbgi4")]

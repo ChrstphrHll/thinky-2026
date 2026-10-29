@@ -8,6 +8,15 @@ colors = PackedColorArray(0.074677326, 0.65289396, 0.979346, 1, 0.074677326, 0.6
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_j0wby"]
 gradient = SubResource("Gradient_nuevk")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0wby"]
+bg_color = Color(0.890549, 0.13222441, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nuevk"]
+bg_color = Color(0.71292275, 0.101336025, 0.26631862, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2b2g1"]
+bg_color = Color(1, 0.36025915, 0.26238233, 1)
+
 [sub_resource type="Gradient" id="Gradient_2b2g1"]
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
@@ -42,7 +51,7 @@ grow_horizontal = 2
 texture_normal = SubResource("GradientTexture1D_j0wby")
 stretch_mode = 0
 
-[node name="Close" type="ColorRect" parent="TopBar" unique_id=1303548295]
+[node name="Close" type="Button" parent="TopBar" unique_id=1745185678]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -52,9 +61,12 @@ offset_top = 4.0
 offset_right = -4.0
 offset_bottom = 28.0
 grow_horizontal = 0
-color = Color(0.8782985, 0.16254476, 0.11744303, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0wby")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nuevk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2b2g1")
 
 [node name="Minimize" type="ColorRect" parent="TopBar" unique_id=1576613535]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -80,4 +92,5 @@ stretch_mode = 0
 
 [connection signal="button_down" from="TopBar" to="." method="_on_top_bar_button_down"]
 [connection signal="button_up" from="TopBar" to="." method="_on_top_bar_button_up"]
+[connection signal="pressed" from="TopBar/Close" to="." method="_on_close_pressed"]
 [connection signal="button_down" from="TopLeftResize" to="." method="_on_resize_button_down" binds= [0]]
