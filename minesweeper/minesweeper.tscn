@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://2hm154dy6lg4"]
+
+[ext_resource type="Script" uid="uid://fjr0p360fem5" path="res://minesweeper/minesweeper.gd" id="1_avy0k"]
+
+[node name="minesweeper" type="Control" unique_id=411667812]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_avy0k")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2084215631]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7072914, 0.92879474, 0.997858, 1)
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=2068362886]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 19.0
+offset_right = 418.0
+offset_bottom = 42.0
+text = "test"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1615265987]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Board" type="GridContainer" parent="CenterContainer" unique_id=556924460]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="Restart" type="Button" parent="." unique_id=1041192408]
+layout_mode = 1
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 100.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 16
+text = "New Game"
