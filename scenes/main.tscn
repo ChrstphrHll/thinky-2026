@@ -46,235 +46,16 @@ expand_mode = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.03497939
-anchor_top = 0.049319714
+anchor_top = 0.07312924
 anchor_right = 0.8232035
 anchor_bottom = 0.80516887
 bounding_box = NodePath("..")
+window_name = "calendar"
+contents = Object(MarginContainer,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":2,"auto_translate_mode":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"oversampling_with_scale":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"custom_minimum_size":Vector2(0, 0),"custom_maximum_size":Vector2(-1, -1),"propagate_maximum_size":true,"clip_contents":false,"layout_mode":3,"anchors_preset":15,"anchor_left":0.0,"anchor_top":0.0,"anchor_right":1.0,"anchor_bottom":1.0,"offset_left":0.0,"offset_top":221.0,"offset_right":0.0,"offset_bottom":0.0,"grow_horizontal":2,"grow_vertical":2,"rotation":0.0,"scale":Vector2(1, 1),"pivot_offset":Vector2(0, 0),"pivot_offset_ratio":Vector2(0, 0),"size_flags_horizontal":1,"size_flags_vertical":1,"size_flags_stretch_ratio":1.0,"offset_transform_enabled":false,"offset_transform_position":Vector2(0, 0),"offset_transform_position_ratio":Vector2(0, 0),"offset_transform_scale":Vector2(1, 1),"offset_transform_rotation":0.0,"offset_transform_pivot":Vector2(0, 0),"offset_transform_pivot_ratio":Vector2(0.5, 0.5),"offset_transform_visual_only":true,"localize_numeral_system":true,"layout_direction":0,"translation_context":&"","tooltip_text":"","tooltip_auto_translate_mode":0,"focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":0,"focus_behavior_recursive":0,"mouse_filter":1,"mouse_behavior_recursive":0,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"accessibility_name":"","accessibility_description":"","accessibility_live":0,"accessibility_controls_nodes":Array[NodePath]([]),"accessibility_described_by_nodes":Array[NodePath]([]),"accessibility_labeled_by_nodes":Array[NodePath]([]),"accessibility_flow_to_nodes":Array[NodePath]([]),"theme":null,"theme_type_variation":&"","theme_override_constants/margin_left":8,"theme_override_constants/margin_top":8,"theme_override_constants/margin_right":8,"theme_override_constants/margin_bottom":8,"accessibility_region":false,"script":null)
+
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="Computer/Screen/Window" unique_id=646324747]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 36.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Computer/Screen/Window/MarginContainer" unique_id=1027427279]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Computer/Screen/Window/MarginContainer/ScrollContainer" unique_id=1032596869]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer" unique_id=708224629]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ColorRect" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1716014872]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=850683341]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=15330257]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=88530949]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=159087973]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=634545183]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer" unique_id=55290680]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ColorRect" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1392487955]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1388909032]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1779665666]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=431413267]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=312054760]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1273306551]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer" unique_id=438108448]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ColorRect" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer3" unique_id=495174630]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer3" unique_id=1377997829]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer3" unique_id=194340188]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer3" unique_id=2133679412]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer3" unique_id=2008646848]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer3" unique_id=147845712]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="VBoxContainer4" type="VBoxContainer" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer" unique_id=946466945]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ColorRect" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer4" unique_id=1227476040]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer4" unique_id=2084713906]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer4" unique_id=291318493]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer4" unique_id=596388]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer4" unique_id=1585313549]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer4" unique_id=705433953]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="VBoxContainer5" type="VBoxContainer" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer" unique_id=853216731]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ColorRect" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer5" unique_id=339433144]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer5" unique_id=371325708]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer5" unique_id=162954474]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer5" unique_id=398050265]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer5" unique_id=1384681042]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer5" unique_id=650340960]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="VBoxContainer6" type="VBoxContainer" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer" unique_id=1912174956]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ColorRect" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer6" unique_id=1483340427]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer6" unique_id=1654146558]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer6" unique_id=1563237234]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer6" unique_id=1259437005]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer6" unique_id=828181116]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer6" unique_id=111364944]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="VBoxContainer7" type="VBoxContainer" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer" unique_id=263997200]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ColorRect" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer7" unique_id=1506102448]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer7" unique_id=121824948]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer7" unique_id=1554738714]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer7" unique_id=1398092079]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer7" unique_id=1828576379]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="Computer/Screen/Window/MarginContainer/ScrollContainer/HBoxContainer/VBoxContainer7" unique_id=1435099529]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="Icon" type="Sprite2D" parent="Computer/Screen/Window" unique_id=589072387]
-position = Vector2(44.750004, 296.25)
-scale = Vector2(0.3789063, 0.3632811)
-texture = ExtResource("2_0wfyh")
-
-[node name="ColorRect" type="ColorRect" parent="Computer/Screen" unique_id=1855724515]
+[node name="bottom bar" type="ColorRect" parent="Computer/Screen" unique_id=1855724515]
 z_index = 1
 layout_mode = 1
 anchors_preset = 12
@@ -286,22 +67,22 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.25819534, 0.44523996, 1, 1)
 
-[node name="Icon" type="Sprite2D" parent="Computer/Screen/ColorRect" unique_id=421635984]
+[node name="Icon" type="Sprite2D" parent="Computer/Screen/bottom bar" unique_id=421635984]
 position = Vector2(16.999998, 15.000004)
 scale = Vector2(0.171875, 0.171875)
 texture = ExtResource("2_0wfyh")
 
-[node name="Icon2" type="Sprite2D" parent="Computer/Screen/ColorRect" unique_id=229743318]
+[node name="Icon2" type="Sprite2D" parent="Computer/Screen/bottom bar" unique_id=229743318]
 position = Vector2(41.999996, 15.000004)
 scale = Vector2(0.171875, 0.171875)
 texture = ExtResource("2_0wfyh")
 
-[node name="Icon3" type="Sprite2D" parent="Computer/Screen/ColorRect" unique_id=1762410279]
+[node name="Icon3" type="Sprite2D" parent="Computer/Screen/bottom bar" unique_id=1762410279]
 position = Vector2(65.99999, 15.000004)
 scale = Vector2(0.171875, 0.171875)
 texture = ExtResource("2_0wfyh")
 
-[node name="Label" type="Label" parent="Computer/Screen/ColorRect" unique_id=1747795602]
+[node name="Label" type="Label" parent="Computer/Screen/bottom bar" unique_id=1747795602]
 layout_mode = 0
 offset_left = 929.0
 offset_top = 4.0
@@ -317,8 +98,11 @@ anchor_top = 0.23639455
 anchor_right = 0.96193415
 anchor_bottom = 0.8469388
 bounding_box = NodePath("..")
+window_name = "mienwesoirer"
+contents = ExtResource("5_tbgi4")
 metadata/_edit_use_anchors_ = true
 
 [node name="minesweeper" parent="Computer/Screen/Window2" unique_id=411667812 instance=ExtResource("5_tbgi4")]
+visible = false
 layout_mode = 1
 offset_top = 34.0
