@@ -10,8 +10,9 @@ var target_reveals = board_rows * board_cols - board_bombs
 var revealed = 0
 
 const BUTTON_SIZE = 18
-const BOMB_SYMBOL = "💣"
-const FLAGGED = "🚩"
+const FONT_SIZE = 12
+const BOMB_SYMBOL = "🐄"
+const FLAGGED = "🛸"
 const BLANK = "   "
 const ADJACENT_DELTAS = [
 	[-1, -1], [-1,  0], [-1 ,  1],
@@ -115,7 +116,7 @@ func create_board():
 			container.custom_maximum_size = Vector2(BUTTON_SIZE, BUTTON_SIZE)
 			button.add_theme_color_override("font_disabled_color", Color(1.0, 1.0, 1.0, 1.0))
 			button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
-			button.add_theme_font_size_override("font_size", 10)
+			button.add_theme_font_size_override("font_size", FONT_SIZE)
 			button.add_theme_stylebox_override("normal", CELL_BUTTON)
 			button.add_theme_stylebox_override("pressed", CELL_BUTTON)
 			button.add_theme_stylebox_override("hover", CELL_BUTTON_HOVER)

@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://bhsyw5tl7f3iv"]
+
+[node name="Email" type="Control" unique_id=939247503]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=988594141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=288371026]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer" unique_id=1281093504]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+color = Color(0.2685243, 0.6386837, 0.10096181, 1)
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=576563318]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=663141095]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer" unique_id=293065208]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1556097347]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1066564420]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=114030432]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1360004532]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=862694937]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1979154184]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1440923267]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=527876680]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1960417907]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=79245501]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1415372786]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=272381493]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1028444980]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=993349939]
+layout_mode = 2

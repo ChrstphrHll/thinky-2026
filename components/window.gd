@@ -10,8 +10,6 @@ var drag_offset: Vector2
 var resizing: bool = false
 var resizing_origin
 
-static var highest_z_index = 0
-
 @onready var v_box_container = $VBoxContainer
 
 # Called when the node enters the scene tree for the first time.
@@ -33,8 +31,8 @@ func _process(delta):
 
 
 func _set_z_index():
-	highest_z_index += 1
-	z_index = highest_z_index
+	move_to_front()
+
 
 func _on_top_bar_button_down():
 	dragging = true
@@ -55,5 +53,6 @@ func _on_close_pressed():
 
 
 func _on_focus_detector_gui_input(event: InputEvent):
+	# TODO: dont call this on every click for active window
 	if event is InputEventMouseButton and event.is_pressed():
 		_set_z_index()
