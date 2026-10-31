@@ -27,7 +27,9 @@ func _ready():
 func _process(delta):
 	if dragging:
 		var raw_position = get_global_mouse_position() - drag_offset
-		global_position = raw_position.clamp(bounding_box.global_position, bounding_box.global_position + bounding_box.size - self.size)
+		var self_offset = self.size * 0.2
+		var min_clamp = Vector2(bounding_box.global_position.x - self.size.x * 0.8, bounding_box.global_position.y)
+		global_position = raw_position.clamp(min_clamp, bounding_box.global_position + bounding_box.size - self_offset)
 
 
 func _set_z_index():
