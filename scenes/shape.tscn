@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c11v2d7y4jqro"]
+
+[ext_resource type="Script" uid="uid://uob11biadlsd" path="res://scenes/shape.gd" id="1_2qewn"]
+
+[node name="Shape" type="Control" unique_id=503858563]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("1_2qewn")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

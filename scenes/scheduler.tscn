@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b7xgsuxgnma2"]
 
 [ext_resource type="Script" uid="uid://uovmpp315j48" path="res://scenes/scheduler.gd" id="1_roo8f"]
+[ext_resource type="Texture2D" uid="uid://chrrbbc6iyskn" path="res://assets/Moo.svg" id="3_02byb"]
+[ext_resource type="Script" uid="uid://dq6wv6omug437" path="res://scenes/piece.gd" id="4_275d6"]
 
 [node name="Scheduler" type="Control" unique_id=1690978717]
 layout_mode = 3
@@ -9,4 +11,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
 script = ExtResource("1_roo8f")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=702846150]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.98277396, 0.6872534, 0.77190256, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1841969531]
+layout_mode = 1
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 312.0
+offset_bottom = 304.0
+color = Color(0.48962224, 0.48962224, 0.48962218, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect2" unique_id=2003068399]
+layout_mode = 1
+offset_right = 292.0
+offset_bottom = 281.0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect2/MarginContainer" unique_id=2028629758]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=78743591]
+layout_mode = 0
+offset_left = 1340.0
+offset_top = 134.0
+offset_right = 1421.0
+offset_bottom = 215.0
+texture = ExtResource("3_02byb")
+expand_mode = 1
+script = ExtResource("4_275d6")

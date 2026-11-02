@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyibh0tfk7wg2"
-path="res://.godot/imported/cublicle.jpg-f1c609bdc437bad505581abaaedfd178.ctex"
+path="res://.godot/imported/cublicle.jpg-2b6cb196787ef1e18eeca416e78b99be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cublicle.jpg"
-dest_files=["res://.godot/imported/cublicle.jpg-f1c609bdc437bad505581abaaedfd178.ctex"]
+source_file="res://assets/placeholders/cublicle.jpg"
+dest_files=["res://.godot/imported/cublicle.jpg-2b6cb196787ef1e18eeca416e78b99be.ctex"]
 
 [params]
 

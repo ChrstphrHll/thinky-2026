@@ -136,8 +136,6 @@ func create_board():
 	for bomb in board_bombs:
 		place_bomb()
 
-	print_board()
-
 
 func print_board():
 	for row in board:
@@ -148,7 +146,6 @@ func place_bomb():
 	var placed = false
 	while not placed:
 		var coords = random_cell_coords()
-		print("selected coords ", coords)
 		if is_coord_bomb(coords):
 			continue
 		set_coord(coords, BOMB_SYMBOL)

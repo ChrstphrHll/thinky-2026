@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://cqb1twfde62vi"]
 
-[ext_resource type="Texture2D" uid="uid://cyibh0tfk7wg2" path="res://assets/cublicle.jpg" id="1_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://cyibh0tfk7wg2" path="res://assets/placeholders/cublicle.jpg" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://7h2j2nq2a7vn" path="res://components/window.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dwyyc1dbp3y14" path="res://scenes/main.gd" id="1_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bdvocqr8hikkm" path="res://icon.svg" id="2_0wfyh"]
-[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/screensaver.png" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://2hm154dy6lg4" path="res://minesweeper/minesweeper.tscn" id="5_tbgi4"]
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/pfptest.svg" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://b7xgsuxgnma2" path="res://scenes/scheduler.tscn" id="6_choun"]
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="6_tefeu"]
 [ext_resource type="Texture2D" uid="uid://chrrbbc6iyskn" path="res://assets/Moo.svg" id="8_tipki"]
+[ext_resource type="AudioStream" uid="uid://b4yh6xs7ola1g" path="res://assets/audio/lookoutv1.wav" id="9_85g3d"]
 
 [node name="main" type="Control" unique_id=1205300623]
 layout_mode = 3
@@ -23,30 +25,18 @@ position = Vector2(1098, 628)
 scale = Vector2(5.45, 4.805208)
 texture = ExtResource("1_jyhfs")
 
-[node name="Computer" type="ColorRect" parent="." unique_id=1371328899]
-layout_mode = 0
-offset_left = 854.0
-offset_top = 159.0
-offset_right = 1888.0
-offset_bottom = 807.0
-color = Color(0.34407577, 0.34407574, 0.34407574, 1)
-
-[node name="Screen" type="TextureRect" parent="Computer" unique_id=160084312]
+[node name="Screen" type="TextureRect" parent="." unique_id=160084312]
 clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 35.0
-offset_top = 27.0
-offset_right = -27.0
-offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_tbgi4")
 expand_mode = 1
 
-[node name="bottom bar" type="ColorRect" parent="Computer/Screen" unique_id=1855724515]
+[node name="bottom bar" type="ColorRect" parent="Screen" unique_id=1855724515]
 z_index = 4096
 layout_mode = 1
 anchors_preset = 12
@@ -58,22 +48,22 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.25819534, 0.44523996, 1, 1)
 
-[node name="Icon" type="Sprite2D" parent="Computer/Screen/bottom bar" unique_id=421635984]
+[node name="Icon" type="Sprite2D" parent="Screen/bottom bar" unique_id=421635984]
 position = Vector2(16.999998, 15.000004)
 scale = Vector2(0.171875, 0.171875)
 texture = ExtResource("2_0wfyh")
 
-[node name="Icon2" type="Sprite2D" parent="Computer/Screen/bottom bar" unique_id=229743318]
+[node name="Icon2" type="Sprite2D" parent="Screen/bottom bar" unique_id=229743318]
 position = Vector2(41.999996, 15.000004)
 scale = Vector2(0.171875, 0.171875)
 texture = ExtResource("2_0wfyh")
 
-[node name="Icon3" type="Sprite2D" parent="Computer/Screen/bottom bar" unique_id=1762410279]
+[node name="Icon3" type="Sprite2D" parent="Screen/bottom bar" unique_id=1762410279]
 position = Vector2(65.99999, 15.000004)
 scale = Vector2(0.171875, 0.171875)
 texture = ExtResource("2_0wfyh")
 
-[node name="Label" type="Label" parent="Computer/Screen/bottom bar" unique_id=1747795602]
+[node name="Label" type="Label" parent="Screen/bottom bar" unique_id=1747795602]
 layout_mode = 0
 offset_left = 929.0
 offset_top = 4.0
@@ -81,7 +71,7 @@ offset_right = 969.0
 offset_bottom = 27.0
 text = "3:22"
 
-[node name="Email" parent="Computer/Screen" unique_id=945610282 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+[node name="Email" parent="Screen" unique_id=945610282 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.03497939
@@ -90,9 +80,10 @@ anchor_right = 0.8232035
 anchor_bottom = 0.80516887
 bounding_box = NodePath("..")
 window_name = "calendar"
+contents = ExtResource("6_choun")
 metadata/_edit_use_anchors_ = true
 
-[node name="Minesweeper" parent="Computer/Screen" unique_id=1339506137 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+[node name="Minesweeper" parent="Screen" unique_id=1339506137 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.34053499
@@ -104,7 +95,17 @@ window_name = "mienwesoirer"
 contents = ExtResource("5_tbgi4")
 metadata/_edit_use_anchors_ = true
 
+[node name="Computer" type="ColorRect" parent="." unique_id=1371328899]
+visible = false
+layout_mode = 0
+offset_left = 854.0
+offset_top = 159.0
+offset_right = 1888.0
+offset_bottom = 807.0
+color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+
 [node name="Pfptest" type="TextureRect" parent="." unique_id=1467110999]
+visible = false
 custom_maximum_size = Vector2(80, 80)
 layout_mode = 1
 anchors_preset = 4
@@ -117,6 +118,13 @@ grow_vertical = 2
 texture = ExtResource("6_tefeu")
 
 [node name="Moo" type="Sprite2D" parent="." unique_id=1025432257]
+visible = false
 position = Vector2(556.2499, 490.74997)
 scale = Vector2(0.031249853, 0.031249853)
 texture = ExtResource("8_tipki")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806837709]
+stream = ExtResource("9_85g3d")
+volume_db = 1.041
+pitch_scale = 0.75
+autoplay = true

@@ -31,7 +31,7 @@ func _process(delta):
 
 
 func _set_z_index():
-	move_to_front()
+	move_to_front.call_deferred()
 
 
 func _on_top_bar_button_down():

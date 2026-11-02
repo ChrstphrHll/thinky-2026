@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crmiage1sg7ql"
-path="res://.godot/imported/pfptest.svg-7b4b0be00d5348316b289ac8f90c56c0.ctex"
+uid="uid://c3gjfv0fnp6ph"
+path="res://.godot/imported/screensaver.png-5c3971d48eba28212b80bc78f8d23112.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pfptest.svg"
-dest_files=["res://.godot/imported/pfptest.svg-7b4b0be00d5348316b289ac8f90c56c0.ctex"]
+source_file="res://assets/placeholders/screensaver.png"
+dest_files=["res://.godot/imported/screensaver.png-5c3971d48eba28212b80bc78f8d23112.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
