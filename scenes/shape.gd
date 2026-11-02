@@ -27,14 +27,14 @@ func _ready():
 		box.mouse_filter = Control.MOUSE_FILTER_PASS
 		add_child(box)
 	
-	var origin = ColorRect.new()
-	origin.size = Vector2(5,5)
-	origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
-	add_child(origin)
+	#var origin = ColorRect.new()
+	#origin.size = Vector2(5,5)
+	#origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
+	#add_child(origin)
 	
-	var label = Label.new()
-	label.text = str(shape_data.id)
-	add_child(label)
+	#var label = Label.new()
+	#label.text = str(shape_data.id)
+	#add_child(label)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -56,6 +56,7 @@ func _on_gui_input(event: InputEvent):
 func drag():
 	drag_offset = get_local_mouse_position()
 	dragging = true
+	move_to_front.call_deferred()
 	
 	if placed:
 		placed = false

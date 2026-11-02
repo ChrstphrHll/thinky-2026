@@ -10,19 +10,18 @@ var id
 
 
 func _init(
-		color = Color(randf(), randf(), randf(), 1.0),
 		coords: Array[Vector2i] = [
 			Vector2i(0,0),
 			Vector2i(0,1),
 			Vector2i(1,0)
 		],
 		total_size = Vector2i(2,2),
-		current_position = null
+		color = Color(randf(), randf(), randf(), 1.0),
 	):
 	self.color = color
 	self.coords = coords
 	self.total_size = total_size
-	self.current_position = current_position
+	self.current_position = null
 	id = randf()
 
 

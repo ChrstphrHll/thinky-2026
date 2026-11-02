@@ -2,14 +2,31 @@
 
 [ext_resource type="Script" uid="uid://dshtclmr8slqs" path="res://grid_cell.gd" id="1_152gs"]
 
-[node name="GridCell" type="ColorRect" unique_id=1809280381]
+[node name="GridCell" type="ColorRect" unique_id=1809280381 groups=["grid_cells"]]
 custom_minimum_size = Vector2(50, 50)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.19568688, 0.30520776, 0.42009267, 1)
 script = ExtResource("1_152gs")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=277820343]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1736155198]
+layout_mode = 2
+color = Color(0.32017198, 0.3695672, 0.5618875, 1)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

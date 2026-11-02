@@ -12,20 +12,20 @@ var grid = [
 
 var pieces: Array[Shape] = [
 	Shape.new(),
-	Shape.new(Color(0.0, 0.914, 0.482, 1.0), [Vector2i(0,0)], Vector2i(1,1)),
-	Shape.new(Color(0.0, 0.914, 0.482, 1.0), [
+	Shape.new([Vector2i(0,0)], Vector2i(1,1)),
+	Shape.new( [
 		Vector2i(-1,0),
 		Vector2i(0,0),
 		Vector2i(1,0),
 		Vector2i(1,1),
 	], Vector2i(3,2)),
-	Shape.new(Color(0.0, 0.914, 0.482, 1.0), [
+	Shape.new( [
 		Vector2i(-1,0),
 		Vector2i(0,0),
 		Vector2i(1,0),
 		Vector2i(1,1),
 	], Vector2i(3,2)),
-	Shape.new(Color(0.0, 0.914, 0.482, 1.0), [
+	Shape.new([
 		Vector2i(-1,0),
 		Vector2i(0,0),
 		Vector2i(1,0),

@@ -5,7 +5,7 @@ extends Control
 const GRID_CELL = preload("uid://ctckwyr7p00bo")
 const SHAPE = preload("uid://c11v2d7y4jqro")
 const SHAPE_SIZE = 50
-@onready var grid_container = $ColorRect2/MarginContainer/GridContainer
+@onready var grid_container = $CenterContainer/GridContainer
 
 var puzzle = ShapePuzzle.new()
 
@@ -17,6 +17,7 @@ func _ready():
 		instance.bounding_box = self
 		instance.shape_data = shape
 		instance.shape_size = SHAPE_SIZE
+		instance.position = get_shape_starting_position(instance)
 		
 		instance.shape_dropped.connect(_on_shape_dropped)
 		instance.removed_from_grid.connect(_on_shape_removed_from_grid)
@@ -32,9 +33,12 @@ func _ready():
 			instance.add_to_group("grid_cells")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func get_shape_starting_position(shape_node):
+	var rect = $Tray.size
+	print("rect", rect)
+	var x = randf_range(0, rect.x)
+	var y = randf_range(0, rect.y)
+	return Vector2(x,y)
 
 
 func _on_shape_dropped(shape_node: Control, mouse_position: Vector2):
