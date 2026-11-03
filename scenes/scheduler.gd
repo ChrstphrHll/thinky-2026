@@ -1,7 +1,5 @@
 extends Control
 
-@onready var shape = $Shape
-
 const GRID_CELL = preload("uid://ctckwyr7p00bo")
 const SHAPE = preload("uid://c11v2d7y4jqro")
 const SHAPE_SIZE = 50
