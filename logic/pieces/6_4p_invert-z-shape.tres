@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Shape" format=3 uid="uid://ype2yk6cltx7"]
+
+[ext_resource type="Script" uid="uid://b0qwgc7dpwe8h" path="res://logic/shape.gd" id="1_kd5c2"]
+
+[resource]
+script = ExtResource("1_kd5c2")
+coords = Array[Vector2i]([Vector2i(0, 0), Vector2i(-1, 0), Vector2i(0, -1), Vector2i(1, -1)])
+total_size = Vector2i(1, 1)
+metadata/_custom_type_script = "uid://b0qwgc7dpwe8h"
