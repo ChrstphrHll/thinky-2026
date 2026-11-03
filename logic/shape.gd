@@ -2,9 +2,9 @@ extends Resource
 
 class_name Shape
 
-var color: Color
-var coords: Array[Vector2i]
-var total_size: Vector2i
+@export var color: Color
+@export var coords: Array[Vector2i]
+@export var total_size: Vector2i
 var current_position
 var id 
 
@@ -19,7 +19,8 @@ func _init(
 		color = Color(randf(), randf(), randf(), 1.0),
 	):
 	self.color = color
-	self.coords = coords
+	for coord in coords:
+		self.coords.append(Vector2i(coord.y, coord.x))
 	self.total_size = total_size
 	self.current_position = null
 	id = randf()

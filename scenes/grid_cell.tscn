@@ -28,5 +28,11 @@ theme_override_constants/margin_bottom = 2
 layout_mode = 2
 color = Color(0.32017198, 0.3695672, 0.5618875, 1)
 
+[node name="Label" type="Label" parent="." unique_id=1984876094]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

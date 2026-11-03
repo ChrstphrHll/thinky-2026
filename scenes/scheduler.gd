@@ -5,7 +5,7 @@ extends Control
 const GRID_CELL = preload("uid://ctckwyr7p00bo")
 const SHAPE = preload("uid://c11v2d7y4jqro")
 const SHAPE_SIZE = 50
-@onready var grid_container = $CenterContainer/GridContainer
+@onready var grid_container = $HBoxContainer/CenterContainer/GridContainer
 
 var puzzle = ShapePuzzle.new()
 
@@ -23,9 +23,15 @@ func _ready():
 		instance.removed_from_grid.connect(_on_shape_removed_from_grid)
 		add_child(instance)
 	
-	grid_container.columns = puzzle.grid[0].size()
-	
+	grid_container.columns = puzzle.grid[0].size() + 1
+	var time = 7
 	for row_i in puzzle.grid.size():
+		var time_label = Label.new()
+		time_label.text = str(time) + ":00"
+		time += 1
+		if time == 13:
+			time = 1
+		grid_container.add_child(time_label)
 		for col_i in puzzle.grid[0].size():
 			var instance = GRID_CELL.instantiate()
 			instance.coord = Vector2i(row_i, col_i)
@@ -34,7 +40,7 @@ func _ready():
 
 
 func get_shape_starting_position(shape_node):
-	var rect = $Tray.size
+	var rect = $HBoxContainer/Tray.size
 	print("rect", rect)
 	var x = randf_range(0, rect.x)
 	var y = randf_range(0, rect.y)
@@ -70,7 +76,6 @@ func bounce_piece():
 
 
 func get_grid_cell_data(mouse_position: Vector2):
-	print("looking for grid cell")
 	for slot in get_tree().get_nodes_in_group("grid_cells"):
 		var rect = slot.get_global_rect()
 		if rect.has_point(mouse_position):
@@ -79,5 +84,4 @@ func get_grid_cell_data(mouse_position: Vector2):
 				"position": rect.position,
 				"coord": slot.coord
 			}
-			
 	return

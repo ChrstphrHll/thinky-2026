@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://b7xgsuxgnma2"]
 
 [ext_resource type="Script" uid="uid://uovmpp315j48" path="res://scenes/scheduler.gd" id="1_roo8f"]
-[ext_resource type="Texture2D" uid="uid://chrrbbc6iyskn" path="res://assets/Moo.svg" id="3_02byb"]
-[ext_resource type="Script" uid="uid://dq6wv6omug437" path="res://scenes/piece.gd" id="4_275d6"]
 
 [node name="Scheduler" type="Control" unique_id=1690978717]
 layout_mode = 3
@@ -26,17 +24,7 @@ grow_vertical = 2
 mouse_filter = 1
 color = Color(0.26091474, 0.39348397, 0.53108203, 1)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=78743591]
-layout_mode = 0
-offset_left = 1340.0
-offset_top = 134.0
-offset_right = 1421.0
-offset_bottom = 215.0
-texture = ExtResource("3_02byb")
-expand_mode = 1
-script = ExtResource("4_275d6")
-
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1795233778]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1821669183]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,19 +32,81 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=2028629758]
+[node name="Tray" type="ColorRect" parent="HBoxContainer" unique_id=1770174829]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+color = Color(0.06906531, 0.08759291, 0.15946415, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=1795233778]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/CenterContainer" unique_id=2028629758]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
 
-[node name="Tray" type="ColorRect" parent="." unique_id=1770174829]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = 13.0
-offset_right = 528.0
-offset_bottom = -19.0
-grow_vertical = 2
-color = Color(0.06906531, 0.08759291, 0.15946415, 1)
+[node name="Nothing" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=277057410]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=725857898]
+layout_mode = 2
+text = "A"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=166116811]
+layout_mode = 2
+text = "B"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1122102264]
+layout_mode = 2
+text = "C"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1502431390]
+layout_mode = 2
+text = "D"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1581206915]
+layout_mode = 2
+text = "E"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=186856936]
+layout_mode = 2
+text = "F"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1906077963]
+layout_mode = 2
+text = "G"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=301747824]
+layout_mode = 2
+text = "H"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=448534531]
+layout_mode = 2
+text = "I"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1948183649]
+layout_mode = 2
+text = "J"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1679050875]
+layout_mode = 2
+text = "K"
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1809972777]
+layout_mode = 2
+text = "L"
+horizontal_alignment = 1
