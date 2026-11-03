@@ -7,6 +7,10 @@ const SHAPE_SIZE = 50
 
 var puzzle = ShapePuzzle.new()
 
+@onready var piece_anchors = [
+	$HBoxContainer/Tray/Point, $HBoxContainer/Tray/Point2, $HBoxContainer/Tray/Point3, $HBoxContainer/Tray/Point4, $HBoxContainer/Tray/Point5, $HBoxContainer/Tray/Point6, $HBoxContainer/Tray/Point7, $HBoxContainer/Tray/Point8, $HBoxContainer/Tray/Point9, $HBoxContainer/Tray/Point10, $HBoxContainer/Tray/Point11, $HBoxContainer/Tray/Point12, $HBoxContainer/Tray/Point13, $HBoxContainer/Tray/Point14, $HBoxContainer/Tray/Point15, $HBoxContainer/Tray/Point16, $HBoxContainer/Tray/Point17, $HBoxContainer/Tray/Point18, $HBoxContainer/Tray/Point19, $HBoxContainer/Tray/Point20, $HBoxContainer/Tray/Point21, $HBoxContainer/Tray/Point22, $HBoxContainer/Tray/Point23, $HBoxContainer/Tray/Point24, $HBoxContainer/Tray/Point25
+]
+
 func _ready():
 	var test = ShapePuzzle.new()
 	for shape in puzzle.pieces:
@@ -37,11 +41,14 @@ func _ready():
 
 
 func get_shape_starting_position(shape_node):
-	var rect = $HBoxContainer/Tray.size
-	print("rect", rect)
-	var x = randf_range(0, rect.x)
-	var y = randf_range(0, rect.y)
-	return Vector2(x,y)
+	#var rect = $HBoxContainer/Tray.size
+	#print("rect", rect)
+	#var x = randf_range(0, rect.x)
+	#var y = randf_range(0, rect.y)
+	var anchor = piece_anchors.pop_front()
+	if not anchor:
+		return Vector2(50, 50)
+	return anchor.position
 
 
 func _on_shape_dropped(shape_node: Control, mouse_position: Vector2):
