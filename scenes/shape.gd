@@ -27,10 +27,10 @@ func _ready():
 		box.mouse_filter = Control.MOUSE_FILTER_PASS
 		add_child(box)
 	
-	#var origin = ColorRect.new()
-	#origin.size = Vector2(5,5)
-	#origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
-	#add_child(origin)
+	var origin = ColorRect.new()
+	origin.size = Vector2(5,5)
+	origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
+	add_child(origin)
 	
 	#var label = Label.new()
 	#label.text = str(shape_data.id)
