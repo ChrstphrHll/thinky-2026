@@ -7,7 +7,6 @@ const SHAPE_SIZE = 50
 
 var puzzle = ShapePuzzle.new()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var test = ShapePuzzle.new()
 	for shape in puzzle.pieces:

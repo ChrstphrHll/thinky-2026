@@ -18,33 +18,34 @@ var grid = [
 	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
 ]
 
+
 var pieces: Array[Shape] = [
-	ResourceLoader.load("res://logic/pieces/4-square.tres"),
-	ResourceLoader.load("res://logic/pieces/4-z.tres"),
-	Shape.new(),
-	Shape.new([Vector2i(0,0)], Vector2i(1,1)),
-	Shape.new( [
-		Vector2i(-1,0),
-		Vector2i(0,0),
-		Vector2i(1,0),
-		Vector2i(1,1),
-	], Vector2i(3,2)),
-	Shape.new( [
-		Vector2i(-1,0),
-		Vector2i(0,0),
-		Vector2i(1,0),
-		Vector2i(1,1),
-	], Vector2i(3,2)),
-	Shape.new([
-		Vector2i(-1,0),
-		Vector2i(0,0),
-		Vector2i(1,0),
-	], Vector2i(3,1))
+
+
+	#Shape.new(),
+	#Shape.new([Vector2i(0,0)], Vector2i(1,1)),
+	#Shape.new( [
+		#Vector2i(-1,0),
+		#Vector2i(0,0),
+		#Vector2i(1,0),
+		#Vector2i(1,1),
+	#], Vector2i(3,2)),
+	#Shape.new( [
+		#Vector2i(-1,0),
+		#Vector2i(0,0),
+		#Vector2i(1,0),
+		#Vector2i(1,1),
+	#], Vector2i(3,2)),
+	#Shape.new([
+		#Vector2i(-1,0),
+		#Vector2i(0,0),
+		#Vector2i(1,0),
+	#], Vector2i(3,1))
 ]
 
 
 func _init():
-	pass
+	load_pieces()
 
 
 func create_board():
@@ -52,7 +53,14 @@ func create_board():
 
 
 func load_pieces():
-	pass
+	var base_directory = "res://logic/pieces/"
+	
+	var pieces_raw = ResourceLoader.list_directory(base_directory)
+	
+	for piece_path in pieces_raw:
+		var full_path = base_directory + piece_path
+		var item = ResourceLoader.load(full_path)
+		pieces.append(item)
 
 
 func check_piece_valid_placement(piece, grid_coord):
