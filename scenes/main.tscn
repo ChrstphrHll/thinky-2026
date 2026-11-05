@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b7xgsuxgnma2" path="res://scenes/scheduler.tscn" id="6_choun"]
 [ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="6_tefeu"]
 [ext_resource type="Texture2D" uid="uid://chrrbbc6iyskn" path="res://assets/Moo.svg" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://bhsyw5tl7f3iv" path="res://scenes/email.tscn" id="8_ya4ey"]
 [ext_resource type="AudioStream" uid="uid://b4yh6xs7ola1g" path="res://assets/audio/lookoutv1.wav" id="9_85g3d"]
 
 [node name="main" type="Control" unique_id=1205300623]
@@ -94,6 +95,17 @@ offset_left = -3.0517578e-05
 bounding_box = NodePath("..")
 window_name = "calendar"
 contents = ExtResource("6_choun")
+metadata/_edit_use_anchors_ = true
+
+[node name="Window" parent="Screen" unique_id=164327919 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0921875
+anchor_top = 0.18898305
+anchor_right = 0.75104165
+anchor_bottom = 0.9050847
+bounding_box = NodePath("..")
+contents = ExtResource("8_ya4ey")
 metadata/_edit_use_anchors_ = true
 
 [node name="Computer" type="ColorRect" parent="." unique_id=1371328899]

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://b3vdj7nk56kq"]
+
+[ext_resource type="Texture2D" uid="uid://bdvocqr8hikkm" path="res://icon.svg" id="1_4on7w"]
+[ext_resource type="ButtonGroup" uid="uid://cpkyfm6vt6im0" path="res://components/email_select_button_group.tres" id="1_427g1"]
+[ext_resource type="Script" uid="uid://c08fbc72auncv" path="res://components/preview.gd" id="2_ow6lr"]
+
+[node name="Preview" type="Button" unique_id=1859891319]
+custom_minimum_size = Vector2(0, 80)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1492.0
+offset_bottom = -1089.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("1_427g1")
+script = ExtResource("2_ow6lr")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=243198533]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=930517346]
+layout_mode = 2
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=2034157054]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.24
+texture = ExtResource("1_4on7w")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1797077244]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sender" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1383663747]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "TOM BOMBADLI"
+
+[node name="Subject" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1409271220]
+layout_mode = 2
+text = "This might be the biggest burger you seen in the"
+clip_text = true
+text_overrun_behavior = 3
