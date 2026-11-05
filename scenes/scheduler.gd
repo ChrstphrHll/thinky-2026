@@ -22,6 +22,7 @@ func _ready():
 		
 		instance.shape_dropped.connect(_on_shape_dropped)
 		instance.removed_from_grid.connect(_on_shape_removed_from_grid)
+		instance.shape_rotated.connect(_on_shape_rotated)
 		add_child(instance)
 	
 	grid_container.columns = puzzle.grid[0].size() + 1
@@ -70,8 +71,14 @@ func _on_shape_removed_from_grid(piece_id: float):
 	puzzle.remove_piece(piece_id)
 
 
+func _on_shape_rotated(piece_id: float, shape_node):
+	puzzle.remove_piece(piece_id)
+	puzzle.rotate_piece(piece_id)
+	shape_node.post_rotation_check()
+
+
 func place_piece(shape_node: Control, grid_cell_position: Vector2):
-	shape_node.global_position = grid_cell_position
+	shape_node.place_at_grid(grid_cell_position)
 	shape_node.placed = true
 
 

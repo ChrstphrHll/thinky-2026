@@ -114,6 +114,8 @@ func get_piece_from_id(id: float):
 
 func remove_piece(piece_id: float):
 	var piece = get_piece_from_id(piece_id)
+	if not piece.current_position:
+		return
 	for coord in piece.coords:
 		var target_coord = piece.current_position + coord
 		set_grid_value(target_coord,-1)
@@ -132,8 +134,12 @@ func add_piece(grid_coord: Vector2i, piece_id: float):
 
 	print_grid()
 
-func rotate_piece():
-	pass
+func rotate_piece(piece_id: float):
+	var piece = get_piece_from_id(piece_id)
+	var new_coords: Array[Vector2i] = []
+	for coord in piece.coords:
+		new_coords.append(Vector2i(coord.y, coord.x * -1))
+	piece.coords = new_coords
 
 
 func get_grid_value(coord):

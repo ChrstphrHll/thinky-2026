@@ -8,11 +8,13 @@ extends Control
 var dragging: bool = false
 var drag_offset: Vector2
 var total_node_size: Vector2
+var zero
 
 var placed := false
 
 signal shape_dropped
 signal removed_from_grid
+signal shape_rotated
 
 
 # Called when the node enters the scene tree for the first time.
@@ -27,10 +29,17 @@ func _ready():
 		box.mouse_filter = Control.MOUSE_FILTER_PASS
 		add_child(box)
 	
-	var origin = ColorRect.new()
-	origin.size = Vector2(5,5)
-	origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
-	add_child(origin)
+	pivot_offset = Vector2(shape_size / 2.0, shape_size / 2.0)
+	
+	#var origin = ColorRect.new()
+	#origin.size = Vector2(5,5)
+	#origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
+	#add_child(origin)
+#
+	#zero = ColorRect.new()
+	#zero.size = Vector2(5,5)
+	#zero.position = Vector2( - 2.5,- 2.5)
+	#add_child(zero)
 	
 	#var label = Label.new()
 	#label.text = str(shape_data.id)
@@ -46,15 +55,18 @@ func _process(delta):
 
 func _on_gui_input(event: InputEvent):
 	# TODO: dont call this on every click for active window
-	if event is InputEventMouseButton and event.is_pressed():
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		drag()
+	
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
+		rotate()
 
-	elif event is InputEventMouseButton and event.is_released():
+	elif event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_LEFT:
 		drop()
 
 
 func drag():
-	drag_offset = get_local_mouse_position()
+	drag_offset = get_local_mouse_position().rotated(rotation)
 	dragging = true
 	move_to_front.call_deferred()
 	
@@ -69,8 +81,38 @@ func drop():
 	shape_dropped.emit(self, origin_position)
 
 
+func rotate():
+	rotation += PI/2
+	drag_offset = Vector2(drag_offset.y, drag_offset.x * -1)
+	shape_rotated.emit(shape_data.id, self)
+
+
+func post_rotation_check():
+	if not dragging:
+		placed = false
+		drop()
+
+
 func get_origin_position():
-	return global_position + Vector2(shape_size / 2.0, shape_size / 2.0)
+	return global_position + Vector2(shape_size / 2.0, shape_size / 2.0).rotated(rotation)
+
+
+func place_at_grid(grid_position: Vector2):
+	var position_mod = Vector2(0,0)
+	var rotation_mod_raw = rotation / (PI/2)
+	var rotation_mod = int(rotation_mod_raw) % 4
+	
+	match rotation_mod:
+		1:
+			position_mod = Vector2(shape_size, 0)
+		2:
+			position_mod = Vector2(shape_size, shape_size)
+		3:
+			position_mod = Vector2(0, shape_size)
+		0:
+			position_mod = Vector2(0, 0)
+	
+	global_position = grid_position + position_mod
 
 
 func get_piece_coord_from_mouse():

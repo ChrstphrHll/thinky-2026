@@ -141,3 +141,9 @@ stream = ExtResource("9_85g3d")
 volume_db = 1.041
 pitch_scale = 0.75
 autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=2072405786]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "ŵèřțýùìòãďșğħķłźçń"
