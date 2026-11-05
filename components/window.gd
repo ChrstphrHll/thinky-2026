@@ -14,6 +14,9 @@ var resizing_origin
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if window_name:
+		$%WindowName.text = window_name
+	
 	if contents:
 		var instance = contents.instantiate()
 		v_box_container.add_child(instance)

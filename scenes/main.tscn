@@ -1,16 +1,15 @@
 [gd_scene format=3 uid="uid://cqb1twfde62vi"]
 
-[ext_resource type="Texture2D" uid="uid://cyibh0tfk7wg2" path="res://assets/placeholders/cublicle.jpg" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://7h2j2nq2a7vn" path="res://components/window.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dwyyc1dbp3y14" path="res://scenes/main.gd" id="1_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bdvocqr8hikkm" path="res://icon.svg" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://2hm154dy6lg4" path="res://minesweeper/minesweeper.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b7xgsuxgnma2" path="res://scenes/scheduler.tscn" id="6_choun"]
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="6_tefeu"]
-[ext_resource type="Texture2D" uid="uid://chrrbbc6iyskn" path="res://assets/Moo.svg" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://bhsyw5tl7f3iv" path="res://scenes/email.tscn" id="8_ya4ey"]
 [ext_resource type="AudioStream" uid="uid://b4yh6xs7ola1g" path="res://assets/audio/lookoutv1.wav" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://36y2d3jslsh3" path="res://scenes/desktop_icon.tscn" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://p7agdrfeo5tg" path="res://scenes/time_keeper.tscn" id="9_eb6dy"]
 
 [node name="main" type="Control" unique_id=1205300623]
 layout_mode = 3
@@ -20,11 +19,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o6xl0")
-
-[node name="Cublicle" type="Sprite2D" parent="." unique_id=1424924615]
-position = Vector2(1098, 628)
-scale = Vector2(5.45, 4.805208)
-texture = ExtResource("1_jyhfs")
 
 [node name="Screen" type="TextureRect" parent="." unique_id=160084312]
 clip_contents = true
@@ -44,35 +38,56 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -29.0
+offset_top = -36.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.25819534, 0.44523996, 1, 1)
 
-[node name="Icon" type="Sprite2D" parent="Screen/bottom bar" unique_id=421635984]
-position = Vector2(16.999998, 15.000004)
-scale = Vector2(0.171875, 0.171875)
-texture = ExtResource("2_0wfyh")
+[node name="MarginContainer" type="MarginContainer" parent="Screen/bottom bar" unique_id=1456984375]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 4
 
-[node name="Icon2" type="Sprite2D" parent="Screen/bottom bar" unique_id=229743318]
-position = Vector2(41.999996, 15.000004)
-scale = Vector2(0.171875, 0.171875)
-texture = ExtResource("2_0wfyh")
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/bottom bar/MarginContainer" unique_id=646236583]
+layout_mode = 2
 
-[node name="Icon3" type="Sprite2D" parent="Screen/bottom bar" unique_id=1762410279]
-position = Vector2(65.99999, 15.000004)
-scale = Vector2(0.171875, 0.171875)
+[node name="TextureRect" type="TextureRect" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=224905988]
+layout_mode = 2
 texture = ExtResource("2_0wfyh")
+expand_mode = 3
+stretch_mode = 5
 
-[node name="Label" type="Label" parent="Screen/bottom bar" unique_id=1747795602]
-layout_mode = 0
-offset_left = 929.0
-offset_top = 4.0
-offset_right = 969.0
-offset_bottom = 27.0
+[node name="TextureRect2" type="TextureRect" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=188562934]
+layout_mode = 2
+texture = ExtResource("2_0wfyh")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=939601693]
+layout_mode = 2
+texture = ExtResource("2_0wfyh")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=783423984]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Time" type="Label" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=1747795602]
+unique_name_in_owner = true
+layout_mode = 2
 text = "3:22"
 
 [node name="Minesweeper" parent="Screen" unique_id=1339506137 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.34053499
@@ -85,6 +100,7 @@ contents = ExtResource("5_tbgi4")
 metadata/_edit_use_anchors_ = true
 
 [node name="Scheduler" parent="Screen" unique_id=945610282 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.03497939
@@ -97,7 +113,9 @@ window_name = "calendar"
 contents = ExtResource("6_choun")
 metadata/_edit_use_anchors_ = true
 
-[node name="Window" parent="Screen" unique_id=164327919 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+[node name="Email" parent="Screen" unique_id=164327919 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0921875
@@ -105,36 +123,48 @@ anchor_top = 0.18898305
 anchor_right = 0.75104165
 anchor_bottom = 0.9050847
 bounding_box = NodePath("..")
+window_name = "Email"
 contents = ExtResource("8_ya4ey")
 metadata/_edit_use_anchors_ = true
 
-[node name="Computer" type="ColorRect" parent="." unique_id=1371328899]
+[node name="TimeKeeper" parent="Screen" unique_id=1670847942 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+unique_name_in_owner = true
 visible = false
-layout_mode = 0
-offset_left = 854.0
-offset_top = 159.0
-offset_right = 1888.0
-offset_bottom = 807.0
-color = Color(0.34407577, 0.34407574, 0.34407574, 1)
-
-[node name="Pfptest" type="TextureRect" parent="." unique_id=1467110999]
-visible = false
-custom_maximum_size = Vector2(80, 80)
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -40.0
-offset_right = 80.0
-offset_bottom = 40.0
-grow_vertical = 2
-texture = ExtResource("6_tefeu")
+anchors_preset = -1
+anchor_left = 0.013020833
+anchor_top = 0.43898305
+anchor_right = 0.32135418
+anchor_bottom = 0.8016949
+bounding_box = NodePath("..")
+contents = ExtResource("9_eb6dy")
+metadata/_edit_use_anchors_ = true
 
-[node name="Moo" type="Sprite2D" parent="." unique_id=1025432257]
-visible = false
-position = Vector2(556.2499, 490.74997)
-scale = Vector2(0.031249853, 0.031249853)
-texture = ExtResource("8_tipki")
+[node name="GridContainer" type="GridContainer" parent="Screen" unique_id=1033384503]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 25.0
+offset_right = 93.0
+offset_bottom = 357.0
+
+[node name="EmailIcon" parent="Screen/GridContainer" unique_id=1832250779 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+layout_mode = 2
+connected_window = NodePath("../../Email")
+
+[node name="CowsweeperIcon" parent="Screen/GridContainer" unique_id=1426099458 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+layout_mode = 2
+app_name = "Cowsweeper"
+connected_window = NodePath("../../Minesweeper")
+
+[node name="SchedulerIcon" parent="Screen/GridContainer" unique_id=19493643 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+layout_mode = 2
+app_name = "Sched"
+connected_window = NodePath("../../Scheduler")
+
+[node name="TimeKeeperIcon" parent="Screen/GridContainer" unique_id=1106398979 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+layout_mode = 2
+app_name = "TimeKeeper"
+connected_window = NodePath("../../TimeKeeper")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806837709]
 stream = ExtResource("9_85g3d")
@@ -142,8 +172,4 @@ volume_db = 1.041
 pitch_scale = 0.75
 autoplay = true
 
-[node name="Label" type="Label" parent="." unique_id=2072405786]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "ŵèřțýùìòãďșğħķłźçń"
+[connection signal="pressed" from="Screen/GridContainer/EmailIcon" to="." method="_on_email_icon_pressed"]

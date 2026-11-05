@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://p7agdrfeo5tg"]
+
+[ext_resource type="Texture2D" uid="uid://bdvocqr8hikkm" path="res://icon.svg" id="1_v44kx"]
+
+[node name="Control" type="Control" unique_id=1451033522]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2101009482]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1913044355]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2012058804]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1906626350]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_v44kx")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer" unique_id=15084723]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer" unique_id=1489495799]
+layout_mode = 2
+
+[node name="Break" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/VBoxContainer" unique_id=1104530569]
+layout_mode = 2
+text = "Take a Break"
+
+[node name="ClockOut" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/VBoxContainer" unique_id=364862553]
+layout_mode = 2
+text = "Clock Out"

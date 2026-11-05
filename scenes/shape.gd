@@ -31,15 +31,15 @@ func _ready():
 	
 	pivot_offset = Vector2(shape_size / 2.0, shape_size / 2.0)
 	
-	#var origin = ColorRect.new()
-	#origin.size = Vector2(5,5)
-	#origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
-	#add_child(origin)
-#
-	#zero = ColorRect.new()
-	#zero.size = Vector2(5,5)
-	#zero.position = Vector2( - 2.5,- 2.5)
-	#add_child(zero)
+	var origin = ColorRect.new()
+	origin.size = Vector2(5,5)
+	origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
+	add_child(origin)
+
+	zero = ColorRect.new()
+	zero.size = Vector2(5,5)
+	zero.position = Vector2( - 2.5,- 2.5)
+	add_child(zero)
 	
 	#var label = Label.new()
 	#label.text = str(shape_data.id)
