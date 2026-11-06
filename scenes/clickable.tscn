@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dglljxwsiddqn"]
+
+[ext_resource type="Script" uid="uid://cegjdxsg77l6v" path="res://scenes/clickable.gd" id="1_4ve21"]
+[ext_resource type="Shader" uid="uid://bwlf4kphnhxq" path="res://outline.gdshader" id="1_8ylfl"]
+[ext_resource type="Texture2D" uid="uid://bxjmkmd72c5do" path="res://assets/placeholders/test.png" id="2_4ve21"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ynx3y"]
+shader = ExtResource("1_8ylfl")
+
+[node name="Button" type="TextureButton" unique_id=1804049820]
+custom_minimum_size = Vector2(80, 80)
+script = ExtResource("1_4ve21")
+
+[node name="Shadow" type="TextureRect" parent="." unique_id=1249864223]
+visible = false
+material = SubResource("ShaderMaterial_ynx3y")
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_4ve21")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Test" type="TextureRect" parent="." unique_id=357092727]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 84.0
+offset_bottom = 83.0
+texture = ExtResource("2_4ve21")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
