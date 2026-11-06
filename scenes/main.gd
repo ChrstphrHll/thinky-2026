@@ -14,6 +14,8 @@ func _ready():
 	Signals.day_ended.connect(call_it)
 	Signals.day_started.connect(start_day)
 	Signals.start_day()
+	
+	Signals.wallpaper_changed.connect(change_wallpaper)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,3 +35,7 @@ func start_day(day):
 	animation_player.play("day_start")
 	await animation_player.animation_finished
 	bootup.hide()
+
+
+func change_wallpaper(texture):
+	$Screen.texture = texture

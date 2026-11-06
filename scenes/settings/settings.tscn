@@ -1,0 +1,300 @@
+[gd_scene format=3 uid="uid://b5h57axbj8cnd"]
+
+[ext_resource type="Script" uid="uid://br8wj5c2mve8h" path="res://scenes/settings/settings.gd" id="1_x2hje"]
+[ext_resource type="Texture2D" uid="uid://bdvocqr8hikkm" path="res://icon.svg" id="2_nkug2"]
+[ext_resource type="ButtonGroup" uid="uid://g026nuv10pnq" path="res://scenes/settings/settings_buttons.tres" id="3_1slea"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="4_1slea"]
+[ext_resource type="ButtonGroup" uid="uid://b316aanhg8le3" path="res://scenes/settings/background_buttons.tres" id="4_vghtj"]
+[ext_resource type="Script" uid="uid://cwkkwggbh0b5w" path="res://scenes/settings/background.gd" id="5_v1hle"]
+[ext_resource type="Texture2D" uid="uid://cyibh0tfk7wg2" path="res://assets/placeholders/cublicle.jpg" id="7_h6son"]
+
+[node name="Settings" type="Control" unique_id=182077178]
+layout_mode = 3
+anchor_right = 0.45729166
+anchor_bottom = 0.44491526
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_x2hje")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2037556198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4506483, 0.4506483, 0.45064825, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1073485550]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1444910753]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1663431297]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.39
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1196129668]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/ColorRect" unique_id=1745072354]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/ColorRect/MarginContainer" unique_id=1537162935]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/ColorRect/MarginContainer/HBoxContainer" unique_id=1096491162]
+layout_mode = 2
+texture = ExtResource("2_nkug2")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/ColorRect/MarginContainer/HBoxContainer" unique_id=82585452]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Settings"
+
+[node name="Background" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1244159885]
+visible = false
+custom_maximum_size = Vector2(-1, 80)
+layout_mode = 2
+size_flags_vertical = 3
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("3_1slea")
+text = "Background"
+
+[node name="Audio" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1716493848]
+visible = false
+custom_maximum_size = Vector2(-1, 80)
+layout_mode = 2
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("3_1slea")
+text = "Audio"
+
+[node name="AdminAccess" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=546819437]
+visible = false
+custom_maximum_size = Vector2(-1, 80)
+layout_mode = 2
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("3_1slea")
+text = "Advanced Settings"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=60098527]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackgroundPanel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2115892258]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel" unique_id=1770828085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer" unique_id=2029830142]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer/VBoxContainer" unique_id=1952850776]
+layout_mode = 2
+text = "Company Approved Desktop Backgrounds"
+
+[node name="Backgrounds" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer/VBoxContainer" unique_id=1209147167]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 5
+
+[node name="TextureRect" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer/VBoxContainer/Backgrounds" unique_id=1384559431]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("4_vghtj")
+texture_normal = ExtResource("4_1slea")
+stretch_mode = 6
+script = ExtResource("5_v1hle")
+
+[node name="TextureRect2" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer/VBoxContainer/Backgrounds" unique_id=2060630211]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_vghtj")
+texture_normal = ExtResource("7_h6son")
+stretch_mode = 6
+script = ExtResource("5_v1hle")
+
+[node name="AudioPanel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1179083556]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AudioPanel" unique_id=1807134193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AudioPanel/MarginContainer" unique_id=725550118]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AudioPanel/MarginContainer/VBoxContainer" unique_id=1863693089]
+layout_mode = 2
+text = "Audio Settings"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AudioPanel/MarginContainer/VBoxContainer" unique_id=401324434]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AudioPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1118418244]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Master Volume"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AudioPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2067043854]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="AdvancedSettingsPanel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=163644708]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel" unique_id=1878846703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer" unique_id=1972596946]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=1737205056]
+layout_mode = 2
+text = "Advanced Settings"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=2035652745]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=437295451]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "A"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2097720519]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=596849212]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1371910657]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "B"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=143265018]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=700183831]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=579967394]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "C"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1482551616]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=683334919]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1557503286]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "D"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1475644765]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=903126749]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=664879432]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "E"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1095318677]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=1946139725]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1567360373]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "F"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1524198863]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/Background" to="." method="_on_background_toggled"]
+[connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/Audio" to="." method="_on_audio_toggled"]
+[connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/AdminAccess" to="." method="_on_admin_access_toggled"]

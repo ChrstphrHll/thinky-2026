@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b4yh6xs7ola1g" path="res://assets/audio/lookoutv1.wav" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://36y2d3jslsh3" path="res://scenes/desktop_icon.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://p7agdrfeo5tg" path="res://scenes/time_keeper.tscn" id="9_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://b5h57axbj8cnd" path="res://scenes/settings/settings.tscn" id="9_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://b7vdooscllo0i" path="res://assets/art/app_icons/LookOut App Icon.svg" id="10_trceg"]
 [ext_resource type="Texture2D" uid="uid://dxsfg8bmj0hrb" path="res://assets/art/app_icons/Cowsweeper Icon.svg" id="11_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dglljxwsiddqn" path="res://scenes/clickable.tscn" id="12_eb6dy"]
@@ -30,6 +31,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Day:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [null]
+}
 
 [sub_resource type="Animation" id="Animation_jkv2x"]
 resource_name = "day_end"
@@ -44,6 +57,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Day:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_trceg"]
@@ -198,6 +223,16 @@ bounding_box = NodePath("..")
 contents = ExtResource("9_eb6dy")
 metadata/_edit_use_anchors_ = true
 
+[node name="Settings" parent="Screen" unique_id=2025695953 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+layout_mode = 1
+offset_left = 518.0
+offset_top = 268.0
+offset_right = -519.0
+offset_bottom = -348.0
+bounding_box = NodePath("..")
+window_name = "System Settings"
+contents = ExtResource("9_jbj1t")
+
 [node name="GridContainer" type="GridContainer" parent="Screen" unique_id=1033384503]
 layout_mode = 0
 offset_left = 18.0
@@ -227,6 +262,11 @@ layout_mode = 2
 app_name = "TimeKeeper"
 connected_window = NodePath("../../TimeKeeper")
 
+[node name="SettingsIcon" parent="Screen/GridContainer" unique_id=606388732 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+layout_mode = 2
+app_name = "Settings"
+connected_window = NodePath("../../Settings")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806837709]
 stream = ExtResource("9_85g3d")
 volume_db = 1.041
@@ -234,6 +274,7 @@ pitch_scale = 0.75
 autoplay = true
 
 [node name="Bootup" type="Control" parent="." unique_id=1047697411]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
