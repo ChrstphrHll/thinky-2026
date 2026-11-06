@@ -11,7 +11,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Signals.day_started.connect(call_it)
+	Signals.day_ended.connect(call_it)
+	Signals.day_started.connect(start_day)
 	Signals.start_day()
 
 
@@ -21,9 +22,14 @@ func _process(delta):
 
 
 func call_it(day):
-	pass
-	#day_count_label.text = "Day " + str(day)
-	#bootup.show()
-	#animation_player.play("next_day")
-	#await animation_player.animation_finished
-	#bootup.hide()
+	day_count_label.text = "Day " + str(day)
+	bootup.show()
+	animation_player.play("day_end")
+	await animation_player.animation_finished
+	Signals.start_day()
+
+
+func start_day(day):
+	animation_player.play("day_start")
+	await animation_player.animation_finished
+	bootup.hide()
