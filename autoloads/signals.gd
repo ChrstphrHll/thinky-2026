@@ -5,6 +5,7 @@ var day = 0
 
 
 signal day_started
+signal day_ended
 
 
 func start_day():

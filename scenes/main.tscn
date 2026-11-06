@@ -11,84 +11,46 @@
 [ext_resource type="AudioStream" uid="uid://b4yh6xs7ola1g" path="res://assets/audio/lookoutv1.wav" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://36y2d3jslsh3" path="res://scenes/desktop_icon.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://p7agdrfeo5tg" path="res://scenes/time_keeper.tscn" id="9_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://b7vdooscllo0i" path="res://assets/art/app_icons/LookOut App Icon.svg" id="10_trceg"]
+[ext_resource type="Texture2D" uid="uid://dxsfg8bmj0hrb" path="res://assets/art/app_icons/Cowsweeper Icon.svg" id="11_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dglljxwsiddqn" path="res://scenes/clickable.tscn" id="12_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://d366iopfcanmy" path="res://assets/art/app_icons/Unnamed Slack-like App Icon.svg" id="12_jbj1t"]
 
 [sub_resource type="Animation" id="Animation_eb6dy"]
-length = 4.0
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SplashScreen:color")
+tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6666667, 2.9, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Day:theme_override_colors/font_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.6333333, 1.1333333, 2.9, 3.9666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_trceg"]
-resource_name = "fade"
-length = 1.0666667
+resource_name = "day_start"
+length = 2.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SplashScreen:color")
+tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0666667),
+"times": PackedFloat32Array(0, 2.0333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_a8y0u"]
-resource_name = "next_day"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SplashScreen:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6666667, 2.9, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Day:theme_override_colors/font_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.6333333, 1.1333333, 2.9, 3.9666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a8y0u"]
 _data = {
 &"RESET": SubResource("Animation_eb6dy"),
-&"fade": SubResource("Animation_trceg"),
-&"next_day": SubResource("Animation_a8y0u")
+&"day_start": SubResource("Animation_trceg")
 }
 
 [node name="main" type="Control" unique_id=1205300623]
@@ -229,16 +191,19 @@ offset_bottom = 357.0
 
 [node name="EmailIcon" parent="Screen/GridContainer" unique_id=1832250779 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
+app_icon = ExtResource("10_trceg")
 connected_window = NodePath("../../Email")
 
 [node name="CowsweeperIcon" parent="Screen/GridContainer" unique_id=1426099458 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "Cowsweeper"
+app_icon = ExtResource("11_jkv2x")
 connected_window = NodePath("../../Minesweeper")
 
 [node name="SchedulerIcon" parent="Screen/GridContainer" unique_id=19493643 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "Sched"
+app_icon = ExtResource("12_jbj1t")
 connected_window = NodePath("../../Scheduler")
 
 [node name="TimeKeeperIcon" parent="Screen/GridContainer" unique_id=1106398979 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
@@ -268,10 +233,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Bootup" unique_id=982247889]
-libraries/ = SubResource("AnimationLibrary_a8y0u")
+color = Color(0, 0, 0, 1)
 
 [node name="Day" type="Label" parent="Bootup" unique_id=932746044]
 layout_mode = 1
@@ -280,11 +242,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 0)
 theme_override_font_sizes/font_size = 72
 text = "Day 2"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bootup" unique_id=1012325663]
+libraries/ = SubResource("AnimationLibrary_a8y0u")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1350691070]
 visible = false

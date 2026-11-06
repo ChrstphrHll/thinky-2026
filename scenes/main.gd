@@ -21,8 +21,9 @@ func _process(delta):
 
 
 func call_it(day):
-	day_count_label.text = "Day " + str(day)
-	bootup.show()
-	animation_player.play("next_day")
-	await animation_player.animation_finished
-	bootup.hide()
+	pass
+	#day_count_label.text = "Day " + str(day)
+	#bootup.show()
+	#animation_player.play("next_day")
+	#await animation_player.animation_finished
+	#bootup.hide()

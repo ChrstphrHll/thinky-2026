@@ -25,10 +25,10 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [node name="Icon" type="Button" unique_id=1832250779]
-custom_minimum_size = Vector2(75, 80)
+custom_minimum_size = Vector2(150, 160)
 anchors_preset = -1
-anchor_right = 0.039
-anchor_bottom = 0.068
+anchor_right = 0.11660417
+anchor_bottom = 0.21376272
 offset_right = -4.880005
 offset_bottom = -10.2400055
 theme_override_styles/normal = SubResource("StyleBoxFlat_85g3d")
