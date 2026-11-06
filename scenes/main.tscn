@@ -220,10 +220,12 @@ anchor_top = 0.43898305
 anchor_right = 0.32135418
 anchor_bottom = 0.8016949
 bounding_box = NodePath("..")
+window_name = "Time Keeper"
 contents = ExtResource("9_eb6dy")
 metadata/_edit_use_anchors_ = true
 
 [node name="Settings" parent="Screen" unique_id=2025695953 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+visible = false
 layout_mode = 1
 offset_left = 518.0
 offset_top = 268.0
