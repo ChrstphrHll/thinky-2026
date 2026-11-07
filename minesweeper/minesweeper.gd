@@ -20,8 +20,11 @@ const ADJACENT_DELTAS = [
 	[ 1, -1], [ 1,  0], [ 1 ,  1],
 ]
 
-@onready var win_label = $Label
-@onready var board_ui = $HBoxContainer/CenterContainer/Board
+const WIN_MESSAGE = "[wave][rainbow]You Win!!!!![/rainbow][/wave]"
+const LOSE_MESSAGE = "Ooops. Try Again"
+
+@onready var win_label = $HBoxContainer/CenterContainer/VBoxContainer/Label
+@onready var board_ui = $HBoxContainer/CenterContainer/VBoxContainer/Board
 
 const CELL_BUTTON = preload("uid://bcqe48ggyfioa")
 const CELL_BUTTON_DISABLED = preload("uid://ds05seb1vtjit")

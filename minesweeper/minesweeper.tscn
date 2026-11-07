@@ -33,28 +33,157 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=181135115]
 layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Panel" type="Panel" parent="HBoxContainer/MarginContainer" unique_id=1594067917]
+layout_mode = 2
+
+[node name="Controls" type="MarginContainer" parent="HBoxContainer/MarginContainer" unique_id=1028548295]
+layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer" unique_id=1917567607]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/Controls" unique_id=1917567607]
+custom_minimum_size = Vector2(225.555, 0)
 layout_mode = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer" unique_id=1858977707]
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=2124750951]
 layout_mode = 2
-text = "COWSWEEPER"
+text = "Levels"
 
-[node name="Restart" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer" unique_id=1041192408]
+[node name="Restart" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1041192408]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "New Game"
+text = "Easy"
+
+[node name="Restart2" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=600229925]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Medium"
+
+[node name="Restart3" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1014328377]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Hard
+"
+
+[node name="Spacer" type="Control" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1139077038]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=741936665]
+layout_mode = 2
+text = "Leaderboard"
+
+[node name="LeaderboardEntry" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=317829808]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry" unique_id=685537416]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Bobra"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry" unique_id=13212398]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry2" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1563787151]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry2" unique_id=123984274]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Bobra"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry2" unique_id=1071739509]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry3" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1591799533]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry3" unique_id=1044970849]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Bobra"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry3" unique_id=817056901]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry4" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=827863949]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry4" unique_id=2057957171]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Bobra"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry4" unique_id=2140090604]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry5" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1347462145]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry5" unique_id=243160410]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Bobra"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry5" unique_id=283768229]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry6" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1618045325]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry6" unique_id=1164343754]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Bobra"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry6" unique_id=1900203426]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry7" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=635024444]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry7" unique_id=2071643121]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Bobra"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry7" unique_id=984229658]
+layout_mode = 2
+text = "0:31"
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=1615265987]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Board" type="GridContainer" parent="HBoxContainer/CenterContainer" unique_id=556924460]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/CenterContainer" unique_id=1312908657]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Board" type="GridContainer" parent="HBoxContainer/CenterContainer/VBoxContainer" unique_id=556924460]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
+
+[node name="Label" type="RichTextLabel" parent="HBoxContainer/CenterContainer/VBoxContainer" unique_id=462954544]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[wave][rainbow]You Win!!!!![/rainbow][/wave]"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
