@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b5h57axbj8cnd" path="res://scenes/settings/settings.tscn" id="9_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://be1ej1b8xfj2i" path="res://scenes/admin/admin.tscn" id="10_muem4"]
 [ext_resource type="Texture2D" uid="uid://b7vdooscllo0i" path="res://assets/art/app_icons/LookOut App Icon.svg" id="10_trceg"]
+[ext_resource type="PackedScene" uid="uid://dytpytk5w18y5" path="res://scenes/credits.tscn" id="11_dp3eg"]
 [ext_resource type="Texture2D" uid="uid://dxsfg8bmj0hrb" path="res://assets/art/app_icons/Cowsweeper Icon.svg" id="11_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dglljxwsiddqn" path="res://scenes/clickable.tscn" id="12_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://d366iopfcanmy" path="res://assets/art/app_icons/Unnamed Slack-like App Icon.svg" id="12_jbj1t"]
@@ -261,12 +262,13 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Email" parent="Screen" unique_id=164327919 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0921875
-anchor_top = 0.18898305
-anchor_right = 0.75104165
-anchor_bottom = 0.9050847
+anchor_left = 0.1796875
+anchor_top = 0.095762715
+anchor_right = 0.8385417
+anchor_bottom = 0.81186444
 bounding_box = NodePath("..")
 window_name = "Email"
 contents = ExtResource("8_ya4ey")
@@ -297,7 +299,8 @@ bounding_box = NodePath("..")
 window_name = "System Settings"
 contents = ExtResource("9_jbj1t")
 
-[node name="Window" parent="Screen" unique_id=1315516088 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+[node name="Admin" parent="Screen" unique_id=1315516088 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.7083333
@@ -308,7 +311,7 @@ bounding_box = NodePath("..")
 window_name = "Admin"
 metadata/_edit_use_anchors_ = true
 
-[node name="Admin" parent="Screen/Window" unique_id=1892483215 instance=ExtResource("10_muem4")]
+[node name="Admin" parent="Screen/Admin" unique_id=1892483215 instance=ExtResource("10_muem4")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 40)
 layout_mode = 1
@@ -316,6 +319,23 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 34.0
+
+[node name="Credits" parent="Screen" unique_id=135486431 instance=ExtResource("1_o5qli")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.54479164
+anchor_top = 0.2101695
+anchor_right = 0.975
+anchor_bottom = 0.5737288
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" parent="Screen/Credits" unique_id=452829716 instance=ExtResource("11_dp3eg")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 35.0
 
 [node name="GridContainer" type="GridContainer" parent="Screen" unique_id=1033384503]
 layout_mode = 0
@@ -350,6 +370,24 @@ connected_window = NodePath("../../TimeKeeper")
 layout_mode = 2
 app_name = "Settings"
 connected_window = NodePath("../../Settings")
+
+[node name="Admin" parent="Screen/GridContainer" unique_id=67904863 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+layout_mode = 2
+app_name = "Admin Portal"
+connected_window = NodePath("../../Admin")
+
+[node name="Credits2" parent="Screen" unique_id=1128038819 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+layout_mode = 1
+anchor_left = 0.89427084
+anchor_top = -0.03983051
+anchor_right = 0.89427084
+anchor_bottom = -0.03983051
+offset_left = 18.0
+offset_top = 1009.0
+offset_right = 168.0
+offset_bottom = 1169.0
+app_name = "Credits"
+connected_window = NodePath("../Credits")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806837709]
 stream = ExtResource("9_85g3d")
@@ -402,7 +440,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_j0wby")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ynx3y")
 
 [node name="Bootup" type="Control" parent="." unique_id=1047697411]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

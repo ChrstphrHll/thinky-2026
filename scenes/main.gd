@@ -47,6 +47,7 @@ func fade(to_run: Callable):
 	animation_player.play("fade_in")
 	await animation_player.animation_finished
 	bootup.hide()
+	$Bootup/SplashScreen.color = Color.BLACK
 	$Bootup/Day.show()
 
 
