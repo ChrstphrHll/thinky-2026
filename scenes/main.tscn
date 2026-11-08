@@ -17,6 +17,22 @@
 [ext_resource type="PackedScene" uid="uid://dglljxwsiddqn" path="res://scenes/clickable.tscn" id="12_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://d366iopfcanmy" path="res://assets/art/app_icons/Unnamed Slack-like App Icon.svg" id="12_jbj1t"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0wby"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynx3y"]
+bg_color = Color(0.6509804, 0.6156863, 0.13725491, 0.21960784)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.8666667, 0, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="Animation" id="Animation_eb6dy"]
 length = 0.001
 tracks/0/type = "value"
@@ -42,6 +58,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [null]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SplashScreen:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_jkv2x"]
@@ -87,11 +115,45 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_muem4"]
+resource_name = "fade_in"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SplashScreen:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dp3eg"]
+resource_name = "fade_out"
+length = 0.46666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SplashScreen:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a8y0u"]
 _data = {
 &"RESET": SubResource("Animation_eb6dy"),
 &"day_end": SubResource("Animation_jkv2x"),
-&"day_start": SubResource("Animation_trceg")
+&"day_start": SubResource("Animation_trceg"),
+&"fade_in": SubResource("Animation_muem4"),
+&"fade_out": SubResource("Animation_dp3eg")
 }
 
 [node name="main" type="Control" unique_id=1205300623]
@@ -275,39 +337,6 @@ volume_db = 1.041
 pitch_scale = 0.75
 autoplay = true
 
-[node name="Bootup" type="Control" parent="." unique_id=1047697411]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SplashScreen" type="ColorRect" parent="Bootup" unique_id=1096921116]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Day" type="Label" parent="Bootup" unique_id=932746044]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 72
-text = "Day 1"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Bootup" unique_id=1012325663]
-libraries/ = SubResource("AnimationLibrary_a8y0u")
-
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1350691070]
 visible = false
 layout_mode = 1
@@ -325,4 +354,66 @@ offset_top = 29.0
 offset_right = 48.0
 offset_bottom = 29.0
 
+[node name="PointAndClick" type="Control" parent="." unique_id=1192662462]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Desk" type="TextureRect" parent="PointAndClick" unique_id=534094994]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jyhfs")
+
+[node name="Computer" type="Button" parent="PointAndClick/Desk" unique_id=940360724]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 466.0
+offset_right = 1420.0
+offset_bottom = 774.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0wby")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ynx3y")
+
+[node name="Bootup" type="Control" parent="." unique_id=1047697411]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="SplashScreen" type="ColorRect" parent="Bootup" unique_id=1096921116]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
+
+[node name="Day" type="Label" parent="Bootup" unique_id=932746044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "Day 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bootup" unique_id=1012325663]
+libraries/ = SubResource("AnimationLibrary_a8y0u")
+
 [connection signal="pressed" from="Screen/GridContainer/EmailIcon" to="." method="_on_email_icon_pressed"]
+[connection signal="pressed" from="PointAndClick/Desk/Computer" to="." method="_on_computer_pressed"]

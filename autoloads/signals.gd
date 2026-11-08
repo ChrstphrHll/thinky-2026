@@ -7,6 +7,7 @@ var day = 1
 signal day_started
 signal day_ended
 signal wallpaper_changed
+signal break_taken
 
 
 func end_day():
@@ -20,3 +21,7 @@ func start_day():
 
 func new_wallpaper(texture):
 	wallpaper_changed.emit(texture)
+
+
+func take_a_break():
+	break_taken.emit()

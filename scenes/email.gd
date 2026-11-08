@@ -15,6 +15,7 @@ var emails: Array = [
 		"body": "omg this is so wild the new hire said they'd bring waffles to the whole office that's so kind of them",
 		"subject": "BIG NEWS",
 		"sender": "IT ANDY",
+		"icon": load("res://assets/art/pfps/daisy/daisythehuman (3).svg"),
 		"day_sent": 1,
 	},
 	{
@@ -54,6 +55,8 @@ func add_email(email):
 	var instance = PREVIEW.instantiate()
 	instance.subject_text = email.subject
 	instance.sender_text = email.sender
+	if "icon" in email:
+		instance.avatar_img = email.icon
 	
 	instance.pressed.connect(_email_selected.bind(email))
 	add_as_top_email_child(instance)
@@ -70,5 +73,5 @@ func _email_selected(email):
 	body.text = email.body
 	subject.text = email.subject
 	sender.text = email.sender
-	if "avatar" in email:
-		avatar.texture = avatar
+	if "icon" in email:
+		avatar.texture = email.icon

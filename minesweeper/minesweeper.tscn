@@ -57,21 +57,26 @@ alignment = 1
 layout_mode = 2
 text = "Levels"
 
-[node name="Restart" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1041192408]
+[node name="Easy" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1041192408]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Easy"
 
-[node name="Restart2" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=600229925]
+[node name="Medium" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=600229925]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Medium"
 
-[node name="Restart3" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1014328377]
+[node name="Hard" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1014328377]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Hard
 "
+
+[node name="Restart" type="Button" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=585135375]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Random"
 
 [node name="Spacer" type="Control" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1139077038]
 layout_mode = 2
@@ -187,3 +192,5 @@ text = "[wave][rainbow]You Win!!!!![/rainbow][/wave]"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/MarginContainer/Controls/VBoxContainer/Restart" to="." method="_new_game" binds= [3]]

@@ -4,12 +4,14 @@ var board: Array[Array] = []
 
 # Game Settings
 var board_bombs = 20
-var board_rows = 15
-var board_cols = 15
+var board_rows = 25
+var board_cols = 40
 var target_reveals = board_rows * board_cols - board_bombs
 var revealed = 0
+enum game_state { PLAYING, LOST, WON }
+var current_game_state = game_state.PLAYING
 
-const BUTTON_SIZE = 32
+const BUTTON_SIZE = 20
 const FONT_SIZE = 16
 const BOMB_SYMBOL = "🐄"
 const FLAGGED = "🛸"
@@ -38,19 +40,36 @@ func _ready():
 	win_game.connect(_win_effects)
 
 
-func reset():
-	pass
+func _new_game(new_board: int):
+	revealed = 0
+	current_game_state = game_state.PLAYING
+	board = []
+	board_ui.modulate = Color(1, 1, 1, 1)
+	win_label.hide()
+	for node in board_ui.get_children():
+		node.queue_free()
+	
+	create_board()
+
 
 func game_over():
-	pass
+	print("oops")
+	current_game_state = game_state.LOST
+	win_label.text = LOSE_MESSAGE
+	win_label.show()
+	board_ui.modulate = Color(1.0, 0.0, 0.0, 1.0)
 
 
 func _win_effects():
 	print("you win!!!")
+	current_game_state = game_state.WON
+	win_label.text = WIN_MESSAGE
 	win_label.show()
 
 
 func _button_pressed(coords):
+	if current_game_state != game_state.PLAYING:
+		return
 	var button = get_button(coords)
 	var cell_value = button.text
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
@@ -232,8 +251,3 @@ func is_coord_inbounds(coord):
 		return false
 		
 	return true
-
-
-func _on_new_game_pressed():
-	reset()
-	create_board()

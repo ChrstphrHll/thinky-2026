@@ -96,3 +96,10 @@ func get_grid_cell_data(mouse_position: Vector2):
 				"coord": slot.coord
 			}
 	return
+
+
+func check_full_board():
+	for piece in puzzle.pieces:
+		if not piece.placed:
+			return false
+	return true
