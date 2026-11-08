@@ -2,7 +2,7 @@ extends Control
 
 const GRID_CELL = preload("uid://ctckwyr7p00bo")
 const SHAPE = preload("uid://c11v2d7y4jqro")
-const SHAPE_SIZE = 50
+const SHAPE_SIZE = 55
 @onready var grid_container = $HBoxContainer/CenterContainer/GridContainer
 
 var puzzle = ShapePuzzle.new()
@@ -37,6 +37,7 @@ func _ready():
 		for col_i in puzzle.grid[0].size():
 			var instance = GRID_CELL.instantiate()
 			instance.coord = Vector2i(row_i, col_i)
+			instance.grid_size = SHAPE_SIZE
 			grid_container.add_child(instance)
 			instance.add_to_group("grid_cells")
 

@@ -193,4 +193,7 @@ fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
 
+[connection signal="pressed" from="HBoxContainer/MarginContainer/Controls/VBoxContainer/Easy" to="." method="_new_game" binds= [0]]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/Controls/VBoxContainer/Medium" to="." method="_new_game" binds= [1]]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/Controls/VBoxContainer/Hard" to="." method="_new_game" binds= [2]]
 [connection signal="pressed" from="HBoxContainer/MarginContainer/Controls/VBoxContainer/Restart" to="." method="_new_game" binds= [3]]

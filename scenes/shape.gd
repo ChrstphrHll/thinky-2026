@@ -5,6 +5,8 @@ extends Control
 @export var shape_size := 50
 @export var gap := 0
 
+const BUFFER = Vector2(15, 15)
+
 var dragging: bool = false
 var drag_offset: Vector2
 var total_node_size: Vector2
@@ -49,8 +51,8 @@ func _ready():
 func _process(delta):
 	if dragging:
 		var raw_position = get_global_mouse_position() - drag_offset
-		var min_clamp = Vector2(bounding_box.global_position.x, bounding_box.global_position.y)
-		global_position = raw_position.clamp(min_clamp, bounding_box.global_position + bounding_box.size - total_node_size)
+		var min_clamp = bounding_box.global_position + BUFFER
+		global_position = raw_position.clamp(min_clamp, bounding_box.global_position + bounding_box.size - BUFFER)
 
 
 func _on_gui_input(event: InputEvent):
