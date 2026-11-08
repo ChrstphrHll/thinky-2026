@@ -21,7 +21,6 @@ signal shape_rotated
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(shape_data.id)
 	total_node_size = shape_data.total_size * shape_size
 	for coord in shape_data.coords:
 		var box = ColorRect.new()
@@ -85,6 +84,8 @@ func drop():
 
 func rotate():
 	rotation += PI/2
+	if rotation >= 2*PI:
+		rotation = 0
 	drag_offset = Vector2(drag_offset.y, drag_offset.x * -1)
 	shape_rotated.emit(shape_data.id, self)
 
@@ -102,7 +103,7 @@ func get_origin_position():
 func place_at_grid(grid_position: Vector2):
 	var position_mod = Vector2(0,0)
 	var rotation_mod_raw = rotation / (PI/2)
-	var rotation_mod = int(rotation_mod_raw) % 4
+	var rotation_mod = int(rotation_mod_raw)
 	
 	match rotation_mod:
 		1:
@@ -113,7 +114,9 @@ func place_at_grid(grid_position: Vector2):
 			position_mod = Vector2(0, shape_size)
 		0:
 			position_mod = Vector2(0, 0)
-	
+	print("rotation_mod_raw ", rotation_mod_raw)
+	print("rotation_mod ", rotation_mod)
+	print("pos mod ", position_mod)
 	global_position = grid_position + position_mod
 
 

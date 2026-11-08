@@ -102,11 +102,7 @@ func _is_coord_in_grid(target_grid_coord: Vector2i):
 
 
 func get_piece_from_id(id: float):
-	print("looking for", id)
-	for piece in pieces:
-		print("id ", piece.id)
 	var index = pieces.find_custom(func (piece): return piece.id == id)
-	print("fount it at ", index)
 	if index != -1:
 		return pieces[index]
 	return null
