@@ -346,3 +346,11 @@ tooltip_text = "Leah"
 texture = ExtResource("13_oi18c")
 expand_mode = 5
 stretch_mode = 5
+
+[node name="Alex13" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=883665887 groups=["temp"]]
+visible = false
+layout_mode = 2
+tooltip_text = "Kim"
+texture = ExtResource("12_sbg75")
+expand_mode = 5
+stretch_mode = 5
