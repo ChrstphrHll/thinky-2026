@@ -4,6 +4,7 @@ extends Control
 @onready var bootup = $Bootup
 @onready var day_count_label = $Bootup/Day
 @onready var point_and_click = $PointAndClick
+@onready var admin = %Admin
 
 
 @onready var time_keeper = %TimeKeeper
@@ -46,8 +47,8 @@ func fade(to_run: Callable):
 	animation_player.play("fade_in")
 	await animation_player.animation_finished
 	bootup.hide()
+	$Bootup/SplashScreen.color = Color.BLACK
 	$Bootup/Day.show()
-
 
 
 func start_day(day):

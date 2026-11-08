@@ -9,6 +9,8 @@ signal day_ended
 signal wallpaper_changed
 signal break_taken
 
+signal temp_hired
+signal overtime_enabled
 
 func end_day():
 	day += 1

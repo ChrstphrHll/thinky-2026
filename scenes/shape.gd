@@ -32,15 +32,15 @@ func _ready():
 	
 	pivot_offset = Vector2(shape_size / 2.0, shape_size / 2.0)
 	
-	var origin = ColorRect.new()
-	origin.size = Vector2(5,5)
-	origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
-	add_child(origin)
-
-	zero = ColorRect.new()
-	zero.size = Vector2(5,5)
-	zero.position = Vector2( - 2.5,- 2.5)
-	add_child(zero)
+	#var origin = ColorRect.new()
+	#origin.size = Vector2(5,5)
+	#origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
+	#add_child(origin)
+#
+	#zero = ColorRect.new()
+	#zero.size = Vector2(5,5)
+	#zero.position = Vector2( - 2.5,- 2.5)
+	#add_child(zero)
 	
 	#var label = Label.new()
 	#label.text = str(shape_data.id)
@@ -114,9 +114,6 @@ func place_at_grid(grid_position: Vector2):
 			position_mod = Vector2(0, shape_size)
 		0:
 			position_mod = Vector2(0, 0)
-	print("rotation_mod_raw ", rotation_mod_raw)
-	print("rotation_mod ", rotation_mod)
-	print("pos mod ", position_mod)
 	global_position = grid_position + position_mod
 
 

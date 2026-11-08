@@ -3,20 +3,23 @@ extends Node
 class_name ShapePuzzle
 
 var grid = [
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
 ]
+
+var overtime_enabled = false
+var temp_hired = false
 
 
 var pieces: Array[Shape] = [
@@ -89,13 +92,21 @@ func _is_grid_space_available(piece, target_grid_coord: Vector2i):
 func _is_coord_in_grid(target_grid_coord: Vector2i):
 	var row = target_grid_coord.x
 	var col = target_grid_coord.y
-		
-	if row < 0 or row >= grid.size():
+	
+	if row < 0:
+		return false
+	if overtime_enabled and row >= grid.size():
+		return false
+	if not overtime_enabled and row >= grid.size() - 4:
 		return false
 
 	var row_data = grid[row]
 
-	if col < 0 or col >= row_data.size():
+	if col < 0:
+		return false
+	if temp_hired and col >= row_data.size():
+		return false
+	if not temp_hired and col >= row_data.size() - 1:
 		return false
 	
 	return true
@@ -109,26 +120,24 @@ func get_piece_from_id(id: float):
 
 
 func remove_piece(piece_id: float):
-	var piece = get_piece_from_id(piece_id)
-	if not piece.current_position:
+	var piece: Shape = get_piece_from_id(piece_id)
+	if piece.current_position == null:
+		printerr("HEYYYYY!!!! you cant remove a piece that isn't placed")
+		piece.debug()
 		return
 	for coord in piece.coords:
 		var target_coord = piece.current_position + coord
 		set_grid_value(target_coord,-1)
 	piece.current_position = null
-	
-	print_grid()
 
 
 func add_piece(grid_coord: Vector2i, piece_id: float):
 	var piece = get_piece_from_id(piece_id)
-	piece.debug()
 	piece.current_position = grid_coord
 	for coord in piece.coords:
 		var target_coord = grid_coord + coord
 		set_grid_value(target_coord, 1)
 
-	print_grid()
 
 func rotate_piece(piece_id: float):
 	var piece = get_piece_from_id(piece_id)
