@@ -11,8 +11,11 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Signals.day_started.connect(call_it)
+	Signals.day_ended.connect(call_it)
+	Signals.day_started.connect(start_day)
 	Signals.start_day()
+	
+	Signals.wallpaper_changed.connect(change_wallpaper)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,6 +26,16 @@ func _process(delta):
 func call_it(day):
 	day_count_label.text = "Day " + str(day)
 	bootup.show()
-	animation_player.play("next_day")
+	animation_player.play("day_end")
+	await animation_player.animation_finished
+	Signals.start_day()
+
+
+func start_day(day):
+	animation_player.play("day_start")
 	await animation_player.animation_finished
 	bootup.hide()
+
+
+func change_wallpaper(texture):
+	$Screen.texture = texture

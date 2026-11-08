@@ -1,12 +1,22 @@
 extends Node
 
 
-var day = 0
+var day = 1
 
 
 signal day_started
+signal day_ended
+signal wallpaper_changed
+
+
+func end_day():
+	day += 1
+	day_ended.emit(day)
 
 
 func start_day():
-	day += 1
 	day_started.emit(day)
+
+
+func new_wallpaper(texture):
+	wallpaper_changed.emit(texture)

@@ -9,8 +9,8 @@ var board_cols = 15
 var target_reveals = board_rows * board_cols - board_bombs
 var revealed = 0
 
-const BUTTON_SIZE = 18
-const FONT_SIZE = 12
+const BUTTON_SIZE = 32
+const FONT_SIZE = 16
 const BOMB_SYMBOL = "🐄"
 const FLAGGED = "🛸"
 const BLANK = "   "
@@ -20,8 +20,11 @@ const ADJACENT_DELTAS = [
 	[ 1, -1], [ 1,  0], [ 1 ,  1],
 ]
 
-@onready var win_label = $Label
-@onready var board_ui = $CenterContainer/Board
+const WIN_MESSAGE = "[wave][rainbow]You Win!!!!![/rainbow][/wave]"
+const LOSE_MESSAGE = "Ooops. Try Again"
+
+@onready var win_label = $HBoxContainer/CenterContainer/VBoxContainer/Label
+@onready var board_ui = $HBoxContainer/CenterContainer/VBoxContainer/Board
 
 const CELL_BUTTON = preload("uid://bcqe48ggyfioa")
 const CELL_BUTTON_DISABLED = preload("uid://ds05seb1vtjit")
