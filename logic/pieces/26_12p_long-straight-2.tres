@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_cnxq2")
+color = Color(0.6039216, 0.5921569, 0.56078434, 1)
 coords = Array[Vector2i]([Vector2i(0, -5), Vector2i(0, -4), Vector2i(0, -3), Vector2i(0, -2), Vector2i(0, -1), Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(0, 3), Vector2i(0, 4), Vector2i(0, 5), Vector2i(0, 6)])
 total_size = Vector2i(1, 1)
 metadata/_custom_type_script = "uid://b0qwgc7dpwe8h"
