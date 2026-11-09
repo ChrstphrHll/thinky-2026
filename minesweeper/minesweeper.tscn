@@ -92,7 +92,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry" unique_id=685537416]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "1. Bobra"
+text = "1. HAS"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry" unique_id=13212398]
 layout_mode = 2
@@ -104,7 +104,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry2" unique_id=123984274]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "1. Bobra"
+text = "2. SAN"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry2" unique_id=1071739509]
 layout_mode = 2
@@ -116,7 +116,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry3" unique_id=1044970849]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "1. Bobra"
+text = "3. EMA"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry3" unique_id=817056901]
 layout_mode = 2
@@ -128,7 +128,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry4" unique_id=2057957171]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "1. Bobra"
+text = "4. ILR"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry4" unique_id=2140090604]
 layout_mode = 2
@@ -140,7 +140,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry5" unique_id=243160410]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "1. Bobra"
+text = "5. EAD"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry5" unique_id=283768229]
 layout_mode = 2
@@ -152,7 +152,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry6" unique_id=1164343754]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "1. Bobra"
+text = "6. EVE"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry6" unique_id=1900203426]
 layout_mode = 2
@@ -164,9 +164,45 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry7" unique_id=2071643121]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "1. Bobra"
+text = "7. RYF"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry7" unique_id=984229658]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry8" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1737762867]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry8" unique_id=386545215]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "8. IFT"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry8" unique_id=169902093]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry9" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=334883280]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry9" unique_id=250822271]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "9. HWO"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry9" unique_id=1610813476]
+layout_mode = 2
+text = "0:31"
+
+[node name="LeaderboardEntry10" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=384843272]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry10" unique_id=1717399875]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "10. RD!"
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry10" unique_id=1378191385]
 layout_mode = 2
 text = "0:31"
 
