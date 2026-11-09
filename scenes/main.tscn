@@ -247,13 +247,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Scheduler" parent="Screen" unique_id=945610282 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.03497939
-anchor_top = 0.07312924
-anchor_right = 0.8232035
-anchor_bottom = 0.80516887
+anchor_left = 0.09947918
+anchor_top = 0.049152542
+anchor_right = 0.98020834
+anchor_bottom = 0.7811922
 offset_left = -3.0517578e-05
 bounding_box = NodePath("..")
 window_name = "calendar"
@@ -440,6 +439,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_j0wby")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ynx3y")
 
 [node name="Bootup" type="Control" parent="." unique_id=1047697411]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

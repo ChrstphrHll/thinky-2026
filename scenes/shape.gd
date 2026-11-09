@@ -3,7 +3,7 @@ extends Control
 @export var bounding_box: CanvasItem
 @export var shape_data := Shape.new()
 @export var shape_size := 50
-@export var gap := 0
+@export var gap := 4
 
 const BUFFER = Vector2(15, 15)
 
@@ -25,8 +25,8 @@ func _ready():
 	for coord in shape_data.coords:
 		var box = ColorRect.new()
 		box.color = shape_data.color
-		box.size = Vector2i(shape_size, shape_size)
-		box.position = shape_size * Vector2i(coord.y, coord.x) + gap * coord
+		box.size = Vector2i(shape_size - gap, shape_size - gap)
+		box.position = Vector2i(shape_size - gap, shape_size - gap) * Vector2i(coord.y, coord.x) + gap * Vector2i(coord.y, coord.x)
 		box.mouse_filter = Control.MOUSE_FILTER_PASS
 		add_child(box)
 	
@@ -41,7 +41,7 @@ func _ready():
 	#zero.size = Vector2(5,5)
 	#zero.position = Vector2( - 2.5,- 2.5)
 	#add_child(zero)
-	
+
 	#var label = Label.new()
 	#label.text = str(shape_data.id)
 	#add_child(label)
@@ -102,19 +102,25 @@ func get_origin_position():
 
 func place_at_grid(grid_position: Vector2):
 	var position_mod = Vector2(0,0)
+	var gap_mod = Vector2.ZERO
 	var rotation_mod_raw = rotation / (PI/2)
 	var rotation_mod = int(rotation_mod_raw)
 	
 	match rotation_mod:
 		1:
 			position_mod = Vector2(shape_size, 0)
+			gap_mod = Vector2(-gap / 2, gap / 2)
 		2:
 			position_mod = Vector2(shape_size, shape_size)
+			gap_mod = Vector2(-gap / 2, -gap / 2)
 		3:
 			position_mod = Vector2(0, shape_size)
+			gap_mod = Vector2(gap / 2, -gap / 2)
 		0:
 			position_mod = Vector2(0, 0)
-	global_position = grid_position + position_mod
+			gap_mod = Vector2(gap / 2, gap / 2)
+
+	global_position = grid_position + position_mod + gap_mod
 
 
 func get_piece_coord_from_mouse():

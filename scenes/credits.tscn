@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dytpytk5w18y5"]
+
+[node name="Credits" type="Control" unique_id=452829716]
+layout_mode = 3
+anchor_right = 0.45
+anchor_bottom = 0.30508474
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2023456132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13319641, 0.13319641, 0.13319638, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2005500450]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=1986229479]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[font_size=44 ]Credits[/font_size]
+Ami: Game Design, Narrative Design
+Dave: Game Design, Shape Puzzle Design Secratary
+Katie: Game Design, Music, Meta Puzzle Design
+Lily: Game Design, Art, Music
+Christopher: Game Design, Programming"
+fit_content = true

@@ -16,15 +16,15 @@
 
 [node name="Scheduler" type="Control" unique_id=1690978717]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.8953125
+anchor_bottom = 0.88305086
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 script = ExtResource("1_roo8f")
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=702846150]
 layout_mode = 1
@@ -45,9 +45,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Tray" type="ColorRect" parent="HBoxContainer" unique_id=1770174829]
-custom_minimum_size = Vector2(500, 0)
+custom_minimum_size = Vector2(750, 0)
 layout_mode = 2
-color = Color(0.06906531, 0.08759291, 0.15946415, 1)
+size_flags_stretch_ratio = 0.69
+color = Color(0.4462523, 0.32916078, 0.2745322, 1)
 
 [node name="Point" type="Control" parent="HBoxContainer/Tray" unique_id=738577878]
 layout_mode = 1
@@ -60,194 +61,202 @@ offset_bottom = 68.23067
 [node name="Point2" type="Control" parent="HBoxContainer/Tray" unique_id=1030739319]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 384.43793
-offset_top = 60.99698
-offset_right = 384.43793
-offset_bottom = 60.99698
+offset_left = 188.51376
+offset_top = 56.650856
+offset_right = 188.51376
+offset_bottom = 56.650856
 
 [node name="Point3" type="Control" parent="HBoxContainer/Tray" unique_id=997160305]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 68.52298
-offset_top = 95.582275
-offset_right = 68.52298
-offset_bottom = 95.582275
+offset_left = 462.3005
+offset_top = 59.87188
+offset_right = 462.3005
+offset_bottom = 59.87188
 
 [node name="Point4" type="Control" parent="HBoxContainer/Tray" unique_id=1171597401]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 215.68134
-offset_top = 93.09859
-offset_right = 215.68134
-offset_bottom = 93.09859
+offset_left = 72.55701
+offset_top = 219.31238
+offset_right = 72.55701
+offset_bottom = 219.31238
 
 [node name="Point5" type="Control" parent="HBoxContainer/Tray" unique_id=1302893212]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 345.83893
-offset_top = 227.37198
-offset_right = 345.83893
-offset_bottom = 227.37198
+offset_left = 267.42874
+offset_top = 209.64932
+offset_right = 267.42874
+offset_bottom = 209.64932
 
 [node name="Point6" type="Control" parent="HBoxContainer/Tray" unique_id=340181149]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 286.46637
-offset_top = 55.843323
-offset_right = 286.46637
-offset_bottom = 55.843323
+offset_left = 447.80588
+offset_top = 216.09137
+offset_right = 447.80588
+offset_bottom = 216.09137
 
 [node name="Point7" type="Control" parent="HBoxContainer/Tray" unique_id=924943905]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 322.4798
-offset_top = 108.0007
-offset_right = 322.4798
-offset_bottom = 108.0007
+offset_left = 639.45667
+offset_top = 217.70187
+offset_right = 639.45667
+offset_bottom = 217.70187
 
 [node name="Point8" type="Control" parent="HBoxContainer/Tray" unique_id=1089376981]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 63.555634
-offset_top = 166.36731
-offset_right = 63.555634
-offset_bottom = 166.36731
+offset_left = 78.999054
+offset_top = 340.10065
+offset_right = 78.999054
+offset_bottom = 340.10065
 
 [node name="Point9" type="Control" parent="HBoxContainer/Tray" unique_id=1887584375]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 92.948975
-offset_top = 448.318
-offset_right = 92.948975
-offset_bottom = 448.318
+offset_left = 231.99753
+offset_top = 359.42676
+offset_right = 231.99753
+offset_bottom = 359.42676
 
 [node name="Point10" type="Control" parent="HBoxContainer/Tray" unique_id=1649507217]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 335.5191
-offset_top = 185.61586
-offset_right = 335.5191
-offset_bottom = 185.61586
+offset_left = 434.92184
+offset_top = 361.0373
+offset_right = 434.92184
+offset_bottom = 361.0373
 
 [node name="Point11" type="Control" parent="HBoxContainer/Tray" unique_id=2024896587]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 261.62952
-offset_top = 218.52469
-offset_right = 261.62952
-offset_bottom = 218.52469
+offset_left = 634.6251
+offset_top = 401.30005
+offset_right = 634.6251
+offset_bottom = 401.30005
 
 [node name="Point12" type="Control" parent="HBoxContainer/Tray" unique_id=1113921]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 138.06616
-offset_top = 236.5314
-offset_right = 138.06616
-offset_bottom = 236.5314
+offset_left = 132.1459
+offset_top = 483.43607
+offset_right = 132.1459
+offset_bottom = 483.43607
 
 [node name="Point13" type="Control" parent="HBoxContainer/Tray" unique_id=1645685919]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 379.60455
-offset_top = 281.85864
-offset_right = 379.60455
-offset_bottom = 281.85864
+offset_left = 265.81827
+offset_top = 504.3727
+offset_right = 265.81827
+offset_bottom = 504.3727
 
 [node name="Point14" type="Control" parent="HBoxContainer/Tray" unique_id=1209520484]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 195.81186
-offset_top = 302.96997
-offset_right = 195.81186
-offset_bottom = 302.96997
+offset_left = 417.2062
+offset_top = 526.91986
+offset_right = 417.2062
+offset_bottom = 526.91986
 
 [node name="Point15" type="Control" parent="HBoxContainer/Tray" unique_id=582660805]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 67.28116
-offset_top = 311.04196
-offset_right = 67.28116
-offset_bottom = 311.04196
+offset_left = 618.52
+offset_top = 528.5304
+offset_right = 618.52
+offset_bottom = 528.5304
 
 [node name="Point16" type="Control" parent="HBoxContainer/Tray" unique_id=605340058]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 294.53833
-offset_top = 343.95078
-offset_right = 294.53833
-offset_bottom = 343.95078
+offset_left = 78.999054
+offset_top = 636.4346
+offset_right = 78.999054
+offset_bottom = 636.4346
 
 [node name="Point17" type="Control" parent="HBoxContainer/Tray" unique_id=1202798513]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 159.17749
-offset_top = 353.88553
-offset_right = 159.17749
-offset_bottom = 353.88553
+offset_left = 198.17682
+offset_top = 660.5922
+offset_right = 198.17682
+offset_bottom = 660.5922
 
 [node name="Point18" type="Control" parent="HBoxContainer/Tray" unique_id=2075182153]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 382.70917
-offset_top = 390.51987
-offset_right = 382.70917
-offset_bottom = 390.51987
+offset_left = 362.44888
+offset_top = 678.3078
+offset_right = 362.44888
+offset_bottom = 678.3078
 
 [node name="Point19" type="Control" parent="HBoxContainer/Tray" unique_id=1090052489]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 119.223114
-offset_top = 462.61935
-offset_right = 119.223114
-offset_bottom = 462.61935
+offset_left = 533.16296
+offset_top = 691.1919
+offset_right = 533.16296
+offset_bottom = 691.1919
 
 [node name="Point20" type="Control" parent="HBoxContainer/Tray" unique_id=802650308]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 244.01645
-offset_top = 477.4954
-offset_right = 244.01645
-offset_bottom = 477.4954
+offset_left = 174.55069
+offset_top = 565.3467
+offset_right = 174.55069
+offset_bottom = 565.3467
 
 [node name="Point21" type="Control" parent="HBoxContainer/Tray" unique_id=1194029342]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 401.04123
-offset_top = 486.58627
-offset_right = 401.04123
-offset_bottom = 486.58627
+offset_left = 254.44809
+offset_top = 711.5005
+offset_right = 254.44809
+offset_bottom = 711.5005
 
 [node name="Point22" type="Control" parent="HBoxContainer/Tray" unique_id=1596551303]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 226.00006
-offset_top = 586.9995
-offset_right = 226.00006
-offset_bottom = 586.9995
+offset_left = 386.9609
+offset_top = 746.5774
+offset_right = 386.9609
+offset_bottom = 746.5774
 
 [node name="Point23" type="Control" parent="HBoxContainer/Tray" unique_id=1313284830]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 362.3637
-offset_top = 602.45404
-offset_right = 362.3637
-offset_bottom = 602.45404
+offset_left = 624.70447
+offset_top = 74.269806
+offset_right = 624.70447
+offset_bottom = 74.269806
 
 [node name="Point24" type="Control" parent="HBoxContainer/Tray" unique_id=1975941644]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 90.54553
-offset_top = 665.18134
-offset_right = 90.54553
-offset_bottom = 665.18134
+offset_left = 84.90964
+offset_top = 680.321
+offset_right = 84.90964
+offset_bottom = 680.321
 
 [node name="Point25" type="Control" parent="HBoxContainer/Tray" unique_id=721095064]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 274.1819
-offset_top = 666.0904
-offset_right = 274.1819
-offset_bottom = 666.0904
+offset_left = 414.24295
+offset_top = 45.039032
+offset_right = 414.24295
+offset_bottom = 45.039032
+
+[node name="Point26" type="Control" parent="HBoxContainer/Tray" unique_id=185202991]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 574.0377
+offset_top = 54.782623
+offset_right = 574.0377
+offset_bottom = 54.782623
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=1795233778]
 layout_mode = 2
