@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cyibh0tfk7wg2" path="res://assets/placeholders/cublicle.jpg" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://7h2j2nq2a7vn" path="res://components/window.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dwyyc1dbp3y14" path="res://scenes/main.gd" id="1_o6xl0"]
-[ext_resource type="Texture2D" uid="uid://bdvocqr8hikkm" path="res://icon.svg" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://ithmp7b1l3hg" path="res://assets/art/desktopbackgrounds/classicbackground.svg" id="2_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://dlxn8qgi5uyae" path="res://assets/art/app_icons/taskbaricon.svg" id="3_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://2hm154dy6lg4" path="res://minesweeper/minesweeper.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b7xgsuxgnma2" path="res://scenes/scheduler.tscn" id="6_choun"]
 [ext_resource type="PackedScene" uid="uid://bhsyw5tl7f3iv" path="res://scenes/email.tscn" id="8_ya4ey"]
@@ -13,11 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://p7agdrfeo5tg" path="res://scenes/time_keeper.tscn" id="9_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://b5h57axbj8cnd" path="res://scenes/settings/settings.tscn" id="9_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://be1ej1b8xfj2i" path="res://scenes/admin/admin.tscn" id="10_muem4"]
-[ext_resource type="Texture2D" uid="uid://b7vdooscllo0i" path="res://assets/art/app_icons/lookoutappicon.svg" id="10_trceg"]
 [ext_resource type="PackedScene" uid="uid://dytpytk5w18y5" path="res://scenes/credits.tscn" id="11_dp3eg"]
-[ext_resource type="Texture2D" uid="uid://buexifhoebbah" path="res://assets/art/app_icons/cowsweeperappicon.svg" id="11_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dglljxwsiddqn" path="res://scenes/clickable.tscn" id="12_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://bhauugv2ptxq" path="res://assets/art/app_icons/schedulerappicon.svg" id="12_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://b7vdooscllo0i" path="res://assets/art/app_icons/lookoutappicon.svg" id="13_y6deb"]
+[ext_resource type="Texture2D" uid="uid://buexifhoebbah" path="res://assets/art/app_icons/cowsweeperappicon.svg" id="14_og1vs"]
+[ext_resource type="Texture2D" uid="uid://bhauugv2ptxq" path="res://assets/art/app_icons/schedulerappicon.svg" id="15_2wyq8"]
+[ext_resource type="Texture2D" uid="uid://doircinj8l2ef" path="res://assets/art/app_icons/settingsappicon.svg" id="16_jscy8"]
+[ext_resource type="Texture2D" uid="uid://xi526hriuuiw" path="res://assets/art/app_icons/timekeeperappicon.svg" id="16_vxglm"]
+[ext_resource type="Texture2D" uid="uid://27r1n4ip1j1d" path="res://assets/art/app_icons/adminappicon.svg" id="17_pm3ni"]
+[ext_resource type="Texture2D" uid="uid://mw53eqxbneqb" path="res://assets/art/app_icons/creditsappicon.svg" id="18_y6deb"]
+[ext_resource type="Texture2D" uid="uid://b2uq8cumpis2i" path="res://assets/art/deskitemsandbackground/deskspace.svg" id="22_og1vs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0wby"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -206,19 +211,10 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=224905988]
 layout_mode = 2
-texture = ExtResource("2_0wfyh")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="TextureRect2" type="TextureRect" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=188562934]
-layout_mode = 2
-texture = ExtResource("2_0wfyh")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="TextureRect3" type="TextureRect" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=939601693]
-layout_mode = 2
-texture = ExtResource("2_0wfyh")
+offset_transform_enabled = true
+offset_transform_position = Vector2(13.39, -13.395)
+offset_transform_scale = Vector2(1.865, 1.865)
+texture = ExtResource("3_pm3ni")
 expand_mode = 3
 stretch_mode = 5
 
@@ -345,47 +341,51 @@ offset_bottom = 357.0
 
 [node name="EmailIcon" parent="Screen/GridContainer" unique_id=1832250779 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
-app_icon = ExtResource("10_trceg")
+app_icon = ExtResource("13_y6deb")
 connected_window = NodePath("../../Email")
 
 [node name="CowsweeperIcon" parent="Screen/GridContainer" unique_id=1426099458 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "Cowsweeper"
-app_icon = ExtResource("11_jkv2x")
+app_icon = ExtResource("14_og1vs")
 connected_window = NodePath("../../Minesweeper")
 
 [node name="SchedulerIcon" parent="Screen/GridContainer" unique_id=19493643 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "Sched"
-app_icon = ExtResource("12_jbj1t")
+app_icon = ExtResource("15_2wyq8")
 connected_window = NodePath("../../Scheduler")
 
 [node name="TimeKeeperIcon" parent="Screen/GridContainer" unique_id=1106398979 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "TimeKeeper"
+app_icon = ExtResource("16_vxglm")
 connected_window = NodePath("../../TimeKeeper")
 
 [node name="SettingsIcon" parent="Screen/GridContainer" unique_id=606388732 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "Settings"
+app_icon = ExtResource("16_jscy8")
 connected_window = NodePath("../../Settings")
 
 [node name="Admin" parent="Screen/GridContainer" unique_id=67904863 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "Admin Portal"
+app_icon = ExtResource("17_pm3ni")
 connected_window = NodePath("../../Admin")
 
 [node name="Credits2" parent="Screen" unique_id=1128038819 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 1
-anchor_left = 0.89427084
-anchor_top = -0.03983051
-anchor_right = 0.89427084
-anchor_bottom = -0.03983051
+anchor_left = 0.9015625
+anchor_top = -0.029661017
+anchor_right = 0.9015625
+anchor_bottom = -0.029661017
 offset_left = 18.0
 offset_top = 1009.0
 offset_right = 168.0
 offset_bottom = 1169.0
 app_name = "Credits"
+app_icon = ExtResource("18_y6deb")
 connected_window = NodePath("../Credits")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806837709]
@@ -412,7 +412,6 @@ offset_right = 48.0
 offset_bottom = 29.0
 
 [node name="PointAndClick" type="Control" parent="." unique_id=1192662462]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -427,14 +426,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_jyhfs")
+texture = ExtResource("22_og1vs")
 
 [node name="Computer" type="Button" parent="PointAndClick/Desk" unique_id=940360724]
 layout_mode = 0
-offset_left = 760.0
-offset_top = 466.0
-offset_right = 1420.0
-offset_bottom = 774.0
+offset_left = 746.0
+offset_top = 445.0
+offset_right = 1179.0
+offset_bottom = 712.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_j0wby")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ynx3y")
 

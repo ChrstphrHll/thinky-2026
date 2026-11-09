@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dekq6mdtxr8qo" path="res://assets/art/avatars/jennythehuman.svg" id="11_cjyx2"]
 [ext_resource type="Texture2D" uid="uid://b4aik6cto0dvd" path="res://assets/art/avatars/kimthehuman.svg" id="12_sbg75"]
 [ext_resource type="Texture2D" uid="uid://cvcctx4sxa7fm" path="res://assets/art/avatars/leahthehuman.svg" id="13_oi18c"]
+[ext_resource type="Texture2D" uid="uid://d2473kh04mpbj" path="res://assets/art/avatars/martinthehuman.svg" id="14_q0h4r"]
 
 [node name="Scheduler" type="Control" unique_id=1690978717]
 layout_mode = 3
@@ -360,6 +361,6 @@ stretch_mode = 5
 visible = false
 layout_mode = 2
 tooltip_text = "Kim"
-texture = ExtResource("12_sbg75")
+texture = ExtResource("14_q0h4r")
 expand_mode = 5
 stretch_mode = 5
