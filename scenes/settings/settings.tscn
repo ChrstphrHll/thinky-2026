@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5h57axbj8cnd"]
 
 [ext_resource type="Script" uid="uid://br8wj5c2mve8h" path="res://scenes/settings/settings.gd" id="1_x2hje"]
-[ext_resource type="Texture2D" uid="uid://bdvocqr8hikkm" path="res://icon.svg" id="2_nkug2"]
+[ext_resource type="Texture2D" uid="uid://doircinj8l2ef" path="res://assets/art/app_icons/settingsappicon.svg" id="2_kol0p"]
 [ext_resource type="ButtonGroup" uid="uid://g026nuv10pnq" path="res://scenes/settings/settings_buttons.tres" id="3_1slea"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="4_1slea"]
 [ext_resource type="ButtonGroup" uid="uid://b316aanhg8le3" path="res://scenes/settings/background_buttons.tres" id="4_vghtj"]
@@ -74,7 +74,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/ColorRect/MarginContainer/HBoxContainer" unique_id=1096491162]
 layout_mode = 2
-texture = ExtResource("2_nkug2")
+texture = ExtResource("2_kol0p")
 expand_mode = 3
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/ColorRect/MarginContainer/HBoxContainer" unique_id=82585452]
@@ -116,8 +116,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="BackgroundPanel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2115892258]
+custom_minimum_size = Vector2(0, 157.325)
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel" unique_id=1770828085]
 layout_mode = 1
@@ -247,6 +247,7 @@ size_flags_horizontal = 3
 value = 50.0
 
 [node name="AdvancedSettingsPanel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=163644708]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
