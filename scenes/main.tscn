@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://bntsbg4e2di6e" path="res://assets/audio/lookoutv4.wav" id="19_pm3ni"]
 [ext_resource type="AudioStream" uid="uid://dm72pkihkb21s" path="res://assets/audio/cowsweeperv2.wav" id="20_y6deb"]
 [ext_resource type="Texture2D" uid="uid://b2uq8cumpis2i" path="res://assets/art/deskitemsandbackground/deskspace.svg" id="22_og1vs"]
+[ext_resource type="Texture2D" uid="uid://doapb1qevtwpt" path="res://assets/art/infographics/morsecodeinfographic.svg" id="24_y6deb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jscy8"]
 load_path = "res://.godot/imported/cowsweeperappicon.svg-b8e4a5872ccfe8dd7a2a621874adbc18.ctex"
@@ -446,6 +447,11 @@ offset_right = 1179.0
 offset_bottom = 712.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_j0wby")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ynx3y")
+
+[node name="Morsecodeinfographic" type="Sprite2D" parent="PointAndClick" unique_id=1368229094]
+position = Vector2(648, 244)
+scale = Vector2(0.17224994, 0.17224994)
+texture = ExtResource("24_y6deb")
 
 [node name="Bootup" type="Control" parent="." unique_id=1047697411]
 visible = false
