@@ -15,6 +15,7 @@ signal overtime_enabled
 signal window_focused
 signal window_closed
 
+signal game_won
 
 func end_day():
 	day += 1

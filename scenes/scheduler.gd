@@ -164,4 +164,5 @@ func check_full_board():
 	for piece in puzzle.pieces:
 		if not piece.placed:
 			return false
+	Signals.game_won.emit()
 	return true
