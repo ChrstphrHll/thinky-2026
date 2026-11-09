@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://b27dqgvxuu12k"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_ig4bq"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_biis1"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_x6hd0"]
+
+[resource]
+script = ExtResource("3_x6hd0")
+sender = "Hassan"
+subject = "Meeting policy reminder"
+body = "Hi team,
+
+You guys all have been such helping hands lately. That last minute meeting really saved the project.
+
+For those absent, remember a full day's notice is required. Time is money, and our employees should know that. I must emphasize that you must be at every mandatory meeting, at minimum, even if you have three in one day.
+
+Hassan
+Communications Director
+Parallax"
+avatar = ExtResource("1_ig4bq")
+graphic = ExtResource("2_biis1")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://2lims6gotxde"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_xy3gl"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_t5ub0"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_bfici"]
+
+[resource]
+script = ExtResource("3_bfici")
+sender = "Daisy"
+subject = "Friendly Reminder about IT Requests!"
+body = "Hi folks,
+
+Justt a friendly reminher that iif yourr computer isn’t workind, mhake sure to try pawering it onn defore colling IT ffor help. We hafe spent a jlot of tieme dealinng with these kinnd of issues instyad of crittical infrastructure updotes. Pkease help us kiep the commpany running efficiently by nat ttroubling the IT despartment with triivial requexts. Your suppport is vemy much appreciated! 
+
+Daisy
+Change Management Specialist
+Parallax"
+avatar = ExtResource("1_xy3gl")
+graphic = ExtResource("2_t5ub0")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

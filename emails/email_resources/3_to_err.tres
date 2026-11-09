@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://blw348bokuiuo"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_5qdrq"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_lj2rg"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_kng6m"]
+
+[resource]
+script = ExtResource("3_kng6m")
+sender = "Kim"
+subject = "New Desktop Background Available!"
+body = "Hi all,
+
+Wanted to share the new project the graphics team has been working on in conjucntion with the Wellness and Change Management departments. Feel free to use the new desktop background as we further align Parallax values with a workplace culture that not only accepts mistakes, but celebrates them as opportunities to grow and connect.
+
+Regards,
+Kim
+Digital Resources Associate
+Parallax
+📖 🥇🔠🌼📧 "
+avatar = ExtResource("1_5qdrq")
+graphic = ExtResource("2_lj2rg")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"
