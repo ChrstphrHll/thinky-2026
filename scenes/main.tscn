@@ -25,7 +25,6 @@
 [ext_resource type="AudioStream" uid="uid://dm72pkihkb21s" path="res://assets/audio/cowsweeperv2.wav" id="20_y6deb"]
 [ext_resource type="Texture2D" uid="uid://b2uq8cumpis2i" path="res://assets/art/deskitemsandbackground/deskspace.svg" id="22_og1vs"]
 [ext_resource type="Texture2D" uid="uid://doapb1qevtwpt" path="res://assets/art/infographics/morsecodeinfographic.svg" id="24_y6deb"]
-
 [ext_resource type="PackedScene" path="res://scenes/word_processor.tscn" id="25_word_processor"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jscy8"]
@@ -419,7 +418,7 @@ connected_window = NodePath("../../Minesweeper")
 
 [node name="SchedulerIcon" parent="Screen/GridContainer" unique_id=19493643 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
-app_name = "Sched"
+app_name = "Scheduler"
 app_icon = ExtResource("15_2wyq8")
 connected_window = NodePath("../../Scheduler")
 
