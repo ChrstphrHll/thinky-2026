@@ -326,6 +326,7 @@ anchor_bottom = 1.0
 offset_top = 34.0
 
 [node name="Credits" parent="Screen" unique_id=135486431 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5385417
@@ -357,6 +358,7 @@ contents = ExtResource("25_word_processor")
 metadata/_edit_use_anchors_ = true
 
 [node name="Win!!" parent="Screen" unique_id=1404032877 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.15989584
@@ -433,13 +435,13 @@ app_name = "Settings"
 app_icon = ExtResource("16_jscy8")
 connected_window = NodePath("../../Settings")
 
-[node name="Admin" parent="Screen/GridContainer" unique_id=67904863 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+[node name="AdminIcon" parent="Screen/GridContainer" unique_id=67904863 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "Admin Portal"
 app_icon = ExtResource("17_pm3ni")
 connected_window = NodePath("../../Admin")
 
-[node name="Credits2" parent="Screen" unique_id=1128038819 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+[node name="CreditsIcon" parent="Screen" unique_id=1128038819 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 1
 anchor_left = 0.9015625
 anchor_top = -0.029661017

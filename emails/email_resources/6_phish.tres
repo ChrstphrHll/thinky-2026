@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://7lvj4v85mmf4"]
 
-[ext_resource type="Texture2D" uid="uid://bvjip5njaucn5" path="res://assets/art/avatars/parallax.svg" id="1_rw6ve"]
+[ext_resource type="Texture2D" uid="uid://dlxn8qgi5uyae" path="res://assets/art/app_icons/taskbaricon.svg" id="1_rw6ve"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_g54xv"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_50hbk"]
 
@@ -14,8 +14,8 @@ If you are receiving this email, your LookOut access is expiring in five (5) day
 
 To retain access, please click the below link to request license renewal:
 
-notaphish.com/VERARYRNQFZRRGVATSEBZAVARGBGJBNAQSVIRGBRAQBSQNL"
+[url]notaphish.com/VERARYRNQFZRRGVATSEBZAVARGBGJBNAQSVIRGBRAQBSQNL[/url]"
 avatar = ExtResource("1_rw6ve")
 graphic = ExtResource("2_g54xv")
-day_sent = 1
+day_sent = 4
 metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

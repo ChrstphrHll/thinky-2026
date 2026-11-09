@@ -146,9 +146,17 @@ func load_level_info(level: MinesweeperLevel):
 func create_board(game_type = 3):
 	match game_type:
 		0: # Easy
-			load_level_info(HARD)
+			board_rows = 15
+			board_cols = 15
+			board_bombs = 10
+			board_bomb_coords = generate_random_bomb_coords(board_bombs)
+			target_reveals = board_rows * board_cols - board_bombs
 		1: # Medium
-			load_level_info(HARD)
+			board_rows = 20
+			board_cols = 20
+			board_bombs = 40
+			board_bomb_coords = generate_random_bomb_coords(board_bombs)
+			target_reveals = board_rows * board_cols - board_bombs
 		2: # Hard
 			load_level_info(HARD)
 		3: # random
