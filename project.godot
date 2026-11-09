@@ -31,6 +31,10 @@ window/stretch/aspect="expand"
 grid_cells=""
 temp=""
 
+[gui]
+
+theme/custom_font="uid://8qfhpychfrpy"
+
 [input]
 
 left_click={

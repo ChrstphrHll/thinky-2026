@@ -12,7 +12,7 @@ var revealed = 0
 enum game_state { PLAYING, LOST, WON }
 var current_game_state = game_state.PLAYING
 
-const BUTTON_SIZE = 32
+const BUTTON_SIZE = 26
 const FONT_SIZE = 16
 const BOMB_SYMBOL = "🐄"
 const FLAGGED = "🛸"
@@ -172,15 +172,19 @@ func create_board(game_type = 3):
 			container.size_flags_horizontal = Control.SIZE_EXPAND
 			container.custom_minimum_size = Vector2(BUTTON_SIZE, BUTTON_SIZE)
 			container.custom_maximum_size = Vector2(BUTTON_SIZE, BUTTON_SIZE)
-			button.add_theme_color_override("font_disabled_color", Color(1.0, 1.0, 1.0, 1.0))
+			button.add_theme_color_override("font_disabled_color", Color.BLACK)
 			button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
 			button.add_theme_font_size_override("font_size", FONT_SIZE)
 			button.add_theme_stylebox_override("normal", CELL_BUTTON)
 			button.add_theme_stylebox_override("pressed", CELL_BUTTON)
 			button.add_theme_stylebox_override("hover", CELL_BUTTON_HOVER)
-			var grass_style = StyleBoxTexture.new()
-			grass_style.texture = GRASS_TEXTURES.pick_random()
-			button.add_theme_stylebox_override("disabled", grass_style)
+			var pasture_style = StyleBoxTexture.new()
+			if randf() < 0.05:
+				pasture_style.texture = COW_TEXTURE
+			else:
+				pasture_style.texture = GRASS_TEXTURES.pick_random()
+			button.add_theme_stylebox_override("disabled", pasture_style)
+			
 			button.text = BLANK
 			button.button_down.connect(_button_pressed.bind({"row": row, "col": col}))
 			
@@ -263,23 +267,33 @@ func get_revealed(coord):
 
 
 func set_revealed(coord, is_revealed: bool):
-	board[coord.row][coord.col].revealed = is_revealed
-	
-	if is_revealed:
-		revealed += 1
-		if revealed == target_reveals:
-			win_game.emit()
-	
+	if not is_revealed or get_revealed(coord):
+		return
+
+	board[coord.row][coord.col].revealed = true
+
 	var button = get_button(coord)
 	var cell_value = get_coord(coord)
-	
-	match cell_value:
-		0:
+
+	if is_coord_bomb(coord):
+		var alien_style = StyleBoxTexture.new()
+		alien_style.texture = ALIEN_TEXTURE
+		button.add_theme_stylebox_override("disabled", alien_style)
+		button.text = ""
+	else:
+		if cell_value == 0:
 			button.text = ""
-		_:
+		else:
 			button.text = str(cell_value)
 
 	button.disabled = true
+
+	if not is_coord_bomb(coord):
+		revealed += 1
+		if revealed == target_reveals:
+			win_game.emit()
+
+
 
 
 func get_coord(coord):
