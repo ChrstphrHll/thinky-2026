@@ -108,7 +108,7 @@ text = "2. SAN"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry2" unique_id=1071739509]
 layout_mode = 2
-text = "0:31"
+text = "0:32"
 
 [node name="LeaderboardEntry3" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1591799533]
 layout_mode = 2
@@ -120,7 +120,7 @@ text = "3. EMA"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry3" unique_id=817056901]
 layout_mode = 2
-text = "0:31"
+text = "0:46"
 
 [node name="LeaderboardEntry4" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=827863949]
 layout_mode = 2
@@ -132,7 +132,7 @@ text = "4. ILR"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry4" unique_id=2140090604]
 layout_mode = 2
-text = "0:31"
+text = "0:51"
 
 [node name="LeaderboardEntry5" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1347462145]
 layout_mode = 2
@@ -144,7 +144,7 @@ text = "5. EAD"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry5" unique_id=283768229]
 layout_mode = 2
-text = "0:31"
+text = "0:59"
 
 [node name="LeaderboardEntry6" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1618045325]
 layout_mode = 2
@@ -156,7 +156,7 @@ text = "6. EVE"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry6" unique_id=1900203426]
 layout_mode = 2
-text = "0:31"
+text = "1:08"
 
 [node name="LeaderboardEntry7" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=635024444]
 layout_mode = 2
@@ -168,7 +168,7 @@ text = "7. RYF"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry7" unique_id=984229658]
 layout_mode = 2
-text = "0:31"
+text = "1:12"
 
 [node name="LeaderboardEntry8" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=1737762867]
 layout_mode = 2
@@ -180,7 +180,7 @@ text = "8. IFT"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry8" unique_id=169902093]
 layout_mode = 2
-text = "0:31"
+text = "1:25"
 
 [node name="LeaderboardEntry9" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=334883280]
 layout_mode = 2
@@ -192,7 +192,7 @@ text = "9. HWO"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry9" unique_id=1610813476]
 layout_mode = 2
-text = "0:31"
+text = "1:39"
 
 [node name="LeaderboardEntry10" type="HBoxContainer" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer" unique_id=384843272]
 layout_mode = 2
@@ -204,7 +204,7 @@ text = "10. RD!"
 
 [node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/Controls/VBoxContainer/LeaderboardEntry10" unique_id=1378191385]
 layout_mode = 2
-text = "0:31"
+text = "1:44"
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=1615265987]
 layout_mode = 2
