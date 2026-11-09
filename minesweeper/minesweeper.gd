@@ -12,7 +12,7 @@ var revealed = 0
 enum game_state { PLAYING, LOST, WON }
 var current_game_state = game_state.PLAYING
 
-const BUTTON_SIZE = 32
+const BUTTON_SIZE = 26
 const FONT_SIZE = 16
 const BOMB_SYMBOL = "🐄"
 const FLAGGED = "🛸"
@@ -172,14 +172,14 @@ func create_board(game_type = 3):
 			container.size_flags_horizontal = Control.SIZE_EXPAND
 			container.custom_minimum_size = Vector2(BUTTON_SIZE, BUTTON_SIZE)
 			container.custom_maximum_size = Vector2(BUTTON_SIZE, BUTTON_SIZE)
-			button.add_theme_color_override("font_disabled_color", Color(1.0, 1.0, 1.0, 1.0))
+			button.add_theme_color_override("font_disabled_color", Color.BLACK)
 			button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
 			button.add_theme_font_size_override("font_size", FONT_SIZE)
 			button.add_theme_stylebox_override("normal", CELL_BUTTON)
 			button.add_theme_stylebox_override("pressed", CELL_BUTTON)
 			button.add_theme_stylebox_override("hover", CELL_BUTTON_HOVER)
 			var pasture_style = StyleBoxTexture.new()
-			if randf() < 0.1:
+			if randf() < 0.05:
 				pasture_style.texture = COW_TEXTURE
 			else:
 				pasture_style.texture = GRASS_TEXTURES.pick_random()
