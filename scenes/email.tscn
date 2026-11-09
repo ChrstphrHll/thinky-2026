@@ -78,6 +78,7 @@ theme_override_constants/margin_right = 8
 
 [node name="EmailDetailed" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=993349939]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 mouse_filter = 1
 color = Color(0.215182, 0.21518221, 0.21518219, 1)
