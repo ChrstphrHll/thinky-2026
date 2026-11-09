@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://ilxp51ax06mm"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_obd2o"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_56kuv"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_b7a34"]
+
+[resource]
+script = ExtResource("3_b7a34")
+sender = "Carol"
+subject = "Company Values Staircase"
+body = "Hi,
+
+As the newest member of Parallax, I wanted to make sure you are familiar with our company values. Daisy and Kim created this graphic for every new hire to understand our company alignment and how you can achieve success here at Parallax.
+
+[INSERT STAIRCASE GRAPHIC]
+
+Feel free to print a copy of this to put on your desk if you feel that it better aligns you to our values.
+
+Carol
+Sr. Human Resources Manager
+Parallax"
+avatar = ExtResource("1_obd2o")
+graphic = ExtResource("2_56kuv")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

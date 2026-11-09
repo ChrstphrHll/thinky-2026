@@ -12,8 +12,8 @@ var revealed = 0
 enum game_state { PLAYING, LOST, WON }
 var current_game_state = game_state.PLAYING
 
-const BUTTON_SIZE = 20
-const FONT_SIZE = 12
+const BUTTON_SIZE = 32
+const FONT_SIZE = 16
 const BOMB_SYMBOL = "🐄"
 const FLAGGED = "🛸"
 const BLANK = "   "
@@ -32,7 +32,16 @@ const LOSE_MESSAGE = "Ooops. Try Again"
 const CELL_BUTTON = preload("uid://bcqe48ggyfioa")
 const CELL_BUTTON_DISABLED = preload("uid://ds05seb1vtjit")
 const CELL_BUTTON_HOVER = preload("uid://b0sex4lta7p8h")
-
+const GRASS_TEXTURES = [
+	preload("res://assets/art/cowsweeper_tiles/pasturetile1.svg"),
+	preload("res://assets/art/cowsweeper_tiles/pasturetile5.svg"),
+	preload("res://assets/art/cowsweeper_tiles/pasturetile2.svg"),
+	preload("res://assets/art/cowsweeper_tiles/pasturetile3.svg"),
+	preload("res://assets/art/cowsweeper_tiles/pasturetile4.svg"),
+	preload("res://assets/art/cowsweeper_tiles/pasturetile6.svg"),
+]
+const COW_TEXTURE = preload("res://assets/art/cowsweeper_tiles/cowtile.svg")
+const ALIEN_TEXTURE = preload("res://assets/art/cowsweeper_tiles/gameovertile.svg")
 const HARD = preload("uid://b0yrijjsdky0e")
 
 
@@ -169,7 +178,9 @@ func create_board(game_type = 3):
 			button.add_theme_stylebox_override("normal", CELL_BUTTON)
 			button.add_theme_stylebox_override("pressed", CELL_BUTTON)
 			button.add_theme_stylebox_override("hover", CELL_BUTTON_HOVER)
-			button.add_theme_stylebox_override("disabled", CELL_BUTTON_DISABLED)
+			var grass_style = StyleBoxTexture.new()
+			grass_style.texture = GRASS_TEXTURES.pick_random()
+			button.add_theme_stylebox_override("disabled", grass_style)
 			button.text = BLANK
 			button.button_down.connect(_button_pressed.bind({"row": row, "col": col}))
 			

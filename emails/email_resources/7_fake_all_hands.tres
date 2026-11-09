@@ -8,6 +8,13 @@
 script = ExtResource("3_lwgh1")
 sender = "Alex"
 subject = "URGENT: All hands meeting at 1pm"
+body = "Hi,
+
+In order to better align the team, please ensure the all hands meeting is scheduled daily at 1p.
+
+Thanks to our new Junior Productivity Associate for helping to get our calendars scheduled properly.
+
+-Alex"
 avatar = ExtResource("1_kobvc")
 graphic = ExtResource("2_wi68m")
 day_sent = 1

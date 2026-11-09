@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://cy2nisq0sx8ud"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_ugcu5"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_mal08"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_a244x"]
+
+[resource]
+script = ExtResource("3_a244x")
+sender = "Carol"
+subject = "Parallax Accommodations Policy"
+body = "Hi,
+
+Welcome to Parallax! We want to ensure that you’re taken care of not only as an employee, but as a human. As such, if you need any such accommodations, please let us know.
+
+Some examples may include:
+	•  Different desk chair with better support
+	•  Service animals
+	•  Shortened meeting times (up to 2h max)
+	•  Dress code modifications
+
+If you need anything, please don’t hesitate to let us know.
+
+Carol
+Parallax"
+avatar = ExtResource("1_ugcu5")
+graphic = ExtResource("2_mal08")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"
