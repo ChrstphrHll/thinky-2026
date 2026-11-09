@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://beic0tre6h022"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_kobvc"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_wi68m"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_lwgh1"]
+
+[resource]
+script = ExtResource("3_lwgh1")
+sender = "Alex"
+subject = "URGENT: All hands meeting at 1pm"
+avatar = ExtResource("1_kobvc")
+graphic = ExtResource("2_wi68m")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"
