@@ -236,10 +236,10 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.34053499
-anchor_top = 0.23639455
-anchor_right = 0.96193415
-anchor_bottom = 0.8469388
+anchor_left = 0.2625
+anchor_top = 0.14576271
+anchor_right = 0.88389915
+anchor_bottom = 0.75630695
 offset_right = 156.91357
 offset_bottom = 179.5578
 bounding_box = NodePath("..")
@@ -249,6 +249,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Scheduler" parent="Screen" unique_id=945610282 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.09947918
@@ -322,13 +323,12 @@ anchor_bottom = 1.0
 offset_top = 34.0
 
 [node name="Credits" parent="Screen" unique_id=135486431 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
-visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.54479164
-anchor_top = 0.2101695
-anchor_right = 0.975
-anchor_bottom = 0.5737288
+anchor_left = 0.5385417
+anchor_top = 0.3059322
+anchor_right = 0.96875
+anchor_bottom = 0.6694915
 bounding_box = NodePath("..")
 window_name = "Credits"
 metadata/_edit_use_anchors_ = true
@@ -339,6 +339,46 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 35.0
+
+[node name="Win!!" parent="Screen" unique_id=1404032877 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15989584
+anchor_top = 0.1381356
+anchor_right = 0.5239583
+anchor_bottom = 0.56186444
+bounding_box = NodePath("..")
+window_name = "Winning!"
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Screen/Win!!" unique_id=1093065019]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.79144526, 0.81845754, 0.9181333, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Screen/Win!!/ColorRect2" unique_id=825863751]
+layout_mode = 0
+offset_right = 698.0
+offset_bottom = 167.0
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[wave][rainbow]You Win!!!!![/rainbow][/wave]"
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Screen/Win!!/ColorRect2" unique_id=1829466661]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 152.0
+offset_right = 638.0
+offset_bottom = 392.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+text = "You've facilitated a perfectly planned day for the resistance and you've broken free from your alien managers. Go! Be free and frolic!"
 
 [node name="GridContainer" type="GridContainer" parent="Screen" unique_id=1033384503]
 layout_mode = 0

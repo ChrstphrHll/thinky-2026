@@ -22,11 +22,17 @@ func _ready():
 	
 	Signals.window_focused.connect(_check_music)
 	Signals.window_closed.connect(_stop_music)
+	Signals.game_won.connect(_show_end_screen)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$%Time.text = Time.get_time_string_from_system()
+
+
+func _show_end_screen():
+	$"Screen/Win!!".show()
+	$Screen/Credits.show()
 
 
 func _stop_music(window_name: String):

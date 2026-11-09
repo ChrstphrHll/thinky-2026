@@ -84,6 +84,7 @@ mouse_filter = 1
 color = Color(0.215182, 0.21518221, 0.21518219, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed" unique_id=1092408042]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -163,6 +164,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="Body" type="RichTextLabel" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1274552646]
 unique_name_in_owner = true
+clip_contents = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 24
