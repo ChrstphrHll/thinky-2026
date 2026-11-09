@@ -178,13 +178,10 @@ func create_board(game_type = 3):
 			button.add_theme_stylebox_override("normal", CELL_BUTTON)
 			button.add_theme_stylebox_override("pressed", CELL_BUTTON)
 			button.add_theme_stylebox_override("hover", CELL_BUTTON_HOVER)
-			var pasture_style = StyleBoxTexture.new()
-			if randf() < 0.05:
-				pasture_style.texture = COW_TEXTURE
-			else:
-				pasture_style.texture = GRASS_TEXTURES.pick_random()
-			button.add_theme_stylebox_override("disabled", pasture_style)
 			
+			var pasture_style = StyleBoxTexture.new()
+			pasture_style.texture = GRASS_TEXTURES.pick_random()
+			button.add_theme_stylebox_override("disabled", pasture_style)
 			button.text = BLANK
 			button.button_down.connect(_button_pressed.bind({"row": row, "col": col}))
 			
@@ -201,7 +198,21 @@ func create_board(game_type = 3):
 		#place_bomb()
 	for coord in board_bomb_coords:
 		place_bomb(coord)
+		
+# Add cows only to blank cells inside the board.
+	for row in range(1, board_rows - 1):
+		for col in range(1, board_cols - 1):
+			var coord = {"row": row, "col": col}
 
+			if is_coord_bomb(coord):
+				continue
+				
+			if get_coord(coord) == 0 and randf() < 0.05:
+				var cow_style = StyleBoxTexture.new()
+				cow_style.texture = COW_TEXTURE
+				get_button(coord).add_theme_stylebox_override(
+					"disabled", cow_style
+				)
 
 func print_board():
 	for row in board:
