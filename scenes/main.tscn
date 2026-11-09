@@ -215,15 +215,6 @@ theme_override_constants/margin_bottom = 4
 [node name="HBoxContainer" type="HBoxContainer" parent="Screen/bottom bar/MarginContainer" unique_id=646236583]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=224905988]
-layout_mode = 2
-offset_transform_enabled = true
-offset_transform_position = Vector2(13.39, -13.395)
-offset_transform_scale = Vector2(1.865, 1.865)
-texture = ExtResource("3_pm3ni")
-expand_mode = 3
-stretch_mode = 5
-
 [node name="Control" type="Control" parent="Screen/bottom bar/MarginContainer/HBoxContainer" unique_id=783423984]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -232,6 +223,15 @@ size_flags_horizontal = 3
 unique_name_in_owner = true
 layout_mode = 2
 text = "3:22"
+
+[node name="TextureRect" type="TextureRect" parent="Screen/bottom bar" unique_id=224905988]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 36.0
+mouse_filter = 2
+texture = ExtResource("3_pm3ni")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Minesweeper" parent="Screen" unique_id=1339506137 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 unique_name_in_owner = true
