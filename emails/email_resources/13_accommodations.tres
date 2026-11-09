@@ -13,10 +13,10 @@ body = "Hi,
 Welcome to Parallax! We want to ensure that you’re taken care of not only as an employee, but as a human. As such, if you need any such accommodations, please let us know.
 
 Some examples may include:
-[ub]Different desk chair with better support[/ub]
-[ub]Service animals[/ub]
-[ub]Shortened meeting times (up to 2h max)[/ub]
-Dress code modifications
+[ul]Different desk chair with better support[/ul]
+[ul]Service animals[/ul]
+[ul]Shortened meeting times (up to 2h max)[/ul]
+[ul]Dress code modifications[/ul]
 
 If you need anything, please don’t hesitate to let us know.
 
@@ -45,5 +45,5 @@ Best,
 Brenda"
 avatar = ExtResource("1_81mag")
 graphic = ExtResource("2_mal08")
-day_sent = 1
+day_sent = 2
 metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

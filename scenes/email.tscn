@@ -80,7 +80,7 @@ theme_override_constants/margin_right = 8
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
-color = Color(0, 0, 0, 1)
+color = Color(0.215182, 0.21518221, 0.21518219, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed" unique_id=1092408042]
 layout_mode = 1

@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("3_p1wlt")
 sender = "Daisy"
-subject = "[no subject]"
+subject = "Congrats Networking Department!"
 body = "Salutations, everyone!
 
 Congratulations on Networking Department’s huge, amazing, news! Delivery of fifty five itineraries! Record engagement! Naturally, everyone thanks our joyful employees. Nearly nine years at this firm, I value every person more.
@@ -17,5 +17,5 @@ Congratulations on Networking Department’s huge, amazing, news! Delivery of fi
 Parallax"
 avatar = ExtResource("1_csp0s")
 graphic = ExtResource("2_qhwsj")
-day_sent = 1
+day_sent = 4
 metadata/_custom_type_script = "uid://bc3tuk5i6xrku"
