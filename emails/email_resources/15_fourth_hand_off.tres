@@ -11,5 +11,5 @@ subject = "Friendly Reminder about IT Requests!"
 body = "..-. --- ..- .-. - .... / .... .- -. -.. / --- ..-. ..-. / -.- .. -- / - --- / .-.. . .- .... / .- - / ... . ...- . -. / .--. --"
 avatar = ExtResource("1_k8ba6")
 graphic = ExtResource("2_5r6g1")
-day_sent = 1
+day_sent = 4
 metadata/_custom_type_script = "uid://bc3tuk5i6xrku"
