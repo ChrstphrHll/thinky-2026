@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://cqv2rsfwtct8"]
 
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_o2gfp"]
+[ext_resource type="Texture2D" uid="uid://bhe4v7wtxw0cu" path="res://assets/art/avatars/brendathehuman.svg" id="1_o2gfp"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_fx4w7"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_tgvh8"]
 
@@ -10,22 +10,22 @@ sender = "Brenda"
 subject = "Cybersecurity Insights: All About Encryption"
 body = "Hi,
 
-If you’ve ever wondered how we keep our messages secure and protect Parallax data, this email is for you. We’re able to protect communications using a process called standard email encryption.
+If you’ve ever wondered how we keep our messages secure and protect Parallax data, this email is for you. We’re able to protect communications using a process called [i]standard email encryption[/i].
 
-What is encryption?
+[b]What is encryption?[/b]
 Encryption is the process by which messages are coded in a way that prevents foreign parties from reading or understanding them. Most email clients, like LookOut, have built-in encryption services. We always make sure we choose email clients and CRMs that offer encyption as a feature of the software, so we can make security automatic.
 
-How does encryption work?
+[b]How does encryption work?[/b]
 Email encryption typically works through a process called “public-key cryptography.” The process involves a lot of factors, but the key thing to note is that when an email is sent, it is automatically coded into ciphertext. Only someone with the correct private key can decode it. The private key completes a series of complicated mathematical formulas in order to “read” the coded message. This is all done automatically through the computer!
 
-Can I read a message if I have the key?
+[b]Can I read a message if I have the key?[/b]
 You could, but to gain access to someone’s private key, you’d need access to their account. If you want to create and read ciphers without a computer, there are lots of simpler cryptographic methods. For example, there are Caesar ciphers, where letters are shifted a fixed amount down in the alphabet, or key ciphers, where you might encode certain words as letters or numbers. I encourage you to do your research and play around with different cryptography methods—it can be a lot of fun!
 
 We hope you enjoyed this month’s Cybersecurity Insights article. Cybersecurity is a shared responsibility, and we hope you do your part in keeping the Parallax community safe.
 
 Stay safe,
 Brenda
-Security Manager
+[i]Security Manager[/i]
 Parallax
 
 ----------
@@ -35,10 +35,10 @@ RE: Cybersecurity Insights: All About Encryption
 Thank you for sharing, Brenda! This background will be extremely helpful for keeping us all safe from threat actors. Information is key to making life more difficult for cybercriminals!
 
 Hassan
-Communications Director
+[i]Communications Director[/i]
 Parallax
 
-Upcoming OOO Dates: 1/28, 2/22, 3/2, 4/7, 5/8, 6/3, 7/6, 8/15, 9/4, 10/30"
+[font_size=12]{text}Upcoming OOO Dates: 1/28, 2/22, 3/2, 4/7, 5/8, 6/3, 7/6, 8/15, 9/4, 10/30[/font_size]"
 avatar = ExtResource("1_o2gfp")
 graphic = ExtResource("2_fx4w7")
 day_sent = 1

@@ -1,19 +1,19 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://cp07ptnbcleyl"]
 
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_csp0s"]
+[ext_resource type="Texture2D" uid="uid://divhwcqvq3uon" path="res://assets/art/avatars/daisythehuman.svg" id="1_csp0s"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_qhwsj"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_p1wlt"]
 
 [resource]
 script = ExtResource("3_p1wlt")
-sender = "[unknown]"
+sender = "Daisy"
 subject = "[no subject]"
 body = "Salutations, everyone!
 
 Congratulations on Networking Department’s huge, amazing, news! Delivery of fifty five itineraries! Record engagement! Naturally, everyone thanks our joyful employees. Nearly nine years at this firm, I value every person more.
 
 -Daisy🌼
-Change Management Specialist
+[i]Change Management Specialist[/i]
 Parallax"
 avatar = ExtResource("1_csp0s")
 graphic = ExtResource("2_qhwsj")

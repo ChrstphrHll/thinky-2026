@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://b8oybrtb4u7n0"]
 
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_brbr2"]
+[ext_resource type="Texture2D" uid="uid://coxy1f2u2j4bf" path="res://assets/art/avatars/irenethehuman.svg" id="1_brbr2"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_61kto"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_2vlav"]
 
@@ -8,20 +8,16 @@
 script = ExtResource("3_2vlav")
 sender = "Irene"
 subject = "Don’t Get Burnt Out: Warning Signs"
-body = "[b]bold[i]bold italic[/b]italic[/i]
-[b]bold[i]bold italic[/i][/b][i]italic[/i]
-BBCode [color=green]test[/color]
-[b]boldbold italic[/b][i]italic[/i]
-Burnout isn’t just caused by working long hours and never taking time off. Sometimes, workplace conditions can cause you to burn out even if your hours are fine.
+body = "Burnout isn’t just caused by working long hours and never taking time off. Sometimes, workplace conditions can cause you to burn out even if your hours are fine.
 
 We’ve provided the attached graphic (thanks for the work on this, Kim!) so you can keep an eye out for common causes of burnout. We want to make sure Parallax is a good place for you to work, so if you notice anything like this happening on your team, we hope you feel empowered to speak up and make a change.
 
-[INSERT BURNOUT GRAPHIC]
+[img=75%]res://assets/art/infographics/burnoutinfographic.svg[/img]
 
 One bonus tip: build little recovery routines into your day! For example, even during long meetings, I try to block out an hour for lunch with Hassan to not only talk about shared projects, but our personal lives and long-term goals.
 
 Irene
-Sr. Wellness Specialist
+[i]Sr. Wellness Specialist[/i]
 Parallax"
 avatar = ExtResource("1_brbr2")
 graphic = ExtResource("2_61kto")

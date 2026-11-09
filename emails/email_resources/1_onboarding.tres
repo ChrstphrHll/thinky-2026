@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://cnkg13qq0tce6"]
 
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_aecuq"]
+[ext_resource type="Texture2D" uid="uid://dlxn8qgi5uyae" path="res://assets/art/app_icons/taskbaricon.svg" id="1_r4bsu"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_frwx1"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_jojo5"]
 
@@ -14,14 +14,15 @@ We are so happy to have you here at Parallax! We can’t wait to see you grow an
 
 To ensure we’re aligned on your first day, here’s a quick start to getting you oriented to your business function:
 
-	• As a Junior Productivity Associate, your job is to coordinate the team’s schedule in order to maximize efficiency. For your first day, we’d love for you to get 5 meeting blocks on the calendar.
-	• Because Parallax is a people-first company, we know how important it is to not just work, but to have fun! Each Parallax computer comes pre-installed with one (1) leisure app: Cowsweeper! Please enjoy this game to help avoid burnout. Note: Remember, computer activity is tracked through the Device Management Connectivity Cloud.
-	• To orient you to your Parallax work environment, you will note four (4) available apps from your home screen:
-- LookOut: Access your emails from the executive team and individual team members. If you’re reading this, you should be somewhat familiar with this app already!
-Scheduler: Conduct your day-to-day work from this app by positioning meeting blocks on team members’ calendars. We keep busy here at Parallax because we value collaboration, but hopefully it doesn’t feel too much like playing “Tetris.” :)
-Cowsweeper: Use this app to take a short break. It’s important to us that we avoid burnout here at the company.
-Time Card: Clock out or take a break using this app. After you clock out, we’ll anticipate seeing you the next day bright and ready for your new assignment!
-Settings: Adjust gameplay settings like your volume, desktop wallpaper, etc. 
+[ul]As a Junior Productivity Associate, your job is to coordinate the team’s schedule in order to maximize efficiency. For your first day, we’d love for you to get [b]5 meeting blocks on the calendar[/b].[/ul]
+[ul]Because Parallax is a people-first company, we know how important it is to not just work, but to have fun! Each Parallax computer comes pre-installed with one (1) leisure app: Cowsweeper! Please enjoy this game to help avoid burnout. [i]Note: Remember, computer activity is tracked through the Device Management Connectivity Cloud[/i].[/ul]
+[ul]To orient you to your Parallax work environment, you will note six (6) available apps from your home screen:
+[ol][b]LookOut[/b]: Access your emails from the executive team and individual team members. If you’re reading this, you shoold be somewhat familiar with this app already!
+[b]Schedoler[/b]: Conduct your day-to-day work from this app by positioning meeting blocks on team members’ calendars. We keep busy here at Parallax because we value collaboration, but hopefolly it doesn’t feel too much like playing “Tetris.” :)
+[b]Cowsweeper[/b]: Use this app to take a short break. It’s important to us that we avoid burnout here at the company.
+[b]Time Card[/b]: Clock out or take a break using this app. After you clock out, we’ll anticipate seeing you the next day bright and ready for your new assignment!
+[b]Settings[/b]: Adjust gameplay settings like your volume, desktop wallpaper, etc.
+[b]Admin Settings[/b]: Don't worry about these for now! [/ol][/ul]
 
 If you have any questions, please don’t hesitate to search through the available resources in the LookOut app. While we’re a small team without the bandwidth to answer your individual requests, we still care about you and want you to feel empowered to find answers yourself.
 
@@ -29,7 +30,7 @@ Thank you, and we are so glad to have you here as part of the Parallax family!
 
 Best,
 Team Parallax"
-avatar = ExtResource("1_aecuq")
+avatar = ExtResource("1_r4bsu")
 graphic = ExtResource("2_frwx1")
 day_sent = 1
 metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

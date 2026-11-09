@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://6yp0slbtgj56"]
 
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_k8ba6"]
+[ext_resource type="Texture2D" uid="uid://d1n75geuaeq7n" path="res://assets/art/avatars/hassanthehuman.svg" id="1_k8ba6"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_5r6g1"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_rpffk"]
 
@@ -8,7 +8,15 @@
 script = ExtResource("3_rpffk")
 sender = "Daisy"
 subject = "Friendly Reminder about IT Requests!"
-body = "..-. --- ..- .-. - .... / .... .- -. -.. / --- ..-. ..-. / -.- .. -- / - --- / .-.. . .- .... / .- - / ... . ...- . -. / .--. --"
+body = "Hi team,
+
+Please remember to format your email signatures correctly. Your name should come first, then your title (in [i]italics[/i]), then the company name. I am noticing a lack of conformity across different teams and would really appreciate your cooperation in improving company cohesion.
+
+..-. --- ..- .-. - .... / .... .- -. -.. / --- ..-. ..-. / -.- .. -- / - --- / .-.. . .- .... / .- - / ... . ...- . -. / .--. –
+
+Hassan
+[i]Communications Director[/i]
+Parallax"
 avatar = ExtResource("1_k8ba6")
 graphic = ExtResource("2_5r6g1")
 day_sent = 1
