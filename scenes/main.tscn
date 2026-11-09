@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://7h2j2nq2a7vn" path="res://components/window.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dwyyc1dbp3y14" path="res://scenes/main.gd" id="1_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://ithmp7b1l3hg" path="res://assets/art/desktopbackgrounds/classicbackground.svg" id="2_jbj1t"]
-[ext_resource type="Texture2D" uid="uid://dlxn8qgi5uyae" path="res://assets/art/app_icons/taskbaricon.svg" id="3_pm3ni"]
+[ext_resource type="Texture2D" uid="uid://b18h1fccftetf" path="res://assets/art/app_icons/taskbaricon.svg" id="3_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://2hm154dy6lg4" path="res://minesweeper/minesweeper.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b7xgsuxgnma2" path="res://scenes/scheduler.tscn" id="6_choun"]
 [ext_resource type="PackedScene" uid="uid://bhsyw5tl7f3iv" path="res://scenes/email.tscn" id="8_ya4ey"]

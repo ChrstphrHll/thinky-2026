@@ -13,36 +13,15 @@ body = "Hi,
 Welcome to Parallax! We want to ensure that you’re taken care of not only as an employee, but as a human. As such, if you need any such accommodations, please let us know.
 
 Some examples may include:
-[ub]Different desk chair with better support[/ub]
-[ub]Service animals[/ub]
-[ub]Shortened meeting times (up to 2h max)[/ub]
-Dress code modifications
+	•  Different desk chair with better support
+	•  Service animals
+	•  Shortened meeting times (up to 2h max)
+	•  Dress code modifications
 
 If you need anything, please don’t hesitate to let us know.
 
 Carol
-[i]Sr. Human Resources Manager[/i]
-Parallax
-
-----------
-
-RE: Parallax Accommodations Policy
-
-Hi Carol,
-
-Confirming that Eduardo, Kim, and I still have access to accommodation #3? Happy to provide psychiatrist diagnosis of ADHD as necessary.
-
-Best,
-Brenda
-
-----------
-
-RE: RE: Parallax Accommodations Policy
-
-Everyone, PLEASE disregard that last email. Did not mean to reply all.
-
-Best,
-Brenda"
+Parallax"
 avatar = ExtResource("1_81mag")
 graphic = ExtResource("2_mal08")
 day_sent = 1

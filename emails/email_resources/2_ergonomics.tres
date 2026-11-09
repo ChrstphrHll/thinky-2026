@@ -8,18 +8,7 @@
 script = ExtResource("3_8a88q")
 sender = "Irene"
 subject = "Ergonomics Check: Watch Your Eyes!"
-body = "Hi,
-
-Did you know that [b]59% of workers[/b] report that eye strain reduces their work productvity and effectiveness?
-
-Here at Parallax, we want to ensure that you take care of yourself and don’t burn out. That’s why the Time Card app includes a “Take a Break” feature. Use this to pause your work, rest your eyes, and take in the world around you.
-
-Remember, there’s a world outside of your screen!
-
-Irene
-[i]Sr. Wellness Specialist[/i]
-Parallax"
 avatar = ExtResource("1_d3dr7")
 graphic = ExtResource("2_b3jrr")
-day_sent = 1
+day_sent = 3
 metadata/_custom_type_script = "uid://bc3tuk5i6xrku"
