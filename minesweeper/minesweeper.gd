@@ -207,7 +207,7 @@ func create_board(game_type = 3):
 			if is_coord_bomb(coord):
 				continue
 				
-			if get_coord(coord) == 0 and randf() < 0.05:
+			if get_coord(coord) == 0 and randf() < 0.1:
 				var cow_style = StyleBoxTexture.new()
 				cow_style.texture = COW_TEXTURE
 				get_button(coord).add_theme_stylebox_override(
