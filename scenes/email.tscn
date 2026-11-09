@@ -160,4 +160,4 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
-text = "There is so mcuh text here omg"
+text = "There is so mcuh text [i]here[/i] omg"

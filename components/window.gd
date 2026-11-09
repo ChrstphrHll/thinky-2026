@@ -59,3 +59,4 @@ func _on_focus_detector_gui_input(event: InputEvent):
 	# TODO: dont call this on every click for active window
 	if event is InputEventMouseButton and event.is_pressed():
 		_set_z_index()
+		Signals.window_focused.emit(window_name)
