@@ -31,8 +31,11 @@ func _process(delta):
 
 
 func _show_end_screen():
+	print("end screen!!!!")
 	$"Screen/Win!!".show()
+	$"Screen/Win!!".move_to_front()
 	$Screen/Credits.show()
+	$Screen/Credits.move_to_front()
 
 
 func _stop_music(window_name: String):
