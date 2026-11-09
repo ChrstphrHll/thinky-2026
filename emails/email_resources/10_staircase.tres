@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://ilxp51ax06mm"]
 
 [ext_resource type="Texture2D" uid="uid://dokllk5v4m65n" path="res://assets/art/avatars/carolthealien.svg" id="1_obd2o"]
-[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_56kuv"]
+[ext_resource type="Texture2D" uid="uid://bjvtwmkn7imxw" path="res://assets/art/infographics/successstaircaseinfographic.svg" id="2_obd2o"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_b7a34"]
 
 [resource]
@@ -12,9 +12,7 @@ body = "Hi,
 
 As the newest member of Parallax, I wanted to make sure you are familiar with our company values. Daisy and Kim created this graphic for every new hire to understand our company alignment and how you can achieve success here at Parallax.
 
-[table=1][cell bg=white]
 [img width=600]res://assets/art/infographics/successstaircaseinfographic.svg[/img]
-[/cell][/table]
 
 Feel free to print a copy of this to put on your desk if you feel that it better aligns you to our values.
 
@@ -22,6 +20,6 @@ Carol
 [i]Sr. Human Resources Manager[/i]
 Parallax"
 avatar = ExtResource("1_obd2o")
-graphic = ExtResource("2_56kuv")
+graphic = ExtResource("2_obd2o")
 day_sent = 2
 metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

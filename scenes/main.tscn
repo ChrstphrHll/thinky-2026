@@ -20,10 +20,13 @@
 [ext_resource type="Texture2D" uid="uid://xi526hriuuiw" path="res://assets/art/app_icons/timekeeperappicon.svg" id="16_vxglm"]
 [ext_resource type="Texture2D" uid="uid://27r1n4ip1j1d" path="res://assets/art/app_icons/adminappicon.svg" id="17_pm3ni"]
 [ext_resource type="Texture2D" uid="uid://mw53eqxbneqb" path="res://assets/art/app_icons/creditsappicon.svg" id="18_y6deb"]
+[ext_resource type="Texture2D" uid="uid://bj1d1ijq0yr8q" path="res://assets/art/app_icons/notesappicon.svg" id="19_og1vs"]
 [ext_resource type="AudioStream" uid="uid://bntsbg4e2di6e" path="res://assets/audio/lookoutv4.wav" id="19_pm3ni"]
 [ext_resource type="AudioStream" uid="uid://dm72pkihkb21s" path="res://assets/audio/cowsweeperv2.wav" id="20_y6deb"]
 [ext_resource type="Texture2D" uid="uid://b2uq8cumpis2i" path="res://assets/art/deskitemsandbackground/deskspace.svg" id="22_og1vs"]
 [ext_resource type="Texture2D" uid="uid://doapb1qevtwpt" path="res://assets/art/infographics/morsecodeinfographic.svg" id="24_y6deb"]
+
+[ext_resource type="PackedScene" path="res://scenes/word_processor.tscn" id="25_word_processor"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jscy8"]
 load_path = "res://.godot/imported/cowsweeperappicon.svg-b8e4a5872ccfe8dd7a2a621874adbc18.ctex"
@@ -341,6 +344,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 35.0
 
+[node name="Notes" parent="Screen" unique_id=728878149 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.15
+anchor_right = 0.75
+anchor_bottom = 0.8
+bounding_box = NodePath("..")
+window_name = "Notes"
+contents = ExtResource("25_word_processor")
+metadata/_edit_use_anchors_ = true
+
 [node name="Win!!" parent="Screen" unique_id=1404032877 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 visible = false
 layout_mode = 1
@@ -438,6 +454,20 @@ offset_bottom = 1169.0
 app_name = "Credits"
 app_icon = ExtResource("18_y6deb")
 connected_window = NodePath("../Credits")
+
+[node name="NotesIcon" parent="Screen" unique_id=1213532388 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+layout_mode = 1
+anchor_left = 0.9015625
+anchor_top = -0.16355932
+anchor_right = 0.9015625
+anchor_bottom = -0.16355932
+offset_left = 18.0
+offset_top = 1009.0
+offset_right = 168.0
+offset_bottom = 1169.0
+app_name = "Notes"
+app_icon = ExtResource("19_og1vs")
+connected_window = NodePath("../Notes")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806837709]
 stream = ExtResource("19_pm3ni")

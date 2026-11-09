@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://b8oybrtb4u7n0"]
 
 [ext_resource type="Texture2D" uid="uid://coxy1f2u2j4bf" path="res://assets/art/avatars/irenethehuman.svg" id="1_brbr2"]
-[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_61kto"]
+[ext_resource type="Texture2D" uid="uid://5a7bb35flc0k" path="res://assets/art/infographics/burnoutinfographic.svg" id="2_brbr2"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_2vlav"]
 
 [resource]
@@ -12,7 +12,7 @@ body = "Burnout isn’t just caused by working long hours and never taking time 
 
 We’ve provided the attached graphic (thanks for the work on this, Kim!) so you can keep an eye out for common causes of burnout. We want to make sure Parallax is a good place for you to work, so if you notice anything like this happening on your team, we hope you feel empowered to speak up and make a change.
 
-[img=75%]res://assets/art/infographics/burnoutinfographic.svg[/img]
+[img width=600]res://assets/art/infographics/burnoutinfographic.svg[/img]
 
 One bonus tip: build little recovery routines into your day! For example, even during long meetings, I try to block out an hour for lunch with Hassan to not only talk about shared projects, but our personal lives and long-term goals.
 

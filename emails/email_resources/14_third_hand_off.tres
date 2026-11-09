@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_bfici")
-sender = "Daisy"
+sender = "Brenda"
 subject = "Friendly Reminder about IT Requests!"
 body = "Hi folks,
 
