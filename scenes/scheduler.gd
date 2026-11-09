@@ -125,7 +125,7 @@ func _on_shape_dropped(shape_node: Control, mouse_position: Vector2):
 		bounce_piece()
 	print("is valid ", valid)
 	
-	print("is board full? ", check_full_board())
+	print("is board full? ", check_full_board(0))
 
 
 func _on_shape_removed_from_grid(piece_id: float):
@@ -162,7 +162,7 @@ func get_grid_cell_data(mouse_position: Vector2):
 	return
 
 
-func check_full_board():
+func check_full_board(day):
 	for piece in puzzle.pieces:
 		if piece.current_position == null:
 			return false

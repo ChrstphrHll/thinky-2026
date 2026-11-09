@@ -40,8 +40,8 @@ const GRASS_TEXTURES = [
 	preload("res://assets/art/cowsweeper_tiles/pasturetile4.svg"),
 	preload("res://assets/art/cowsweeper_tiles/pasturetile6.svg"),
 ]
-const COW_TEXTURE = preload("res://assets/art/cowsweeper_tiles/cowtile.svg")
-const ALIEN_TEXTURE = preload("res://assets/art/cowsweeper_tiles/gameovertile.svg")
+#const COW_TEXTURE = preload("res://assets/art/cowsweeper_tiles/cowtile.svg")
+#const ALIEN_TEXTURE = preload("res://assets/art/cowsweeper_tiles/gameovertile.svg")
 const HARD = preload("uid://b0yrijjsdky0e")
 
 
@@ -207,20 +207,20 @@ func create_board(game_type = 3):
 	for coord in board_bomb_coords:
 		place_bomb(coord)
 		
-# Add cows only to blank cells inside the board.
-	for row in range(1, board_rows - 1):
-		for col in range(1, board_cols - 1):
-			var coord = {"row": row, "col": col}
-
-			if is_coord_bomb(coord):
-				continue
-				
-			if get_coord(coord) == 0 and randf() < 0.1:
-				var cow_style = StyleBoxTexture.new()
-				cow_style.texture = COW_TEXTURE
-				get_button(coord).add_theme_stylebox_override(
-					"disabled", cow_style
-				)
+	## Add cows only to blank cells inside the board.
+	#for row in range(1, board_rows - 1):
+		#for col in range(1, board_cols - 1):
+			#var coord = {"row": row, "col": col}
+#
+			#if is_coord_bomb(coord):
+				#continue
+				#
+			#if get_coord(coord) == 0 and randf() < 0.1:
+				#var cow_style = StyleBoxTexture.new()
+				#cow_style.texture = COW_TEXTURE
+				#get_button(coord).add_theme_stylebox_override(
+					#"disabled", cow_style
+				#)
 
 func print_board():
 	for row in board:
@@ -296,9 +296,9 @@ func set_revealed(coord, is_revealed: bool):
 
 	if is_coord_bomb(coord):
 		var alien_style = StyleBoxTexture.new()
-		alien_style.texture = ALIEN_TEXTURE
-		button.add_theme_stylebox_override("disabled", alien_style)
-		button.text = ""
+		#alien_style.texture = ALIEN_TEXTURE
+		button.add_theme_stylebox_override("disabled", CELL_BUTTON_DISABLED)
+		button.text = BOMB_SYMBOL
 	else:
 		if cell_value == 0:
 			button.text = ""
