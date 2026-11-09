@@ -12,7 +12,9 @@ body = "Hi,
 
 As the newest member of Parallax, I wanted to make sure you are familiar with our company values. Daisy and Kim created this graphic for every new hire to understand our company alignment and how you can achieve success here at Parallax.
 
-[img=75%]res://assets/art/infographics/successstaircaseinfographic.svg[/img]
+[table=1][cell bg=white]
+[img width=600]res://assets/art/infographics/successstaircaseinfographic.svg[/img]
+[/cell][/table]
 
 Feel free to print a copy of this to put on your desk if you feel that it better aligns you to our values.
 
