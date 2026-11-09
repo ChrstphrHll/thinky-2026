@@ -419,13 +419,13 @@ app_name = "Settings"
 app_icon = ExtResource("16_jscy8")
 connected_window = NodePath("../../Settings")
 
-[node name="Admin" parent="Screen/GridContainer" unique_id=67904863 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+[node name="AdminIcon" parent="Screen/GridContainer" unique_id=67904863 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
 app_name = "Admin Portal"
 app_icon = ExtResource("17_pm3ni")
 connected_window = NodePath("../../Admin")
 
-[node name="Credits2" parent="Screen" unique_id=1128038819 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
+[node name="CreditsIcon" parent="Screen" unique_id=1128038819 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 1
 anchor_left = 0.9015625
 anchor_top = -0.029661017
