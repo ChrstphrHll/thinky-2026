@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://blw348bokuiuo"]
 
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_5qdrq"]
+[ext_resource type="Texture2D" uid="uid://b4aik6cto0dvd" path="res://assets/art/avatars/kimthehuman.svg" id="1_5qdrq"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_lj2rg"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_kng6m"]
 

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://cnkg13qq0tce6"]
 
-[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_aecuq"]
+[ext_resource type="Texture2D" uid="uid://bvjip5njaucn5" path="res://assets/art/avatars/parallax.svg" id="1_r4bsu"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_frwx1"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_jojo5"]
 
@@ -29,7 +29,7 @@ Thank you, and we are so glad to have you here as part of the Parallax family!
 
 Best,
 Team Parallax"
-avatar = ExtResource("1_aecuq")
+avatar = ExtResource("1_r4bsu")
 graphic = ExtResource("2_frwx1")
 day_sent = 1
 metadata/_custom_type_script = "uid://bc3tuk5i6xrku"
