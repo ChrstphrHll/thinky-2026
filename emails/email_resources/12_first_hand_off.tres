@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://c6s77mcbm07dn"]
 
-[ext_resource type="Texture2D" uid="uid://dekq6mdtxr8qo" path="res://assets/art/avatars/jennythehuman.svg" id="1_hvo2p"]
+[ext_resource type="Texture2D" uid="uid://b4aik6cto0dvd" path="res://assets/art/avatars/kimthehuman.svg" id="1_hvo2p"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_fgy1t"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_mtcag"]
 
 [resource]
 script = ExtResource("3_mtcag")
-sender = "[unknown]"
+sender = "Kim"
 subject = "no subject"
 body = "🐟🍦🦝😔🎺 🌭🍎👎🍩 🫒🐟🐟 🌭🍎😔😔🍎👎 🎺🫒 🍦🦝🍆👎🍆 🍎🎺 🐟🫒☂️🦝 🫛😡 "
 avatar = ExtResource("1_hvo2p")
