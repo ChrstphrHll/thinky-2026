@@ -18,3 +18,4 @@ func _ready():
 func _on_pressed():
 	connected_window.show()
 	connected_window.move_to_front()
+	Signals.window_focused.emit(connected_window.window_name)

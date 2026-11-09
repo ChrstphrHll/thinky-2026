@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://2hm154dy6lg4" path="res://minesweeper/minesweeper.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b7xgsuxgnma2" path="res://scenes/scheduler.tscn" id="6_choun"]
 [ext_resource type="PackedScene" uid="uid://bhsyw5tl7f3iv" path="res://scenes/email.tscn" id="8_ya4ey"]
-[ext_resource type="AudioStream" uid="uid://b4yh6xs7ola1g" path="res://assets/audio/lookoutv1.wav" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://36y2d3jslsh3" path="res://scenes/desktop_icon.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://p7agdrfeo5tg" path="res://scenes/time_keeper.tscn" id="9_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://b5h57axbj8cnd" path="res://scenes/settings/settings.tscn" id="9_jbj1t"]
@@ -21,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://xi526hriuuiw" path="res://assets/art/app_icons/timekeeperappicon.svg" id="16_vxglm"]
 [ext_resource type="Texture2D" uid="uid://27r1n4ip1j1d" path="res://assets/art/app_icons/adminappicon.svg" id="17_pm3ni"]
 [ext_resource type="Texture2D" uid="uid://mw53eqxbneqb" path="res://assets/art/app_icons/creditsappicon.svg" id="18_y6deb"]
+[ext_resource type="AudioStream" uid="uid://bntsbg4e2di6e" path="res://assets/audio/lookoutv4.wav" id="19_pm3ni"]
+[ext_resource type="AudioStream" uid="uid://dm72pkihkb21s" path="res://assets/audio/cowsweeperv2.wav" id="20_y6deb"]
 [ext_resource type="Texture2D" uid="uid://b2uq8cumpis2i" path="res://assets/art/deskitemsandbackground/deskspace.svg" id="22_og1vs"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jscy8"]
@@ -241,7 +242,7 @@ anchor_bottom = 0.8469388
 offset_right = 156.91357
 offset_bottom = 179.5578
 bounding_box = NodePath("..")
-window_name = "mienwesoirer"
+window_name = "Cowsweeper"
 contents = ExtResource("5_tbgi4")
 metadata/_edit_use_anchors_ = true
 
@@ -255,7 +256,7 @@ anchor_right = 0.98020834
 anchor_bottom = 0.7811922
 offset_left = -3.0517578e-05
 bounding_box = NodePath("..")
-window_name = "calendar"
+window_name = "Scheduler"
 contents = ExtResource("6_choun")
 metadata/_edit_use_anchors_ = true
 
@@ -269,7 +270,7 @@ anchor_top = 0.095762715
 anchor_right = 0.8385417
 anchor_bottom = 0.81186444
 bounding_box = NodePath("..")
-window_name = "Email"
+window_name = "LookOut"
 contents = ExtResource("8_ya4ey")
 metadata/_edit_use_anchors_ = true
 
@@ -319,7 +320,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 34.0
 
-[node name="Credits" parent="Screen" unique_id=135486431 instance=ExtResource("1_o5qli")]
+[node name="Credits" parent="Screen" unique_id=135486431 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -327,6 +328,8 @@ anchor_left = 0.54479164
 anchor_top = 0.2101695
 anchor_right = 0.975
 anchor_bottom = 0.5737288
+bounding_box = NodePath("..")
+window_name = "Credits"
 metadata/_edit_use_anchors_ = true
 
 [node name="Credits" parent="Screen/Credits" unique_id=452829716 instance=ExtResource("11_dp3eg")]
@@ -345,6 +348,7 @@ offset_bottom = 357.0
 
 [node name="EmailIcon" parent="Screen/GridContainer" unique_id=1832250779 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
+app_name = "LookOut"
 app_icon = ExtResource("13_y6deb")
 connected_window = NodePath("../../Email")
 
@@ -393,10 +397,11 @@ app_icon = ExtResource("18_y6deb")
 connected_window = NodePath("../Credits")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806837709]
-stream = ExtResource("9_85g3d")
-volume_db = 1.041
-pitch_scale = 0.75
+stream = ExtResource("19_pm3ni")
 autoplay = true
+
+[node name="CowMusic" type="AudioStreamPlayer" parent="." unique_id=1161084781]
+stream = ExtResource("20_y6deb")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1350691070]
 visible = false
@@ -416,6 +421,7 @@ offset_right = 48.0
 offset_bottom = 29.0
 
 [node name="PointAndClick" type="Control" parent="." unique_id=1192662462]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

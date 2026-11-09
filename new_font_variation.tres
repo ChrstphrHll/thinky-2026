@@ -1,0 +1,12 @@
+[gd_resource type="FontVariation" format=3 uid="uid://8qfhpychfrpy"]
+
+[ext_resource type="FontFile" uid="uid://dvwrbocmm4md7" path="res://assets/fonts/NotoColorEmoji-Regular.ttf" id="1_ej4o4"]
+[ext_resource type="FontFile" uid="uid://dnie2ikv7actw" path="res://assets/fonts/NotoSans-VariableFont_wdth,wght.ttf" id="1_v5jcj"]
+[ext_resource type="FontFile" uid="uid://bpcg0igfxvj2w" path="res://assets/fonts/NotoSans-Italic-VariableFont_wdth,wght.ttf" id="3_xx7uk"]
+
+[resource]
+fallbacks = Array[Font]([ExtResource("1_ej4o4"), ExtResource("3_xx7uk")])
+base_font = ExtResource("1_v5jcj")
+variation_opentype = {
+0: 1
+}

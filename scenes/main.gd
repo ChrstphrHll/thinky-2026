@@ -19,11 +19,43 @@ func _ready():
 	
 	Signals.wallpaper_changed.connect(change_wallpaper)
 	Signals.break_taken.connect(take_a_break)
+	
+	Signals.window_focused.connect(_check_music)
+	Signals.window_closed.connect(_stop_music)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$%Time.text = Time.get_time_string_from_system()
+
+
+func _stop_music(window_name: String):
+	print("window closed: ", window_name)
+	if window_name == "Cowsweeper":
+		play_normal_music()
+
+
+func _check_music(window_name: String):
+	print("checking")
+	if window_name == "Cowsweeper":
+		print("playing music")
+		play_cowsweeper_music()
+	else:
+		play_normal_music()
+
+
+func play_normal_music():
+	if $AudioStreamPlayer.playing:
+		return
+	$CowMusic.stop()
+	$AudioStreamPlayer.play()
+
+
+func play_cowsweeper_music():
+	if $CowMusic.playing:
+		return
+	$AudioStreamPlayer.stop()
+	$CowMusic.play()
 
 
 func call_it(day):

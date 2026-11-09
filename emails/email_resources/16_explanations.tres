@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://cbyu32jyi21d0"]
+
+[ext_resource type="Texture2D" uid="uid://dekq6mdtxr8qo" path="res://assets/art/avatars/jennythehuman.svg" id="1_gxypx"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_v5i0p"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_tes8r"]
+
+[resource]
+script = ExtResource("3_tes8r")
+sender = "Jenny"
+subject = "Project Meetings"
+body = "Hi,
+
+Please see the directory below to help with orienting yourself to the Scheduller app.
+
+[b]Green[/b]: Infrastructure Resource Allocation
+[b]Blue[/b]: Company Portal* 
+[b]Purple[/b]: Product Research and Development
+[b]Yellow[/b]: eLearning Curriculum Design**
+[b]Grey[/b]: Business Strategy Alignment
+
+*This team is currently understaffed. As such, we would appreciate if these blocks do not abut on the calendar.
+
+**Due to time zone differences, the eLearning team should be scheduled at or after 4pm.
+
+Jenny
+[i]Resource Alignment Strategist[/i]
+Parallax"
+avatar = ExtResource("1_gxypx")
+graphic = ExtResource("2_v5i0p")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

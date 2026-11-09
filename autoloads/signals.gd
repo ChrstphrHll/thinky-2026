@@ -12,6 +12,10 @@ signal break_taken
 signal temp_hired
 signal overtime_enabled
 
+signal window_focused
+signal window_closed
+
+
 func end_day():
 	day += 1
 	day_ended.emit(day)
