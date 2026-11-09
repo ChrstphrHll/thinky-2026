@@ -8,8 +8,7 @@ extends Control
 
 
 @onready var time_keeper = %TimeKeeper
-
-
+var time_seconds = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,11 +26,23 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$%Time.text = Time.get_time_string_from_system()
+	time_seconds += delta
+	%Time.text = get_time_string(time_seconds)
+
+
+func get_time_string(seconds):
+	#TODO oops its 36:32
+	var hours: int = floor(seconds / (60 * 60))
+	var seconds_left_after_hours = seconds - (hours * 60 * 60)
+	var minutes: int = floor(seconds / 60)
+	var extra_zero = ""
+	if minutes < 10:
+		extra_zero = "0"
+	
+	return str(7 + hours) + ":" + extra_zero + str(minutes)
 
 
 func _show_end_screen():
-	print("end screen!!!!")
 	$"Screen/Win!!".show()
 	$"Screen/Win!!".move_to_front()
 	$Screen/Credits.show()
@@ -39,13 +50,11 @@ func _show_end_screen():
 
 
 func _stop_music(window_name: String):
-	print("window closed: ", window_name)
 	if window_name == "Cowsweeper":
 		play_normal_music()
 
 
 func _check_music(window_name: String):
-	print("checking")
 	if window_name == "Cowsweeper":
 		print("playing music")
 		play_cowsweeper_music()
