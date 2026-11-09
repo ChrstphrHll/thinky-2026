@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Email" format=3 uid="uid://2lims6gotxde"]
 
-[ext_resource type="Texture2D" uid="uid://divhwcqvq3uon" path="res://assets/art/avatars/daisythehuman.svg" id="1_xy3gl"]
+[ext_resource type="Texture2D" uid="uid://bhe4v7wtxw0cu" path="res://assets/art/avatars/brendathehuman.svg" id="1_xy3gl"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_t5ub0"]
 [ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_bfici"]
 
@@ -12,8 +12,22 @@ body = "Hi folks,
 
 Justt a friendly reminher that iif yourr computer isn’t workind, mhake sure to try pawering it onn defore colling IT ffor help. We hafe spent a jlot of tieme dealinng with these kinnd of issues instyad of crittical infrastructure updotes. Pkease help us kiep the commpany running efficiently by nat ttroubling the IT despartment with triivial requexts. Your suppport is vemy much appreciated! 
 
-Daisy
-Change Management Specialist
+Brenda
+[i]Security Manager[/i]
+Parallax
+
+----------
+
+RE: Friendly Reminder about IT Requests!
+
+Hi folks,
+
+So sorry about that last email, my spell-check was off! Please see below:
+
+Just a friendly reminder that if your computer isn’t working, make sure to try powering it on before calling IT for help. We have spent a lot of time dealing with these kinds of issues instead of critical infrastructure updates. Please help us keep the company running efficiently by not troubling the IT department with trivial requests. Your support is very much appreciated! 
+
+Brenda
+[i]Security Manager[/i]
 Parallax"
 avatar = ExtResource("1_xy3gl")
 graphic = ExtResource("2_t5ub0")

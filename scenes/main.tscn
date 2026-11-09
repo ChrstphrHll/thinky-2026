@@ -323,6 +323,7 @@ anchor_bottom = 1.0
 offset_top = 34.0
 
 [node name="Credits" parent="Screen" unique_id=135486431 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5385417
@@ -341,6 +342,7 @@ anchor_bottom = 1.0
 offset_top = 35.0
 
 [node name="Win!!" parent="Screen" unique_id=1404032877 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.15989584
