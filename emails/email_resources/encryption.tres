@@ -8,6 +8,9 @@
 script = ExtResource("3_e8k7l")
 sender = "Brenda"
 subject = "Cybersecurity Insights: All About Encryption"
+body = "yes!
+
+YES!!!!"
 avatar = ExtResource("1_wotui")
 graphic = ExtResource("2_5cjyr")
 day_sent = 1
