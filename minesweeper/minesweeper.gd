@@ -178,9 +178,13 @@ func create_board(game_type = 3):
 			button.add_theme_stylebox_override("normal", CELL_BUTTON)
 			button.add_theme_stylebox_override("pressed", CELL_BUTTON)
 			button.add_theme_stylebox_override("hover", CELL_BUTTON_HOVER)
-			var grass_style = StyleBoxTexture.new()
-			grass_style.texture = GRASS_TEXTURES.pick_random()
-			button.add_theme_stylebox_override("disabled", grass_style)
+			var pasture_style = StyleBoxTexture.new()
+			if randf() < 0.1:
+				pasture_style.texture = COW_TEXTURE
+			else:
+				pasture_style.texture = GRASS_TEXTURES.pick_random()
+			button.add_theme_stylebox_override("disabled", pasture_style)
+			
 			button.text = BLANK
 			button.button_down.connect(_button_pressed.bind({"row": row, "col": col}))
 			
@@ -263,23 +267,33 @@ func get_revealed(coord):
 
 
 func set_revealed(coord, is_revealed: bool):
-	board[coord.row][coord.col].revealed = is_revealed
-	
-	if is_revealed:
-		revealed += 1
-		if revealed == target_reveals:
-			win_game.emit()
-	
+	if not is_revealed or get_revealed(coord):
+		return
+
+	board[coord.row][coord.col].revealed = true
+
 	var button = get_button(coord)
 	var cell_value = get_coord(coord)
-	
-	match cell_value:
-		0:
+
+	if is_coord_bomb(coord):
+		var alien_style = StyleBoxTexture.new()
+		alien_style.texture = ALIEN_TEXTURE
+		button.add_theme_stylebox_override("disabled", alien_style)
+		button.text = ""
+	else:
+		if cell_value == 0:
 			button.text = ""
-		_:
+		else:
 			button.text = str(cell_value)
 
 	button.disabled = true
+
+	if not is_coord_bomb(coord):
+		revealed += 1
+		if revealed == target_reveals:
+			win_game.emit()
+
+
 
 
 func get_coord(coord):
