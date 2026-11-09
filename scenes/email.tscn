@@ -78,6 +78,7 @@ theme_override_constants/margin_right = 8
 
 [node name="EmailDetailed" type="ColorRect" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=993349939]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 mouse_filter = 1
 color = Color(0, 0, 0, 1)
@@ -89,6 +90,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+horizontal_scroll_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer" unique_id=417436729]
 layout_mode = 2
