@@ -13,11 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://p7agdrfeo5tg" path="res://scenes/time_keeper.tscn" id="9_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://b5h57axbj8cnd" path="res://scenes/settings/settings.tscn" id="9_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://be1ej1b8xfj2i" path="res://scenes/admin/admin.tscn" id="10_muem4"]
-[ext_resource type="Texture2D" uid="uid://b7vdooscllo0i" path="res://assets/art/app_icons/LookOut App Icon.svg" id="10_trceg"]
+[ext_resource type="Texture2D" uid="uid://b7vdooscllo0i" path="res://assets/art/app_icons/lookoutappicon.svg" id="10_trceg"]
 [ext_resource type="PackedScene" uid="uid://dytpytk5w18y5" path="res://scenes/credits.tscn" id="11_dp3eg"]
-[ext_resource type="Texture2D" uid="uid://dxsfg8bmj0hrb" path="res://assets/art/app_icons/Cowsweeper Icon.svg" id="11_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://buexifhoebbah" path="res://assets/art/app_icons/cowsweeperappicon.svg" id="11_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dglljxwsiddqn" path="res://scenes/clickable.tscn" id="12_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://d366iopfcanmy" path="res://assets/art/app_icons/Unnamed Slack-like App Icon.svg" id="12_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://bhauugv2ptxq" path="res://assets/art/app_icons/schedulerappicon.svg" id="12_jbj1t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0wby"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
