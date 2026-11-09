@@ -417,7 +417,7 @@ connected_window = NodePath("../../Minesweeper")
 
 [node name="SchedulerIcon" parent="Screen/GridContainer" unique_id=19493643 node_paths=PackedStringArray("connected_window") instance=ExtResource("9_choun")]
 layout_mode = 2
-app_name = "Sched"
+app_name = "Scheduler"
 app_icon = ExtResource("15_2wyq8")
 connected_window = NodePath("../../Scheduler")
 
