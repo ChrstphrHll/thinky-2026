@@ -25,7 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://dm72pkihkb21s" path="res://assets/audio/cowsweeperv2.wav" id="20_y6deb"]
 [ext_resource type="Texture2D" uid="uid://b2uq8cumpis2i" path="res://assets/art/deskitemsandbackground/deskspace.svg" id="22_og1vs"]
 [ext_resource type="Texture2D" uid="uid://doapb1qevtwpt" path="res://assets/art/infographics/morsecodeinfographic.svg" id="24_y6deb"]
-[ext_resource type="PackedScene" path="res://scenes/word_processor.tscn" id="25_word_processor"]
+[ext_resource type="PackedScene" uid="uid://bof1k4trgfckc" path="res://scenes/word_processor.tscn" id="25_word_processor"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jscy8"]
 load_path = "res://.godot/imported/cowsweeperappicon.svg-b8e4a5872ccfe8dd7a2a621874adbc18.ctex"
