@@ -82,10 +82,12 @@ func add_as_top_email_child(child):
 func _email_selected(email):
 	email_detailed.show()
 	
-	body.text = email.body
+	body.bbcode_enabled = true
+	body.text = email.body	
 	subject.text = email.subject
 	sender.text = email.sender
-	
+
 	if "avatar" in email:
 		avatar.texture = email.avatar
-	#TODO: add graphics here
+	#TODO: add graphics here 
+	#with bbcode enabled, this is complete :) -Lily
