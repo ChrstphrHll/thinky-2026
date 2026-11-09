@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c7cvab0w2h86n"]
+
+[ext_resource type="Texture2D" uid="uid://dgf6rxbtnpkbw" path="res://assets/art/pfps/daisy/daisythehuman (5).svg" id="1_ppyta"]
+[ext_resource type="Texture2D" uid="uid://b6h672xqkxyvq" path="res://assets/art/pfps/daisy/daisythehuman (4).svg" id="2_ykrsh"]
+[ext_resource type="Texture2D" uid="uid://7wqraaujopcv" path="res://assets/art/pfps/daisy/daisythehuman (2).svg" id="3_g14j6"]
+[ext_resource type="Texture2D" uid="uid://dhaenjtj4mpi7" path="res://assets/art/pfps/daisy/daisythehuman.svg" id="4_vbegm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j0wby"]
+animations = [{
+"frames": [{
+"duration": 60.0,
+"texture": ExtResource("1_ppyta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ykrsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g14j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vbegm")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 22.0
+}]
+
+[node name="Control" type="Control" unique_id=1748504851]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1662353189]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+offset_right = 30.0
+offset_bottom = 30.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PanelContainer" unique_id=201497655]
+position = Vector2(14.5, 15.0576935)
+scale = Vector2(0.014500001, 0.015057694)
+sprite_frames = SubResource("SpriteFrames_j0wby")
+frame_progress = 0.59175575

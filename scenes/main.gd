@@ -3,6 +3,8 @@ extends Control
 @onready var animation_player = $Bootup/AnimationPlayer
 @onready var bootup = $Bootup
 @onready var day_count_label = $Bootup/Day
+@onready var point_and_click = $PointAndClick
+@onready var admin = %Admin
 
 
 @onready var time_keeper = %TimeKeeper
@@ -16,6 +18,7 @@ func _ready():
 	Signals.start_day()
 	
 	Signals.wallpaper_changed.connect(change_wallpaper)
+	Signals.break_taken.connect(take_a_break)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,11 +34,33 @@ func call_it(day):
 	Signals.start_day()
 
 
+func take_a_break():
+	fade(func (): point_and_click.show())
+
+
+func fade(to_run: Callable):
+	$Bootup/Day.hide()
+	bootup.show()
+	animation_player.play("fade_out")
+	await animation_player.animation_finished
+	to_run.call()
+	animation_player.play("fade_in")
+	await animation_player.animation_finished
+	bootup.hide()
+	$Bootup/SplashScreen.color = Color.BLACK
+	$Bootup/Day.show()
+
+
 func start_day(day):
 	animation_player.play("day_start")
 	await animation_player.animation_finished
 	bootup.hide()
+	bootup.modulate = Color(1,1,1,1)
 
 
 func change_wallpaper(texture):
 	$Screen.texture = texture
+
+
+func _on_computer_pressed():
+	fade(func (): point_and_click.hide())

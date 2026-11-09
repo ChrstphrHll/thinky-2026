@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://c4baaqyvhfk8o"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_wotui"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_5cjyr"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_e8k7l"]
+
+[resource]
+script = ExtResource("3_e8k7l")
+sender = "Brenda"
+subject = "Cybersecurity Insights: All About Encryption"
+avatar = ExtResource("1_wotui")
+graphic = ExtResource("2_5cjyr")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

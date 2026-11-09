@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b3vdj7nk56kq"]
 
-[ext_resource type="Texture2D" uid="uid://bdvocqr8hikkm" path="res://icon.svg" id="1_4on7w"]
 [ext_resource type="ButtonGroup" uid="uid://cpkyfm6vt6im0" path="res://components/email_select_button_group.tres" id="1_427g1"]
 [ext_resource type="Script" uid="uid://c08fbc72auncv" path="res://components/preview.gd" id="2_ow6lr"]
+[ext_resource type="Texture2D" uid="uid://dgf6rxbtnpkbw" path="res://assets/art/pfps/daisy/daisythehuman (5).svg" id="3_ow6lr"]
 
 [node name="Preview" type="Button" unique_id=1859891319]
 custom_minimum_size = Vector2(0, 80)
@@ -38,7 +38,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.24
-texture = ExtResource("1_4on7w")
+texture = ExtResource("3_ow6lr")
 expand_mode = 1
 stretch_mode = 5
 

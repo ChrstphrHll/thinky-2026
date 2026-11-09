@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://c6s77mcbm07dn"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_1r53j"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_tn30h"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_pbj2h"]
+
+[resource]
+script = ExtResource("3_pbj2h")
+sender = "Daisy"
+subject = "Congrats Networking Department!"
+avatar = ExtResource("1_1r53j")
+graphic = ExtResource("2_tn30h")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

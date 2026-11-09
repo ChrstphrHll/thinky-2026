@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://b7xgsuxgnma2"]
 
 [ext_resource type="Script" uid="uid://uovmpp315j48" path="res://scenes/scheduler.gd" id="1_roo8f"]
+[ext_resource type="Texture2D" uid="uid://bhmee5yuleh4j" path="res://assets/art/avatars/alexthealien.svg" id="2_h1tkv"]
+[ext_resource type="Texture2D" uid="uid://bhe4v7wtxw0cu" path="res://assets/art/avatars/brendathehuman.svg" id="3_q0h4r"]
+[ext_resource type="Texture2D" uid="uid://dokllk5v4m65n" path="res://assets/art/avatars/carolthealien.svg" id="4_x0kl1"]
+[ext_resource type="Texture2D" uid="uid://divhwcqvq3uon" path="res://assets/art/avatars/daisythehuman.svg" id="5_ab7sv"]
+[ext_resource type="Texture2D" uid="uid://whbn376faliy" path="res://assets/art/avatars/eduardothealien.svg" id="6_n4uwv"]
+[ext_resource type="Texture2D" uid="uid://b6wyeykcfxfjp" path="res://assets/art/avatars/frankthealien.svg" id="7_hx5pu"]
+[ext_resource type="Texture2D" uid="uid://bj026anb3ca7" path="res://assets/art/avatars/georgethealien.svg" id="8_p3ksu"]
+[ext_resource type="Texture2D" uid="uid://d1n75geuaeq7n" path="res://assets/art/avatars/hassanthehuman.svg" id="9_2sxei"]
+[ext_resource type="Texture2D" uid="uid://coxy1f2u2j4bf" path="res://assets/art/avatars/irenethehuman.svg" id="10_ov4j1"]
+[ext_resource type="Texture2D" uid="uid://dekq6mdtxr8qo" path="res://assets/art/avatars/jennythehuman.svg" id="11_cjyx2"]
+[ext_resource type="Texture2D" uid="uid://b4aik6cto0dvd" path="res://assets/art/avatars/kimthehuman.svg" id="12_sbg75"]
+[ext_resource type="Texture2D" uid="uid://cvcctx4sxa7fm" path="res://assets/art/avatars/leahthehuman.svg" id="13_oi18c"]
 
 [node name="Scheduler" type="Control" unique_id=1690978717]
 layout_mode = 3
@@ -251,62 +263,94 @@ columns = 3
 layout_mode = 2
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=725857898]
+[node name="Alex" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=586575720]
 layout_mode = 2
-text = "A"
-horizontal_alignment = 1
+tooltip_text = "Alex"
+texture = ExtResource("2_h1tkv")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label2" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=166116811]
+[node name="Alex2" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=198787176]
 layout_mode = 2
-text = "B"
-horizontal_alignment = 1
+tooltip_text = "Brenda"
+texture = ExtResource("3_q0h4r")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label3" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1122102264]
+[node name="Alex3" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1175220076]
 layout_mode = 2
-text = "C"
-horizontal_alignment = 1
+tooltip_text = "Carol"
+texture = ExtResource("4_x0kl1")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label4" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1502431390]
+[node name="Alex4" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1456763614]
 layout_mode = 2
-text = "D"
-horizontal_alignment = 1
+tooltip_text = "Daisy"
+texture = ExtResource("5_ab7sv")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label5" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1581206915]
+[node name="Alex5" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=425419076]
 layout_mode = 2
-text = "E"
-horizontal_alignment = 1
+tooltip_text = "Eduardo"
+texture = ExtResource("6_n4uwv")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label6" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=186856936]
+[node name="Alex6" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=598489706]
 layout_mode = 2
-text = "F"
-horizontal_alignment = 1
+tooltip_text = "Frank"
+texture = ExtResource("7_hx5pu")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label7" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1906077963]
+[node name="Alex7" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=186624936]
 layout_mode = 2
-text = "G"
-horizontal_alignment = 1
+tooltip_text = "George"
+texture = ExtResource("8_p3ksu")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label8" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=301747824]
+[node name="Alex8" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=396621976]
 layout_mode = 2
-text = "H"
-horizontal_alignment = 1
+tooltip_text = "Hassan"
+texture = ExtResource("9_2sxei")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label9" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=448534531]
+[node name="Alex9" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=856416031]
 layout_mode = 2
-text = "I"
-horizontal_alignment = 1
+tooltip_text = "Irene"
+texture = ExtResource("10_ov4j1")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label10" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1948183649]
+[node name="Alex10" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=849237975]
 layout_mode = 2
-text = "J"
-horizontal_alignment = 1
+tooltip_text = "Jenny"
+texture = ExtResource("11_cjyx2")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label11" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1679050875]
+[node name="Alex11" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=33963447]
 layout_mode = 2
-text = "K"
-horizontal_alignment = 1
+tooltip_text = "Kim"
+texture = ExtResource("12_sbg75")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Label12" type="Label" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=1809972777]
+[node name="Alex12" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=673676669]
 layout_mode = 2
-text = "L"
-horizontal_alignment = 1
+tooltip_text = "Leah"
+texture = ExtResource("13_oi18c")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Alex13" type="TextureRect" parent="HBoxContainer/CenterContainer/GridContainer" unique_id=883665887 groups=["temp"]]
+visible = false
+layout_mode = 2
+tooltip_text = "Kim"
+texture = ExtResource("12_sbg75")
+expand_mode = 5
+stretch_mode = 5

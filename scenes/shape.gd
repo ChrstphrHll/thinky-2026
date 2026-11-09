@@ -5,6 +5,8 @@ extends Control
 @export var shape_size := 50
 @export var gap := 0
 
+const BUFFER = Vector2(15, 15)
+
 var dragging: bool = false
 var drag_offset: Vector2
 var total_node_size: Vector2
@@ -19,7 +21,6 @@ signal shape_rotated
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(shape_data.id)
 	total_node_size = shape_data.total_size * shape_size
 	for coord in shape_data.coords:
 		var box = ColorRect.new()
@@ -31,15 +32,15 @@ func _ready():
 	
 	pivot_offset = Vector2(shape_size / 2.0, shape_size / 2.0)
 	
-	var origin = ColorRect.new()
-	origin.size = Vector2(5,5)
-	origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
-	add_child(origin)
-
-	zero = ColorRect.new()
-	zero.size = Vector2(5,5)
-	zero.position = Vector2( - 2.5,- 2.5)
-	add_child(zero)
+	#var origin = ColorRect.new()
+	#origin.size = Vector2(5,5)
+	#origin.position = Vector2(shape_size / 2.0 - 2.5, shape_size / 2.0 - 2.5)
+	#add_child(origin)
+#
+	#zero = ColorRect.new()
+	#zero.size = Vector2(5,5)
+	#zero.position = Vector2( - 2.5,- 2.5)
+	#add_child(zero)
 	
 	#var label = Label.new()
 	#label.text = str(shape_data.id)
@@ -49,8 +50,8 @@ func _ready():
 func _process(delta):
 	if dragging:
 		var raw_position = get_global_mouse_position() - drag_offset
-		var min_clamp = Vector2(bounding_box.global_position.x, bounding_box.global_position.y)
-		global_position = raw_position.clamp(min_clamp, bounding_box.global_position + bounding_box.size - total_node_size)
+		var min_clamp = bounding_box.global_position + BUFFER
+		global_position = raw_position.clamp(min_clamp, bounding_box.global_position + bounding_box.size - BUFFER)
 
 
 func _on_gui_input(event: InputEvent):
@@ -83,6 +84,8 @@ func drop():
 
 func rotate():
 	rotation += PI/2
+	if rotation >= 2*PI:
+		rotation = 0
 	drag_offset = Vector2(drag_offset.y, drag_offset.x * -1)
 	shape_rotated.emit(shape_data.id, self)
 
@@ -100,7 +103,7 @@ func get_origin_position():
 func place_at_grid(grid_position: Vector2):
 	var position_mod = Vector2(0,0)
 	var rotation_mod_raw = rotation / (PI/2)
-	var rotation_mod = int(rotation_mod_raw) % 4
+	var rotation_mod = int(rotation_mod_raw)
 	
 	match rotation_mod:
 		1:
@@ -111,7 +114,6 @@ func place_at_grid(grid_position: Vector2):
 			position_mod = Vector2(0, shape_size)
 		0:
 			position_mod = Vector2(0, 0)
-	
 	global_position = grid_position + position_mod
 
 

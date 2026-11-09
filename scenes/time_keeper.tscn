@@ -59,4 +59,5 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Clock Out"
 
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Break" to="." method="_on_break_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/ClockOut" to="." method="end_day"]

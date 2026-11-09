@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://be1ej1b8xfj2i"]
+
+[ext_resource type="Script" uid="uid://dr1b7rubadevk" path="res://scenes/admin/admin.gd" id="1_qy2gp"]
+
+[node name="Admin" type="Control" unique_id=1892483215]
+layout_mode = 3
+anchor_right = 0.1515625
+anchor_bottom = 0.14576271
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_qy2gp")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=967998097]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1808948503]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2032587641]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=798756648]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=525183232]
+layout_mode = 2
+text = "Overtime"
+
+[node name="Overtime" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1253694360]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Enable Overtime"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=47976986]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=35228386]
+layout_mode = 2
+text = "Hire Temp"
+
+[node name="Temp" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1714100341]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Hire Temp"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Overtime" to="." method="_on_overtime_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Temp" to="." method="_on_temp_pressed"]

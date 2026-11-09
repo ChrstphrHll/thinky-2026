@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Email" format=3 uid="uid://clicarpa08xe5"]
+
+[ext_resource type="Texture2D" uid="uid://crmiage1sg7ql" path="res://assets/placeholders/pfptest.svg" id="1_oyhq2"]
+[ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="2_b3jrr"]
+[ext_resource type="Script" uid="uid://bc3tuk5i6xrku" path="res://emails/new_script.gd" id="3_8a88q"]
+
+[resource]
+script = ExtResource("3_8a88q")
+sender = "Irene"
+subject = "Ergonomics Check: Watch Your Eyes!"
+avatar = ExtResource("1_oyhq2")
+graphic = ExtResource("2_b3jrr")
+day_sent = 1
+metadata/_custom_type_script = "uid://bc3tuk5i6xrku"

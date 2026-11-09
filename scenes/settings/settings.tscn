@@ -5,8 +5,11 @@
 [ext_resource type="ButtonGroup" uid="uid://g026nuv10pnq" path="res://scenes/settings/settings_buttons.tres" id="3_1slea"]
 [ext_resource type="Texture2D" uid="uid://c3gjfv0fnp6ph" path="res://assets/placeholders/screensaver.png" id="4_1slea"]
 [ext_resource type="ButtonGroup" uid="uid://b316aanhg8le3" path="res://scenes/settings/background_buttons.tres" id="4_vghtj"]
+[ext_resource type="Texture2D" uid="uid://ithmp7b1l3hg" path="res://assets/art/desktopbackgrounds/classicbackground.svg" id="5_p57yh"]
 [ext_resource type="Script" uid="uid://cwkkwggbh0b5w" path="res://scenes/settings/background.gd" id="5_v1hle"]
 [ext_resource type="Texture2D" uid="uid://cyibh0tfk7wg2" path="res://assets/placeholders/cublicle.jpg" id="7_h6son"]
+[ext_resource type="Texture2D" uid="uid://qgsjlwyqupga" path="res://assets/art/desktopbackgrounds/beachbackground.svg" id="7_vgacw"]
+[ext_resource type="Texture2D" uid="uid://b1bvhx8uy5jmu" path="res://assets/art/desktopbackgrounds/colorfulvectorbackground.svg" id="8_kol0p"]
 
 [node name="Settings" type="Control" unique_id=182077178]
 layout_mode = 3
@@ -144,11 +147,40 @@ layout_mode = 2
 toggle_mode = true
 button_pressed = true
 button_group = ExtResource("4_vghtj")
+texture_normal = ExtResource("5_p57yh")
+stretch_mode = 6
+script = ExtResource("5_v1hle")
+
+[node name="TextureRect3" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer/VBoxContainer/Backgrounds" unique_id=690972032]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_vghtj")
+texture_normal = ExtResource("7_vgacw")
+stretch_mode = 6
+script = ExtResource("5_v1hle")
+
+[node name="TextureRect4" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer/VBoxContainer/Backgrounds" unique_id=834228534]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_vghtj")
+texture_normal = ExtResource("8_kol0p")
+stretch_mode = 6
+script = ExtResource("5_v1hle")
+
+[node name="TextureRect5" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer/VBoxContainer/Backgrounds" unique_id=1376491722]
+visible = false
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_vghtj")
 texture_normal = ExtResource("4_1slea")
 stretch_mode = 6
 script = ExtResource("5_v1hle")
 
 [node name="TextureRect2" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/BackgroundPanel/MarginContainer/VBoxContainer/Backgrounds" unique_id=2060630211]
+visible = false
 custom_maximum_size = Vector2(100, 100)
 layout_mode = 2
 toggle_mode = true
@@ -217,83 +249,31 @@ layout_mode = 2
 layout_mode = 2
 text = "Advanced Settings"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=2035652745]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=950752727]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=437295451]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "A"
-
-[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2097720519]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=922259521]
 layout_mode = 2
 size_flags_horizontal = 3
-value = 50.0
+text = "Enable Overtime"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=596849212]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1371910657]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "B"
-
-[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=143265018]
+[node name="OvertimeEntry" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=75557670]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-value = 50.0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=700183831]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=835912913]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=579967394]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "C"
-
-[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1482551616]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=582246491]
 layout_mode = 2
 size_flags_horizontal = 3
-value = 50.0
+text = "Temp Funding Code"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=683334919]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1557503286]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "D"
-
-[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1475644765]
+[node name="TempEntry" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1591205076]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-value = 50.0
-
-[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=903126749]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=664879432]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "E"
-
-[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1095318677]
-layout_mode = 2
-size_flags_horizontal = 3
-value = 50.0
-
-[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer" unique_id=1946139725]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1567360373]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "F"
-
-[node name="Volume" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer2/AdvancedSettingsPanel/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1524198863]
-layout_mode = 2
-size_flags_horizontal = 3
-value = 50.0
 
 [connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/Background" to="." method="_on_background_toggled"]
 [connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/Audio" to="." method="_on_audio_toggled"]

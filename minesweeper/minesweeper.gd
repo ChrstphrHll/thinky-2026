@@ -3,14 +3,17 @@ extends Control
 var board: Array[Array] = []
 
 # Game Settings
-var board_bombs = 20
-var board_rows = 15
-var board_cols = 15
+var board_bombs = 1
+var board_bomb_coords = []
+var board_rows = 25
+var board_cols = 40
 var target_reveals = board_rows * board_cols - board_bombs
 var revealed = 0
+enum game_state { PLAYING, LOST, WON }
+var current_game_state = game_state.PLAYING
 
-const BUTTON_SIZE = 32
-const FONT_SIZE = 16
+const BUTTON_SIZE = 20
+const FONT_SIZE = 12
 const BOMB_SYMBOL = "🐄"
 const FLAGGED = "🛸"
 const BLANK = "   "
@@ -30,27 +33,46 @@ const CELL_BUTTON = preload("uid://bcqe48ggyfioa")
 const CELL_BUTTON_DISABLED = preload("uid://ds05seb1vtjit")
 const CELL_BUTTON_HOVER = preload("uid://b0sex4lta7p8h")
 
+const HARD = preload("uid://b0yrijjsdky0e")
+
+
 signal win_game
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(HARD.get_board_info())
 	create_board()
 	win_game.connect(_win_effects)
 
 
-func reset():
-	pass
+func _new_game(new_board: int):
+	revealed = 0
+	current_game_state = game_state.PLAYING
+	board = []
+	board_ui.modulate = Color(1, 1, 1, 1)
+	win_label.hide()
+	for node in board_ui.get_children():
+		node.queue_free()
+	
+	create_board(new_board)
+
 
 func game_over():
-	pass
+	current_game_state = game_state.LOST
+	win_label.text = LOSE_MESSAGE
+	win_label.show()
+	board_ui.modulate = Color(1.0, 0.0, 0.0, 1.0)
 
 
 func _win_effects():
-	print("you win!!!")
+	current_game_state = game_state.WON
+	win_label.text = WIN_MESSAGE
 	win_label.show()
 
 
 func _button_pressed(coords):
+	if current_game_state != game_state.PLAYING:
+		return
 	var button = get_button(coords)
 	var cell_value = button.text
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
@@ -103,7 +125,31 @@ func get_unrevealed_adjacent_cells(coord):
 	return results
 
 
-func create_board():
+func load_level_info(level: MinesweeperLevel):
+	var level_info = level.get_board_info()
+	board_rows = level_info.rows
+	board_cols = level_info.cols
+	board_bombs = level_info.bomb_coords.size()
+	target_reveals = board_rows * board_cols - board_bombs
+	board_bomb_coords = level_info.bomb_coords
+
+
+func create_board(game_type = 3):
+	match game_type:
+		0: # Easy
+			load_level_info(HARD)
+		1: # Medium
+			load_level_info(HARD)
+		2: # Hard
+			load_level_info(HARD)
+		3: # random
+			board_rows = 20
+			board_cols = 30
+			board_bombs = 60
+			board_bomb_coords = generate_random_bomb_coords(board_bombs)
+			target_reveals = board_rows * board_cols - board_bombs
+
+ 
 	board.resize(board_rows)
 	board_ui.columns = board_cols
 	for row in board_rows:
@@ -136,8 +182,10 @@ func create_board():
 				"button": button
 			}
 
-	for bomb in board_bombs:
-		place_bomb()
+	#for bomb in board_bombs:
+		#place_bomb()
+	for coord in board_bomb_coords:
+		place_bomb(coord)
 
 
 func print_board():
@@ -145,14 +193,29 @@ func print_board():
 		print(row.map(func (coord): return coord.adjacency))
 
 
-func place_bomb():
+func generate_random_bomb_coords(bombs):
+	var coords = []
+	while coords.size() < bombs:
+		var coord = random_cell_coords(board_rows, board_cols)
+		if coord in coords:
+			continue
+		coords.append(coord)
+	
+	return coords
+
+
+func place_bomb(coord):
+	set_coord(coord, BOMB_SYMBOL)
+	increment_adjacent(coord)
+
+
+func place_random_bomb():
 	var placed = false
 	while not placed:
-		var coords = random_cell_coords()
+		var coords = random_cell_coords(board_rows, board_cols)
 		if is_coord_bomb(coords):
 			continue
-		set_coord(coords, BOMB_SYMBOL)
-		increment_adjacent(coords)
+		place_bomb(coords)
 		placed = true
 
 
@@ -171,11 +234,9 @@ func increment_adjacent(coords):
 		set_coord(coord, get_coord(coord) + 1)
 
 
-func random_cell_coords():
-	if board.size() == 0 or board[0].size() == 0:
-		printerr("Board must be initialized")
-	var row = randi_range(0, board.size() - 1)
-	var col = randi_range(0, board[0].size() - 1)
+func random_cell_coords(rows, cols):
+	var row = randi_range(0, rows - 1)
+	var col = randi_range(0, cols - 1)
 	return {
 		"row": row,
 		"col": col
@@ -232,8 +293,3 @@ func is_coord_inbounds(coord):
 		return false
 		
 	return true
-
-
-func _on_new_game_pressed():
-	reset()
-	create_board()
