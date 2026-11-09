@@ -91,3 +91,5 @@ func _email_selected(email):
 		avatar.texture = email.avatar
 	#TODO: add graphics here 
 	#with bbcode enabled, this is complete :) -Lily
+	
+	%EmailScrollContainer.scroll_vertical = 0

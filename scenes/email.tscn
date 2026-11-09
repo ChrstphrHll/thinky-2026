@@ -82,18 +82,10 @@ layout_mode = 2
 mouse_filter = 1
 color = Color(0.215182, 0.21518221, 0.21518219, 1)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed" unique_id=1092408042]
-clip_contents = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-horizontal_scroll_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer" unique_id=417436729]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed" unique_id=417436729]
+layout_mode = 0
+offset_right = 912.0
+offset_bottom = 846.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 16
@@ -101,15 +93,15 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer" unique_id=512289413]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer" unique_id=512289413]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer" unique_id=676855853]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer" unique_id=676855853]
 custom_minimum_size = Vector2(0, 91.39)
 layout_mode = 2
 theme_override_constants/separation = 31
 
-[node name="Avatar" type="TextureRect" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=595590315]
+[node name="Avatar" type="TextureRect" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/HBoxContainer" unique_id=595590315]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
@@ -118,55 +110,60 @@ texture = ExtResource("2_85euw")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1281978322]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1281978322]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=310238413]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=310238413]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=360295812]
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=360295812]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "From: "
 
-[node name="Sender" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=424899077]
+[node name="Sender" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=424899077]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "sender"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=456830619]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=456830619]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label2" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1983826155]
+[node name="Label2" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1983826155]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 26
 text = "Subject: "
 
-[node name="Subject" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1945412073]
+[node name="Subject" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1945412073]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 26
 text = "subject is this"
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer" unique_id=2040997113]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer" unique_id=2040997113]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_bottom = 64
 
-[node name="Body" type="RichTextLabel" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1274552646]
+[node name="EmailScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/MarginContainer" unique_id=1779211720]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Body" type="RichTextLabel" parent="VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/EmailDetailed/MarginContainer/VBoxContainer/MarginContainer/EmailScrollContainer" unique_id=1274552646]
 unique_name_in_owner = true
 clip_contents = false
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
@@ -175,3 +172,5 @@ theme_override_font_sizes/italics_font_size = 24
 theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
 text = "There is so mcuh text here omg"
+fit_content = true
+scroll_active = false
