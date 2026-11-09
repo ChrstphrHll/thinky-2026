@@ -18,6 +18,7 @@ var puzzle = ShapePuzzle.new()
 func _ready():
 	Signals.temp_hired.connect(hire_temp)
 	Signals.overtime_enabled.connect(enable_overtime)
+	Signals.day_started.connect(check_full_board)
 	
 	for shape in puzzle.pieces:
 		var instance = SHAPE.instantiate()
@@ -80,7 +81,6 @@ func hire_temp():
 	grid_container.columns = puzzle.grid[0].size() + 1
 
 
-
 func get_overtime_nodes():
 	var all_nodes = []
 	all_nodes.append_array(get_tree().get_nodes_in_group("overtime"))
@@ -124,6 +124,8 @@ func _on_shape_dropped(shape_node: Control, mouse_position: Vector2):
 	else:
 		bounce_piece()
 	print("is valid ", valid)
+	
+	print("is board full? ", check_full_board())
 
 
 func _on_shape_removed_from_grid(piece_id: float):
@@ -162,7 +164,7 @@ func get_grid_cell_data(mouse_position: Vector2):
 
 func check_full_board():
 	for piece in puzzle.pieces:
-		if not piece.placed:
+		if piece.current_position == null:
 			return false
 	Signals.game_won.emit()
 	return true
