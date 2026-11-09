@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_rpffk")
-sender = "Daisy"
+sender = "Hassan"
 subject = "Friendly Reminder about IT Requests!"
 body = "Hi team,
 
