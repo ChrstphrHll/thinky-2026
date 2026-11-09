@@ -25,7 +25,6 @@
 [ext_resource type="AudioStream" uid="uid://dm72pkihkb21s" path="res://assets/audio/cowsweeperv2.wav" id="20_y6deb"]
 [ext_resource type="Texture2D" uid="uid://b2uq8cumpis2i" path="res://assets/art/deskitemsandbackground/deskspace.svg" id="22_og1vs"]
 [ext_resource type="Texture2D" uid="uid://doapb1qevtwpt" path="res://assets/art/infographics/morsecodeinfographic.svg" id="24_y6deb"]
-
 [ext_resource type="PackedScene" path="res://scenes/word_processor.tscn" id="25_word_processor"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jscy8"]
@@ -267,7 +266,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Email" parent="Screen" unique_id=164327919 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1796875
@@ -526,7 +524,6 @@ scale = Vector2(0.17224994, 0.17224994)
 texture = ExtResource("24_y6deb")
 
 [node name="Bootup" type="Control" parent="." unique_id=1047697411]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
