@@ -236,10 +236,10 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.34053499
-anchor_top = 0.23639455
-anchor_right = 0.96193415
-anchor_bottom = 0.8469388
+anchor_left = 0.2625
+anchor_top = 0.14576271
+anchor_right = 0.88389915
+anchor_bottom = 0.75630695
 offset_right = 156.91357
 offset_bottom = 179.5578
 bounding_box = NodePath("..")
@@ -249,6 +249,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Scheduler" parent="Screen" unique_id=945610282 node_paths=PackedStringArray("bounding_box") instance=ExtResource("1_o5qli")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.09947918
