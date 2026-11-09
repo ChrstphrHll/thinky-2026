@@ -53,6 +53,7 @@ func _on_resize_button_down(corner_index: int):
 
 func _on_close_pressed():
 	self.hide()
+	Signals.window_closed.emit(window_name)
 
 
 func _on_focus_detector_gui_input(event: InputEvent):
